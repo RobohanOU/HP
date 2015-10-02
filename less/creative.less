@@ -24,10 +24,10 @@ hr.light {
 
 a {
     .transition-all;
-    color: @theme-primary;
+    color: lighten(@theme-primary, 30%);
     &:hover,
     &:focus {
-        color: darken(@theme-primary, 10%);
+        color: lighten(@theme-primary, 20%);
     }
 }
 
@@ -82,7 +82,7 @@ aside {
         color: @theme-primary;
         .sans-serif-font;
         font-weight: 700;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         &:hover,
         &:focus {
             color: darken(@theme-primary, 10%);
@@ -92,7 +92,7 @@ aside {
         > li {
             > a,
             > a:focus {
-                text-transform: uppercase;
+                //text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
                 color: @theme-dark;
@@ -150,6 +150,10 @@ aside {
         }
     }
 }
+.nav > li > a > i.fa {
+     margin-left: 0.2em;
+     font-size: 0.5em;
+}
 
 // Homepage Header
 
@@ -159,7 +163,7 @@ header {
     min-height: auto;
     .background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/top2.jpg');
     text-align: center;
     color: white;
     .header-content {
@@ -206,6 +210,13 @@ header {
                 }
             }
         }
+    }
+}
+
+// Footer
+footer{
+    .brand-logo{
+        margin-top: 4em;
     }
 }
 
