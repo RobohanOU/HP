@@ -270,6 +270,9 @@ footer .brand-logo {
 .modal-content blockquote p {
   font-size: 80%;
 }
+.map img {
+  margin: 0 auto;
+}
 .text-primary {
   color: #0F4FA8;
 }

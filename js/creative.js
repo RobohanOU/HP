@@ -52,6 +52,12 @@
     });
     $("#robocon iframe").attr("src", "");			   
 
+    // Initialize slider
+    var options = {$Duration:1200,y:1,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Opacity:2,$Round:{$Left:0.75,$Top:0.5},$Assembly:2049,
+		   $Duration:1200,x:0.6,$Easing:{$Left:$JssorEasing$.$EaseInOutExpo},$Opacity:2,
+		   $AutoPlay: true };
+    //var jssor_slider1 = new $JssorSlider$('slider-container', options);
+
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 

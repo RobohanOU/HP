@@ -83,14 +83,16 @@
     </nav>
 
     <header>
+      <div id="slider-container">
         <div class="header-content">
-            <div class="header-content-inner">
-                <h1>おいでよ、ロボハンの森。</h1>
-                <hr>
-                <p>私たち大阪大学Robohanは、NHK学生ロボコンに向けたロボット製作を行っています。</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">もっと見る</i></a>
-            </div>
+          <div class="header-content-inner">
+            <h1>おいでよ、ロボハンの森。</h1>
+            <hr>
+            <p>私たち大阪大学Robohanは、NHK学生ロボコンに向けたロボット製作を行っています。</p>
+            <a href="#about" class="btn btn-primary btn-xl page-scroll">もっと見る</i></a>
+          </div>
         </div>
+      </div>
     </header>
 
     <section class="bg-primary" id="about">
@@ -164,14 +166,14 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-pencil-square-o wow bounceIn text-primary"></i>
+                        <i class="fa fa-4x fa-pencil-square-o wow rubberBand text-primary" data-wow-offset="200"></i>
                         <h3>設計</h3>
                         <p class="text-muted">まずはロボットのアイデア出しから始まります。それらのアイデアを具体的にCADや回路図に書き起こします。</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-gears wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <i class="fa fa-4x fa-gears wow rotateIn text-primary" data-wow-delay=".2s" data-wow-offset="200"></i>
                         <h3>加工・機体製作</h3>
                         <p class="text-muted">材料を加工して部品を作り、ロボットの機体を組み上げます。</p>
                     </div>
@@ -179,14 +181,14 @@
 		<div class="clearfix visible-md"></div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-code-fork wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fa fa-4x fa-code-fork wow zoomInDown text-primary" data-wow-delay=".2s" data-wow-offset="200"></i>
                         <h3>回路製作</h3>
                         <p class="text-muted">ロボットが電気的に動くための回路を、はんだ付けなどにより作り上げます。</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-file-code-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <i class="fa fa-4x fa-file-code-o wow fadeInRightBig text-primary" data-wow-delay=".3s" data-wow-offset="200"></i>
                         <h3>プログラミング</h3>
                         <p class="text-muted">ロボットがどのように動くのかを文字にします。</p>
                     </div>
@@ -296,7 +298,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>一緒にロボット、作りませんか。</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">メンバー募集中!</a>
+                <a href="#contact" class="btn btn-default btn-xl wow tada page-scroll" data-wow-iteration="1">メンバー募集中!</a>
             </div>
         </div>
     </aside>
@@ -311,25 +313,26 @@
 		<hr class="primary">
 		<p>部室は吹田キャンパスの一角にあり、その他に創造工学センターや図書館にて活動しています。</p>
 	      </div>
-	      <div class="col-lg-12 text-center">
-		<a href="https://www.google.com/maps/d/edit?mid=zUy05CUvjyHA.k8O4KOUB9QcY&usp=sharing"><img src="img/Robohan_map.png" height="300"></a>
+	      <div class="col-xs-12 map">
+		<a href="https://www.google.com/maps/d/edit?mid=zUy05CUvjyHA.k8O4KOUB9QcY&usp=sharing"><img src="img/Robohan_map.png" class="img-responsive"></a>
 	      </div>
 	    </div>
 	    <div class="row" id="contact">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
+		    <h3 class="">お問い合わせ</h3>
                     <hr class="primary">
                     <p>質問や入部希望、見学希望などのお問い合わせはE-mailで！</p>
                 </div>
-                <div class="col-xs-4 col-xs-offset-2 col-lg-4 col-lg-offset-0 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn"></i>
+                <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-offset="10"></i>
                     <p><a href="mailto:info@robohan.net">info@robohan.net</a></p>
                 </div>
-                <div class="col-xs-4 col-lg-4 text-center">
-                    <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-3 text-center">
+                    <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s" data-wow-offset="10"></i>
                     <p><a target="blank_" href="https://twitter.com/Robohan_">Twitter</a></p>
                 </div>
-		<div class="col-xs-4 col-xs-offset-4 col-lg-4 col-lg-offset-0 text-center">
-		  <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".2s"></i>
+		<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 text-center">
+		  <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".2s" data-wow-offset="10"></i>
 		  <p><a target="_blank" href="https://www.facebook.com/robohanr">Facebook</a></p>
 		</div>
             </div>
@@ -383,6 +386,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jssor.slider.mini.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
