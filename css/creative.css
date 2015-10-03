@@ -267,6 +267,9 @@ footer .brand-logo {
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
+.modal-content blockquote p {
+  font-size: 80%;
+}
 .text-primary {
   color: #0F4FA8;
 }
