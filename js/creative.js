@@ -42,6 +42,17 @@
         }
     })
 
+    // Video stop when modal close
+    var src = $("#robocon .modal-body").children("iframe").attr("src");
+    $("#robocon .modal-body").children("iframe").attr("src", "");
+    $("#robocon").on("shown.bs.modal", function(e){
+	$(this).find(".modal-body iframe").attr("src", src);
+    });
+    $("#robocon").on("hidden.bs.modal", function(e){
+	$(this).find(".modal-body iframe").attr("src", "");
+    });
+			   
+
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
