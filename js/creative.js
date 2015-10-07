@@ -42,6 +42,13 @@
         }
     })
 
+    // Activate Portfolio box caption
+    $(".portfolio-box").on("touchstart", function(){
+	$(this).parent().parent().find(".active").removeClass("active");
+	$(this).addClass("active");
+    });
+    
+
     // Video stop when modal close
     var src = $("#robocon iframe").attr("src");
     $("#robocon").on("shown.bs.modal", function(e){
