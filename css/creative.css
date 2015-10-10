@@ -185,6 +185,9 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
+header .btn {
+  margin: 1em 1em;
+}
 footer .brand-logo {
   margin-top: 4em;
 }
@@ -370,10 +373,14 @@ fieldset[disabled] .btn-primary.active {
   border: none;
   border-radius: 300px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 .btn-xl {
   padding: 15px 30px;
+}
+.btn > i.fa {
+  margin-up: 0;
+  margin-left: 0.2em;
+  font-size: 0.5em;
 }
 ::-moz-selection {
   color: white;
