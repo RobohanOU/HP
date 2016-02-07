@@ -1,3 +1,58 @@
+@-webkit-keyframes pulse_interval {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse_interval {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+}
+.auto-animate {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 html,
 body {
   height: 100%;
@@ -159,7 +214,7 @@ header .header-content .header-content-inner p {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   header {
@@ -183,6 +238,7 @@ header .header-content .header-content-inner p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
   }
 }
 header .btn {
@@ -445,6 +501,8 @@ body {
   color: #07234a;
 }
 header .sns-tooltip {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   position: relative;
   display: inline-block;
   padding: 0 15px;
@@ -494,4 +552,12 @@ header .sns-btn {
 }
 .sns-btn.facebook:hover {
   background: #4360b1;
+}
+.more-btn {
+  -webkit-animation-name: pulse_interval;
+  animation-name: pulse_interval;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }

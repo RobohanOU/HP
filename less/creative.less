@@ -1,5 +1,6 @@
 @import "variables.less";
 @import "mixins.less";
+@import "animation.less";
 
 // Global Components
 html,
@@ -150,6 +151,7 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
+    //max-height: 100%;
     .background-cover;
     background-image: url('../img/top.jpg');
     //background-color: #6EB7DB;
@@ -175,7 +177,7 @@ header {
                 font-weight: 300;
                 color: fade(black, 70%);
                 font-size: 16px;
-                margin-bottom: 50px;
+                margin-bottom: 0;
             }
         }
     }
@@ -197,6 +199,7 @@ header {
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
+                    margin-bottom: 50px;
                 }
             }
         }
@@ -408,6 +411,9 @@ body {
 }
 
 header .sns-tooltip {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+
     position: relative;
     display: inline-block;
     padding: 0 15px;
@@ -434,10 +440,6 @@ header .sns-tooltip {
     }
 }
 
-header .sns-wrapper {
-    //border: double;
-    //background: fade(#E06A3B, 60%);
-}
 header .sns-btn {
     font-size: 1em;
     display:block;
@@ -461,4 +463,13 @@ header .sns-btn {
     &:hover {
 	background: lighten(#354c8c, 10%);
     }
+}
+
+.more-btn {
+    -webkit-animation-name: pulse_interval;
+    animation-name: pulse_interval;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }

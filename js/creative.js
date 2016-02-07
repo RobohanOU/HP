@@ -69,7 +69,10 @@
     //var jssor_slider1 = new $JssorSlider$('slider-container', options);
 
     // Initialize WOW.js Scrolling Animations
-    new WOW({mobile: false}).init();
+    new WOW({
+	mobile: false,
+	live: false
+    }).init();
 
     // PhotoSwipe
     var initPhotoSwipe = function() {
