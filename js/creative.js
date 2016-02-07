@@ -41,6 +41,10 @@
             top: 100
         }
     })
+
+    $(".faq-heading").click(function(){
+	$(this).find(".faq-body").toggle();
+    });
     
     // Activate Portfolio box caption for mobile devices
     $(".portfolio-box").on("touchstart", function(){
@@ -65,7 +69,10 @@
     //var jssor_slider1 = new $JssorSlider$('slider-container', options);
 
     // Initialize WOW.js Scrolling Animations
-    new WOW({mobile: false}).init();
+    new WOW({
+	mobile: false,
+	live: false
+    }).init();
 
     // PhotoSwipe
     var initPhotoSwipe = function() {
