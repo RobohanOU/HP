@@ -41,6 +41,10 @@
             top: 100
         }
     })
+
+    $(".faq-heading").click(function(){
+	$(this).find(".faq-body").toggle();
+    });
     
     // Activate Portfolio box caption for mobile devices
     $(".portfolio-box").on("touchstart", function(){

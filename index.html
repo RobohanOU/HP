@@ -57,7 +57,6 @@
 </head>
 
 <body id="page-top">
-
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -83,6 +82,9 @@
                     <li>
                         <a class="page-scroll" href="#portfolio">活動風景</a>
                     </li>
+		    <li>
+		      <a class="page-scroll" href="#FAQ">Q&A</a>
+		    </li>
                     <li>
                         <a class="page-scroll" href="#access">活動日・場所</a>
                     </li>
@@ -103,12 +105,22 @@
       <div id="slider-container">
         <div class="header-content">
           <div class="header-content-inner">
-            <h1>その手で未来を作り出せ</h1>
+            <h2>その手で未来を作り出せ</h2>
             <hr>
             <p>私たち大阪大学Robohanは、NHK学生ロボコンに向けたロボット製作を行っています。</p>
-            <a href="http://blog.robohan.net/" class="btn btn-success btn-xl">ブログを見る<i class="fa fa-external-link"></i></a><br>
+	    <div class="sns-tooltip">最新情報をチェック！</div>
+	    <div class="row sns-wrapper">
+	      <div class="col-xs-8 col-xs-offset-2 col-sm-2 col-sm-offset-4 text-center">
+		<a href="http://blog.robohan.net/" class="btn btn-success btn-xl">ブログを見る<i class="fa fa-external-link"></i></a>
+	      </div>
+              <div class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-1 text-center">
+		<a target="_blank" href="https://twitter.com/Robohan_" class="sns-btn twitter">Twitter</a>
+		<a target="_blank" href="https://www.facebook.com/robohanr/" class="sns-btn facebook">Facebook</a>
+	      </div>
+	    </div>
+	    <hr>
             <a href="#about" class="btn btn-primary btn-xl page-scroll">Robohanをもっと知りたい <span class="fa fa-chevron-down"></span><br></a>
-
+	      
           </div>
         </div>
       </div>
@@ -360,14 +372,45 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
+    <section class="bg-dark" id="FAQ">
         <div class="container text-center">
+	    <div>
+	      <h2 class="section-heading">新メンバー向けQ&A</h2>
+	      <div class="list-group">
+		<div class="list-group-item faq-heading"><i>Q</i> : ロボットとか作ったことないですけど、大丈夫ですか？
+		  <div class="faq-body text-muted"><i>A</i> : 大丈夫です！設計やプログラミング・回路づくりなど、
+		    やったことないけどやってみたいという人がほとんどです。<br>
+		    やったことのある人はじゃんじゃん自分のスキルを活かしてください！</div>
+		</div>
+		<div class="list-group-item faq-heading"><i>Q</i> : 活動日はいつですか？　どこで活動してますか？
+		  <div class="faq-body text-muted"><i>A</i> : 基本的に金曜日の会議には参加して欲しいですが、<br>
+		    参加できなくても気軽に相談してください。活動日・活動場所については<a class="page-scroll" href="#access">こちら</a>。<br>
+		    見学したい場合などは場所がわかりづらいので、メールしてくれれば案内します。
+		  </div>
+		</div>
+		<div class="list-group-item faq-heading"><i>Q</i> : どんな人たちがいますか？
+		  <div class="faq-body text-muted"><i>A</i> : 学部は工学部・基礎工学部が多いですが、<br>
+		    外国語学部など理系学部以外のメンバーもいます。<br>男子が多いですが、もちろん女子もいます。
+		    <a href="http://blog.robohan.net/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E7%B4%B9%E4%BB%8B/">現役メンバー紹介はこちら</a></div>
+		</div>
+		<div class="list-group-item faq-heading"><i>Q</i> : １回生じゃないんですけど大丈夫ですか？
+		  <div class="faq-body text-muted"><i>A</i> : もちろんです！２回生や高専からの編入生、留学生なども、毎年新たに参加してくれています。</div>
+		</div>
+		<div class="list-group-item faq-heading"><i>Q</i> : ロボットつくるのってお金かかりますよね・・？　部費高そう・・
+		  <div class="faq-body text-muted"><i>A</i> : 新入生は、9月まで部費はタダです！<br>
+		    それ以降は毎月部費を徴収しますが、なんと月に1000円です(2016/02現在)。<br>
+		    <a class="page-scroll" href="#footer">下記の方々</a>のご協力のおかげて、お金のかかるロボットづくりを楽しむことが出来ています。
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    <hr class="light">
             <div class="call-to-action">
-                <h2>一緒にロボット、作りませんか。</h2>
-                <a href="#contact" class="btn btn-default btn-xl wow tada page-scroll" data-wow-iteration="1">メンバー募集中!</a>
+              <h2>一緒にロボット、作りませんか。</h2>
+              <a href="#contact" class="btn btn-default btn-xl wow tada page-scroll" data-wow-iteration="1">メンバー募集中!</a>
             </div>
         </div>
-    </aside>
+    </section>
 
     <section id="access">
         <div class="container">
@@ -385,26 +428,32 @@
 	    </div>
 	    <div class="row" id="contact">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-		    <h3 class="">お問い合わせ</h3>
-                    <hr class="primary">
-                    <p>質問や入部希望、見学希望などのお問い合わせはE-mailで！</p>
+		  <h3 class="">お問い合わせ</h3>
+                  <hr class="primary">
+                  <p>質問や入部希望、見学希望などのお問い合わせはE-mailで！<br>TwitterやFacebookでも受け付けてます。</p>
                 </div>
                 <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-offset="10"></i>
-                    <p><a href="mailto:info@robohan.net">info@robohan.net</a></p>
+                  <a href="mailto:info@robohan.net">
+		    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-offset="10"></i>
+                    <p>info@robohan.net</p>
+		  </a>
                 </div>
                 <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-3 text-center">
-                    <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s" data-wow-offset="10"></i>
-                    <p><a target="blank_" href="https://twitter.com/Robohan_">Twitter</a></p>
+                  <a target="blank_" href="https://twitter.com/Robohan_">
+		    <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s" data-wow-offset="10"></i>
+                    <p>Twitter</p>
+		  </a>
                 </div>
 		<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 text-center">
-		  <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".2s" data-wow-offset="10"></i>
-		  <p><a target="_blank" href="https://www.facebook.com/robohanr">Facebook</a></p>
+		  <a target="_blank" href="https://www.facebook.com/robohanr">
+		    <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".2s" data-wow-offset="10"></i>
+		    <p>Facebook</p>
+		  </a>
 		</div>
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="footer">
       <div class="bg-dark container-fluid">
 	<div class="row text-center">
 	  <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-1">
