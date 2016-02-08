@@ -206,6 +206,7 @@ header .header-content .header-content-inner h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 40px;
+  text-shadow: 2px 2px 2px #222;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
