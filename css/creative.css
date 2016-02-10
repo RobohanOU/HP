@@ -216,6 +216,10 @@ header .header-content .header-content-inner p {
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
   margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 @media (min-width: 768px) {
   header {
