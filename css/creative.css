@@ -558,6 +558,12 @@ header .sns-btn {
 .sns-btn.facebook:hover {
   background: #4360b1;
 }
+.sns-btn.line {
+  background-color: #01c101;
+}
+.sns-btn.line:hover {
+  background-color: #01da01;
+}
 .more-btn {
   -webkit-animation-name: pulse_interval;
   animation-name: pulse_interval;
