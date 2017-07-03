@@ -52,8 +52,10 @@ $ git push -u origin release # releaseブランチをpush
 ```
 
 # サーバーでの更新の仕方(デプロイ)
+webという名前のLXCコンテナでwebサーバーが動いている。
 
 ```
+$ ssh web.lxc.sakura.robohan.net # webサーバーのあるLXCコンテナへアクセス
 $ cd /var/www/www.robohan.net/
 $ git pull
 ```
