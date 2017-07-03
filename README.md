@@ -27,9 +27,15 @@ masterには開発するときだけ必要なものなどが含まれており�
 
 基本的にはindex.htmlをいじることが多いと思う。
 
+一番最初はcloneする
+```
+$ git clone ssh://git@git.robohan.net:2200/website/robohan_hp.git
+```
+
 編集前にmasterにいる事を確認して、最新版をとってくる。
 
 ```
+$ cd robohan_hp/ # ここに移動する
 $ git checkout master  # masterブランチに切り替える
 $ git pull
 ```
