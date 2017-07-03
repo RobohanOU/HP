@@ -1,6 +1,6 @@
 # robohan HP
 
-## しくみ
+# しくみ
 - HTML
   * 授業でも書くアレ。文書の本文や構成はほぼここに書かれる。
 
@@ -14,12 +14,12 @@
 - Webサーバー
   * 上の３つを置いておく場所。`www.robohan.net`にある。
 
-[Bootstrap](http://getbootstrap.com/)というフレームワークを使って作っています。
+[Bootstrap](http://getbootstrap.com/)というフレームワークを使って作っている。
 Bootstrapを使うと、簡単にある程度見た目が良いサイトを作れる。
-[Start Bootstrap](http://startbootstrap.com/)ってサイトの[Creative](http://startbootstrap.com/template-overviews/creative/)っていう無料のテンプレートを元にして作りました。
+[Start Bootstrap](http://startbootstrap.com/)ってサイトの[Creative](http://startbootstrap.com/template-overviews/creative/)っていう無料のテンプレートを元にした。
 
 
-## 編集の仕方
+# 編集の仕方
 基本的にmasterブランチで変更を加え、releaseブランチは直接いじらない。
 masterブランチにコミットしたら、releaseブランチにマージするようにする。
 
@@ -45,7 +45,7 @@ $ git merge master # masterブランチをreleaseにマージする
 $ git push -u origin release # releaseブランチをpush
 ```
 
-## サーバーでの更新の仕方(デプロイ)
+# サーバーでの更新の仕方(デプロイ)
 
 ```
 $ cd /var/www/www.robohan.net/
