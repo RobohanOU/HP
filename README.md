@@ -29,7 +29,7 @@ masterには開発するときだけ必要なものなどが含まれており�
 
 一番最初はcloneする
 ```
-$ git clone ssh://git@git.robohan.net:2200/website/robohan_hp.git
+$ git clone https://github.com/RobohanOU/HP.git
 ```
 
 編集前にmasterにいる事を確認して、最新版をとってくる。
@@ -46,17 +46,14 @@ $ git pull
 $ git add index.html # 変更を加えたファイルをcommit対象に加える
 $ git commit -m "コメント" # コメントを付けてコミット
 $ git push -u origin master # masterブランチをpush
-$ git checkout release # releaseブランチに切り替える
-$ git merge master # masterブランチをreleaseにマージする
-$ git push -u origin release # releaseブランチをpush
 ```
 
 # サーバーでの更新の仕方(デプロイ)
 webという名前のLXCコンテナでwebサーバーが動いている。
 
 ```
-$ ssh web.lxc.sakura.robohan.net # webサーバーのあるLXCコンテナへアクセス
-$ cd /var/www/www.robohan.net/
+$ lxc exec www -- /bin/bash # webサーバーのあるLXCコンテナへアクセス
+$ cd /var/www/www.robohan.net/robohan_hp/
 $ git pull
 ```
 
