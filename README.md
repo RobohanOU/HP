@@ -15,15 +15,16 @@
   * 上の３つを置いておく場所。`www.robohan.net`にある。
 
 [Bootstrap](http://getbootstrap.com/)というフレームワークを使って作っている。
+
 Bootstrapを使うと、簡単にある程度見た目が良いサイトを作れる。
+
 [Start Bootstrap](http://startbootstrap.com/)ってサイトの[Creative](http://startbootstrap.com/template-overviews/creative/)っていう無料のテンプレートを元にした。
 
 
 # 編集の仕方
-基本的にmasterブランチで変更を加え、releaseブランチは直接いじらない。
-masterブランチにコミットしたら、releaseブランチにマージするようにする。
+基本的にdevelop/masterブランチで変更を加え、masterブランチは直接いじらない。
 
-masterには開発するときだけ必要なものなどが含まれており、webサーバーに設置するreleaseブランチはそれらが除かれている。
+develop/masterブランチにcommit/mergeしたら、masterブランチにマージするようにする。
 
 基本的にはindex.htmlをいじることが多いと思う。
 
@@ -36,7 +37,7 @@ $ git clone https://github.com/RobohanOU/HP.git
 
 ```
 $ cd robohan_hp/ # ここに移動する
-$ git checkout master  # masterブランチに切り替える
+$ git checkout develop/master  # develop/masterブランチに切り替える
 $ git pull
 ```
 
@@ -45,16 +46,7 @@ $ git pull
 ```
 $ git add index.html # 変更を加えたファイルをcommit対象に加える
 $ git commit -m "コメント" # コメントを付けてコミット
-$ git push -u origin master # masterブランチをpush
-```
-
-# サーバーでの更新の仕方(デプロイ)
-webという名前のLXCコンテナでwebサーバーが動いている。
-
-```
-$ lxc exec www -- /bin/bash # webサーバーのあるLXCコンテナへアクセス
-$ cd /var/www/www.robohan.net/robohan_hp/
-$ git pull
+$ git push -u origin develop/master # masterブランチをpush
 ```
 
 ## 画像について
@@ -65,7 +57,7 @@ $ git pull
 - `img/portfolip/1_thumb.jpg`がサムネイルです。
 
 1. 画像を選ぶ
-   * Flickrかどこかから画像をとってきましょう。
+   * Google Photoかどこかから画像をとってきましょう。
 
 2. トリミング・拡大縮小
    * 縦横サイズは全ての画像であわせた方が見た目が揃っていいです。今は元画像が`1500x1125`で、サムネイルは3分の1の`500x375`で作っています。
