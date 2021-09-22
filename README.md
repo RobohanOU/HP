@@ -1,6 +1,42 @@
 # robohan HP
 
-# しくみ
+## 概要
+
+大阪大学公認ロボット製作団体Robohan 公式HP
+
+URL: https://www.robohan.net/
+
+### フォルダ階層
+
+``` bash
+├─.github　# GitHub関係もの（GitHubActionsなどの設定ファイルが入っている）
+│  └─ISSUE_TEMPLATE
+├─css # スタイルをよくするcssが入っている
+│  └─default-skin
+├─favicons # favicon（ブラウザタブ左上のアイコン）が入っているフォルダ
+├─font-awesome # メインに使われているテーマが入っている
+│  ├─css
+│  ├─fonts
+│  ├─less
+│  └─scss
+├─fonts # 埋め込まれているフォントが入っている
+├─img # 画像が入っている
+│  ├─archives # 以前使われていた画像
+│  │  └─~2018-11
+│  └─portfolio # 3x3で並んでいる画像
+└─js # サイトの動きを決めるJavaScriptが入っている
+
+```
+
+## 編集の流れ
+
+1. このリポジトリをgit cloneする。
+
+``` bash
+> git clone 
+```
+
+## しくみ
 - HTML
   * 授業でも書くアレ。文書の本文や構成はほぼここに書かれる。
 
