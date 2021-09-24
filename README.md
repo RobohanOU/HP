@@ -28,13 +28,48 @@ URL: https://www.robohan.net/
 
 ```
 
+## システム構成
+
+<!--TODO:システム構成（GitHubアクションの仕組み/流れを書く）-->
+
 ## 編集の流れ
 
 1. このリポジトリをgit cloneする。
 
 ``` bash
-> git clone 
+> git clone git@github.com:RobohanOU/HP.git
 ```
+
+2. branchを作業ブランチのdevelop/masterにする。
+
+``` bash
+> git checkout develop/master
+```
+
+3. 編集すべきところを編集する。
+4. 編集が終わったら、編集したファイルをステージングする。
+
+``` bash
+> git add <編集したファイル名>
+```
+
+5. git commitをする。
+
+``` bash
+> git commit -m "<編集内容に関して>"
+```
+
+6. GitHubへpushする。
+
+``` bash
+> git push
+```
+
+7. GitHubの[リポジトリページ](https://github.com/RobohanOU/HP)へアクセスして、PullRequestをする。
+   - この時、master←develop/masterへPullRequestを出す。
+8. 上記で作成した、PullRequestで、「Merge pull request」をクリックしてdevelop/masterの変更をmasterブランチにmargeする。
+
+
 
 ## しくみ
 - HTML
