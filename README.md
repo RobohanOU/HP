@@ -1,6 +1,77 @@
 # robohan HP
 
-# しくみ
+## 概要
+
+大阪大学公認ロボット製作団体Robohan 公式HP
+
+URL: https://www.robohan.net/
+
+### フォルダ階層
+
+``` bash
+├─.github　# GitHub関係もの（GitHubActionsなどの設定ファイルが入っている）
+│  └─ISSUE_TEMPLATE
+├─css # スタイルをよくするcssが入っている
+│  └─default-skin
+├─favicons # favicon（ブラウザタブ左上のアイコン）が入っているフォルダ
+├─font-awesome # メインに使われているテーマが入っている
+│  ├─css
+│  ├─fonts
+│  ├─less
+│  └─scss
+├─fonts # 埋め込まれているフォントが入っている
+├─img # 画像が入っている
+│  ├─archives # 以前使われていた画像
+│  │  └─~2018-11
+│  └─portfolio # 3x3で並んでいる画像
+└─js # サイトの動きを決めるJavaScriptが入っている
+
+```
+
+## システム構成
+
+<!--TODO:システム構成（GitHubアクションの仕組み/流れを書く）-->
+
+## 編集の流れ
+
+1. このリポジトリをgit cloneする。
+
+``` bash
+> git clone git@github.com:RobohanOU/HP.git
+```
+
+2. branchを作業ブランチのdevelop/masterにする。
+
+``` bash
+> git checkout develop/master
+```
+
+3. 編集すべきところを編集する。
+4. 編集が終わったら、編集したファイルをステージングする。
+
+``` bash
+> git add <編集したファイル名>
+```
+
+5. git commitをする。
+
+``` bash
+> git commit -m "<編集内容に関して>"
+```
+
+6. GitHubへpushする。
+
+``` bash
+> git push
+```
+
+7. GitHubの[リポジトリページ](https://github.com/RobohanOU/HP)へアクセスして、PullRequestをする。
+   - この時、master←develop/masterへPullRequestを出す。
+8. 上記で作成した、PullRequestで、「Merge pull request」をクリックしてdevelop/masterの変更をmasterブランチにmargeする。
+
+
+
+## しくみ
 - HTML
   * 授業でも書くアレ。文書の本文や構成はほぼここに書かれる。
 
