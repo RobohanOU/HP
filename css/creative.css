@@ -66,6 +66,11 @@ hr {
   border-width: 3px;
   max-width: 50px;
 }
+hr.white {
+  border-color: #FFFFFF;
+  border-width: 3px;
+  max-width: 50px;
+}
 hr.light {
   border-color: white;
 }
