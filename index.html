@@ -1,667 +1,186 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" dir="ltr">
 
 <head>
+    <!--メタタグ-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RobohanはNHK学生ロボコンに出場している、大阪大学工学部・工学研究科公認のロボット製作団体です。">
+    <meta name="keywords" content="Robohan,ロボハン,大阪大学,阪大,ロボット,ロボコン,サークル,クラブ,課外研究,工学部,工学研究科,FRC,フロンティア研究センター">
+    <meta name="apple-mobile-web-app-title" content="Robohan">
+    <meta name="application-name" content="Robohan">
+    <meta nme="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#5bbad5">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="RobohanはNHK学生ロボコンに出場している、大阪大学工学部・工学研究科公認のロボット製作団体です。">
-  <meta name="keywords" content="Robohan,ロボハン,大阪大学,阪大,ロボット,ロボコン,サークル,クラブ,課外研究,工学部,工学研究科,FRC,フロンティア研究センター">
-  <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="./favicons/favicon.ico">
-  <meta name="apple-mobile-web-app-title" content="Robohan">
-  <meta name="application-name" content="Robohan">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-  <meta name="theme-color" content="#5bbad5">
+    <!-- OGP -->
+    <meta property="og:url" content="https://www.robohan.net/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Robohan ホームページ" />
+    <meta property="og:description" content="大阪大学公認のロボット製作団体です!NHK学生ロボコン優勝を目指し、ロボットの製作を行っています!" />
+    <meta property="og:site_name" content="Robohan -大阪大学ロボット製作団体-" />
+    <meta property="og:image" content="https://www.robohan.net/images/card.jpg" />
 
-  <!--Twitter等でcardで表示させるためのもの-->
-  <meta property="og:url" content="https://www.robohan.net/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Robohan ホームページ" />
-  <meta property="og:description" content="大阪大学公認のロボット製作団体です！NHK学生ロボコン優勝を目指し、ロボットの製作を行っています！" />
-  <meta property="og:site_name" content="Robohan -大阪大学ロボット製作団体-" />
-  <meta property="og:image" content="https://www.robohan.net/img/card.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Robohan_" />
+    <meta name="fb:app_id" content="3813245675396094">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@Robohan_" />
-  <meta name="fb:app_id" content="3813245675396094">
+    <!--アイコン-->
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./favicons/favicon.ico">
 
+    <!--タイトル-->
+    <title>Robohan -大阪大学ロボット製作団体-</title>
 
-  <title>Robohan -大阪大学ロボット製作団体-</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="./css/style.css">
 
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="css/creative.css" type="text/css">
-  <!--link rel="stylesheet" href='css/font.css' type="text/css">
-         <link rel="stylesheet" href='font-awesome/css/font-awesome.min.css' type="text/css">
-         <link rel="stylesheet" href='css/animate.min.css' type="text/css">
-         <link rel="stylesheet" href='css/photoswipe.css' type="text/css">
-         <link rel="stylesheet" href='css/default-skin/default-skin.css' type="text/css"-->
+    <!--JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/partsload.js"></script>
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-27144361-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
 </head>
 
-<body id="page-top">
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-          data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand page-scroll" href="#page-top">大阪大学 Robohan</a>
-      </div>
+<body>
+    <div id = "wrapper">
+        <header>
+            <div id="allheader">
+            </div>
+        </header>
+        <main>
+            <section id="hometopview">
+            </section>
+            <section id = "aboutrobohan" class="homesection">
+                <h2 class="homesectiontitle">ABOUT</h2>
+                <p>Robohanとは大阪大学公認のロボット製作団体のことです。<br>2006年にNHK大学ロボコン出場を目的として<br>
+                    電子技術研究会ToolBox&nbsp;サイエンスクラブ&nbsp;阪大ベンチャーファクトリー
+                    の３団体からの有志によって発足しました。<br>
+                    そして2007年度、NHK大学ロボコン出場の目標を達成しました。
+                    2010年度2011年度大会も出場を果たし、その後、2014年度から8年連続本選出場を果たしています。
+                    2017年度大会ではトヨタ株式会社様から、2018年度大会ではパナソニックシステムソリューションズジャパン株式会社様から、2021年度大会ではローム株式会社様より特別賞をいただくなどの成果を上げており、
+                    2018年度大会では初のシード枠の取得に成功しました。<br>
+                    現在はNHK大学ロボコン優勝を目指して日々活動しています。</p>
+            </section>
+            <section id = "aboutnhkrobocon" class="homesection">
+                <h2 class="homesectiontitle">NHK&nbsp;ROBOCON</h2>
+                <p>
+                    ABU「アジア太平洋放送連合」が主催するABUロボコンの国内予選を兼ねたロボット大会で、NHKが主催しています。<br>
+                    この大会の最大の特徴は毎年全く違ったルールが策定され、多くの奇抜なアイデアと番狂わせが起きる点です。<br>
+                    優勝すると、日本代表としてABUアジア・太平洋ロボコンへ出場できます。<br>
+                    2023年度の競技課題はアンコールワットをモチーフとした「Casting Flowers over Angkor Wat」です。<br>
+                  </p>
+                  <blockquote>
+                    <p>ユネスコ世界遺産に登録されているカンボジアのアンコールワット<br>
+                      は、息を呑むほど美しい寺院群としてよく知られています。<br>
+                      カンボジアの寓話では、多くの動物が登場するのですが、とりわけ<br>
+                      「うさぎ」は知恵の象徴として、「ぞう」は力強く穏やかな性格を持<br>
+                      っているとされています。今年の大会のテーマは、うさぎロボットと<br>
+                      ぞうロボットが協力してアンコールワットに花を手向けます。競技は<br>
+                      ゴムホースで作った、赤と青の輪を使った「輪投げゲーム」です。ア<br>
+                      ンコールワットを模したステージに、赤と青のカラフルな花（輪）が<br>
+                      飛び交います。
+                    </p>
+                    NHK学生ロボコン公式HP ルールブックより
+                  </blockquote>
+            </section>
+            <section id="topics" class="homesection">
+                <h2 class="homesectiontitle">TOPICS</h2>
+                <div class="homesectionmain flexbox">
+                    <div class="topicbox">
+                        <div class="topictitle">
+                            <div topictitle_date>
+                                <time datetime="2023-06-13">2023/06/13<time>
+                            </div>
+                            <h3>ABOUTページを更新しました。</h3>
+                        </div>
+                        <p>自己紹介を追加しました。</p>
+                        <p>詳細は<a href="./about">こちら</a></p>
+                    </div>
+                </div>
+            </section>
+            <section id = "sponsor" class="homesection">
+                <h2 class="homesectiontitle">SPONSOR</h2>
+                <ul class="list-unstyled">
+                    <li><a href="http://www.cfi.eng.osaka-u.ac.jp/" target="_blank">大阪大学大学院工学研究科附属 フューチャーイノベーションセンター 様</a></li>
+                    <!--<li><a href="https://creatio.eng.osaka-u.ac.jp/" target="_blank">大阪大学 工学部/大学院工学研究科 創造工学センター 様</a></li>--->
+                    <li><a href="https://jp.misumi-ec.com/" target="_blank">株式会社ミスミ 様</a></li>
+                    <li><a href="https://www.hakko.com/japan/" target="_blank"> 白光株式会社 様</a></li>
+                    <li><a href="https://www.mabuchi-motor.co.jp/" target="_blank">マブチモーター株式会社 様</a></li>
+                    <li><a href="https://tier4.jp/" target="_blank">株式会社ティアフォー 様</a></li>
+                    <li><a href="https://kansai-yip.co.jp/" target="_blank">株式会社関西ユアイノベーションパートナー 様</a></li>
+                </ul>
+            </section>
+            <section id="gallery" class="homesection">
+                <h2 class="homesectiontitle">GALLERY</h2>
+                <div class="homesectionmain flexbox">
+                <!--
+                    <div class="containerbox">
+                        <a href="">
+                            <div class="containerimg">
+                            <img src="" alt="">
+                            </div>
+                            <div class="containertitle">
+                                <h3>title</h3>
+                            </div>
+                        </a>
+                    </div>
+                -->
+                    <div class="containerbox">
+                        <a href="./about">
+                            <div class="containerimg">
+                                <img src="./images/top.svg" alt="">
+                            </div>
+                            <div class="containertitle">
+                                <h3>ABOUT</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="containerbox">
+                        <a href="./blog">
+                            <div class="containerimg">
+                                <img src="./images/top.svg" alt="">
+                            </div>
+                            <div class="containertitle">
+                                <h3>BLOG</h3>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id = "links" class="homesection">
+                <ul class="list-unstyled">
+                    <li><a href="https://albatross.mystrikingly.com/" target="_blank">大阪大学 飛行機製作研究会 albatross</a></li>
+                    <li><a href="http://ofrac.net/" target="_blank">大阪大学 フォーミュラレーシングクラブ OFRAC</a></li>
+                    <li><a href="https://outoolbox.wixsite.com/tool" target="_blank">大阪大学 電子技術研究会ToolBox</a></li>
+                    <li><a href="https://www.ouxt.jp/" target="_blank">OUXT Polaris</a></li>
+                    <li><a href="https://xn--tck4d2b0a0029dol2bn0r.com/" target="_blank">春ロボコン(関西大会)</a></li>
+                  </ul>
+            </section>
+            <section id = "access" class="homesection">
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a class="page-scroll" href="#about">Robohanとは?</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#services">ロボット製作</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#portfolio">活動風景</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#FAQ">Q&A</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#access">活動日・場所</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#contact">お問い合わせ</a>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+            </section>
+        </main>
+        <footer>
+        </footer>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
-
-  <header>
-    <div id="slider-container">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h2 style="font-size:50px">その手で未来を作り出せ</h2>
-          <hr>
-          <p style="font-size:20px">私たち大阪大学Robohanは、NHK学生ロボコンに向けたロボット製作を行っています。</p>
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 text-center">
-              <div class="tada auto-animate sns-tooltip"><b>新歓情報</b>はTwitterでチェック！</div>
-              <a href="https://twitter.com/robohan_" class="btn btn-success btn-xl">　　　Twitter　　　<i
-                  class="fa fa-external-link"></i></a>
-            </div>
-            <div class="col-xs-12 col-sm-4 text-center">
-              <br><br>
-              <a href="https://www.youtube.com/channel/UC8i-AYzPQm65uRz7YgNNQkg"
-                class="btn btn-danger btn-xl">　　Youtube　　<i class="fa fa-external-link"></i></a>
-            </div>
-          </div>
-          <hr>
-          <a href="#about" class="btn btn-primary auto-animate more-btn btn-xl page-scroll">Robohanをもっと知りたい <span
-              class="fa fa-chevron-down"></span><br></a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="bg-primary" id="about">
-    <div class="container text-center">
-      <h2 class="section-heading">Robohanとは？</h2>
-      <hr class="light">
-      <div class="row">
-        <div class="col-lg-6">
-          <p class="text-faded">Robohanとは大阪大学公認のロボット製作団体のことです。<br>2006年にNHK大学ロボコン出場を目的として<br>
-            電子技術研究会ToolBox 　サイエンスクラブ 　阪大ベンチャーファクトリー
-            の３団体からの有志によって発足しました。<br>
-            そして2007年度、NHK大学ロボコン出場の目標を達成しました。
-            2010年度2011年度大会も出場を果たし、その後、2014年度から８年連続本選出場を果たしています。
-            2017年度大会ではトヨタ株式会社様から、2018年度大会ではパナソニックシステムソリューションズジャパン株式会社様から、2021年度大会ではローム株式会社様より特別賞をいただくなどの成果を上げており、
-            2018年度大会では初のシード枠の取得に成功しました。<br>
-            現在はNHK大学ロボコン優勝を目指して日々活動しています。</p>
-        </div>
-        <div class=" col-lg-6 text-center">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ckySAazNxt4" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <p><br></p>
-      <a class="modal-link btn btn-default btn-xl" data-toggle="modal" data-target="#robocon">NHK学生ロボコンって何？</a>
-      <hr class="light">
-    </div>
-  </section>
-
-  <section id="robocon" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title">NHK学生ロボコンって？</h4>
-        </div>
-        <div class="modal-body text-center">
-          <p>
-            ABU「アジア太平洋放送連合」が主催するABUロボコンの国内予選を兼ねたロボット大会で、NHKが主催しています。<br>
-            この大会の最大の特徴は毎年全く違ったルールが策定され、多くの奇抜なアイデアと番狂わせが起きる点です。<br>
-            優勝すると、日本代表としてABUアジア・太平洋ロボコンへ出場できます。<br>
-            2023年度の競技課題はアンコールワットをモチーフとした「Casting Flowers over Angkor Wat」です。<br>
-          </p>
-          <blockquote>
-            <p>ユネスコ世界遺産に登録されているカンボジアのアンコールワット<br>
-              は、息を呑むほど美しい寺院群としてよく知られています。<br>
-              カンボジアの寓話では、多くの動物が登場するのですが、とりわけ<br>
-              「うさぎ」は知恵の象徴として、「ぞう」は力強く穏やかな性格を持<br>
-              っているとされています。今年の大会のテーマは、うさぎロボットと<br>
-              ぞうロボットが協力してアンコールワットに花を手向けます。競技は<br>
-              ゴムホースで作った、赤と青の輪を使った「輪投げゲーム」です。ア<br>
-              ンコールワットを模したステージに、赤と青のカラフルな花（輪）が<br>
-              飛び交います。
-            </p>
-            <footer>NHK学生ロボコン公式HP ルールブックより</footer>
-          </blockquote>
-          <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/eEnqrpgW8jU"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <br>
-          <a href="http://www.official-robocon.com/gakusei/" target="blank_" class="btn btn-warning btn-xl">もっと知りたい</a>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="services">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">ロボットができるまで</h2>
-          <hr class="primary">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-pencil-square-o wow rubberBand text-primary" data-wow-offset="200"></i>
-            <h3>設計</h3>
-            <p class="text-muted">まずはロボットのアイデア出しから始まります。それらのアイデアを具体的にCADや回路図に書き起こします。</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-gears wow rotateIn text-primary" data-wow-delay=".2s" data-wow-offset="200"></i>
-            <h3>加工・機体製作</h3>
-            <p class="text-muted">材料を加工して部品を作り、ロボットの機体を組み上げます。</p>
-          </div>
-        </div>
-        <div class="clearfix visible-md"></div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-code-fork wow fadeIn text-primary" data-wow-delay=".5s" data-wow-offset="200"></i>
-            <h3>回路製作</h3>
-            <p class="text-muted">ロボットが電気的に動くための回路を、はんだ付けなどにより作り上げます。</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="service-box">
-            <i class="fa fa-4x fa-file-code-o wow flipInY text-primary" data-wow-delay=".7s" data-wow-offset="200"></i>
-            <h3>プログラミング</h3>
-            <p class="text-muted">ロボットがどのように動くのかを文字にします。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-dark no-padding" id="portfolio">
-    <div class="container-fluid">
-      <div class="row no-gutter">
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/1.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/1_thumb.jpg" class="img-responsive" alt="NHK2021　TR＆DR">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  NHK2021
-                </div>
-                <div class="project-name">
-                  DR ＆ TR
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/2.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/2_thumb.jpg" class="img-responsive" alt="特別賞　NHK2017 NHK2018">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  特別賞
-                </div>
-                <div class="project-name">
-                  NHK2017 NHK2018
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/3.PNG" data-size="1084x813">
-            <img width="100%" src="img/portfolio/3_thumb.PNG" class="img-responsive"
-              alt="3D CAD　NHK2018 Throwing Robot">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  3D CAD
-                </div>
-                <div class="project-name">
-                  NHK2018 Throwing Robot
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/4.jpg" data-size="1164x873">
-            <img width="100%" src="img/portfolio/4_thumb.jpg" class="img-responsive"
-              alt="LRF(Laser Range Finder)　フィールドマップ生成">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  LRF(Laser Range Finder)
-                </div>
-                <div class="project-name">
-                  フィールドマップ生成
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/5.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/5_thumb.jpg" class="img-responsive" alt="NHK2021 メンバー">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  NHK2021
-                </div>
-                <div class="project-name">
-                  メンバー
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/6.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/6_thumb.jpg" class="img-responsive" alt="関西春ロボコン２０２２">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  新入生大会
-                </div>
-                <div class="project-name">
-                  関西春ロボコン２０２２
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/7.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/7_thumb.jpg" class="img-responsive" alt="キャチロボバトルコンテスト　審査員特別賞">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  キャチロボバトルコンテスト
-                </div>
-                <div class="project-name">
-                  老害ハンドと審査員特別賞
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img/portfolio/8.jpg" data-size="1500x1125">
-            <img width="100%" src="img/portfolio/8_thumb.jpg" class="img-responsive" alt="モータードライバの回路図">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  回路図
-                </div>
-                <div class="project-name">
-                  モータードライバー
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
-
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <a class="portfolio-box" href="img\portfolio\10_thumb.png" data-size="500x375">
-            <img width="100%" src="img\portfolio\10_thumb.png" class="img-responsive" alt="加工風景">
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  機構
-                </div>
-                <div class="project-name">
-                  加工風景
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-dark" id="FAQ">
-    <div class="container text-center">
-      <div>
-        <h2 class="section-heading">新メンバー向けQ&A</h2>
-        <div class="list-group">
-          <div class="list-group-item faq-heading"><i>Q</i> : ロボットとか作ったことないですけど、大丈夫ですか？
-            <div class="faq-body text-muted"><i>A</i> : 大丈夫です！設計やプログラミング・回路づくりなど、
-              やったことないけどやってみたいという人がほとんどです。<br>
-              やったことのある人はじゃんじゃん自分のスキルを活かしてください！</div>
-          </div>
-          <div class="list-group-item faq-heading"><i>Q</i> : 活動日はいつですか？　どこで活動してますか？
-            <div class="faq-body text-muted"><i>A</i> : 基本的に金曜日の会議には参加して欲しいですが、<br>
-              参加できなくても気軽に相談してください。活動日・活動場所については<a class="page-scroll" href="#access">こちら</a>。<br>
-            </div>
-          </div>
-          <div class="list-group-item faq-heading"><i>Q</i> : どんな人たちがいますか？
-            <div class="faq-body text-muted"><i>A</i> : 今は30人ぐらいのメンバーがいます。学部は工学部・基礎工学部が多いですが、<br>
-              理系学部だけでなく文系学部の人も大歓迎です。<br>男子が多いですが、もちろん女子もいます。
-            </div>
-          </div>
-          <!--
-            <div class="list-group-item faq-heading"><i>Q</i> : Robohanはサークルでも部活でも無いと聞いたのですが、どういう事ですか？
-              <div class="faq-body text-muted"><i>A</i> : RobohanはNHK学生ロボコンでの優勝を目的とした「プロジェクト」です。<br>
-                同じ趣味を持つ人たちが集まるのがサークルや部活とすれば、プロジェクトは特定の目的のために結成されたチームです。<br>
-                もちろんRobohanでも同じ趣味を持つ人はきっと見つかります。目的を見失わず、真剣に打ち込んでくれるメンバーを募集します！
-              </div>
-            </div>
-            --->
-          <div class="list-group-item faq-heading"><i>Q</i> : １回生じゃないんですけど大丈夫ですか？
-            <div class="faq-body text-muted"><i>A</i> : もちろんです！２回生や高専からの編入生、留学生なども、毎年新たに参加してくれています。</div>
-          </div>
-          <div class="list-group-item faq-heading"><i>Q</i> : ロボットつくるのってお金かかりますよね・・？　部費高そう・・
-            <div class="faq-body text-muted"><i>A</i> : 新入生は、9月まで部費はタダです！<br>
-              それ以降は毎月部費を徴収しますが、なんと月に1500円です(2020/03現在)。<br>
-              <a class="page-scroll" href="#footer">下記の方々</a>のご協力のおかげて、お金のかかるロボットづくりを楽しむことが出来ています。
-            </div>
-          </div>
-        </div>
-        <div class="list-group-item faq-heading"><i>Q</i> : 参加するのに必要なものはありますか？
-          <div class="faq-body text-muted"><i>A</i> : 十分な性能を持ったノートパソコンを持参してください。<br>
-            (生協推奨PCでも十分です！)
-          </div>
-        </div>
-        <div class="list-group-item faq-heading"><i>Q</i> : もっと聞きたいことがあるんですけど・・ 見学できますか？
-          <div class="faq-body text-muted"><i>A</i> : くわしくは<a class="page-scroll" href="#contact">こちら</a>まで。
-            メールで受け付けてます。<br>Twitterで聞いてくれてもOKです！<br>
-            見学したい場合は場所がわかりづらいので、連絡してくれれば案内します。
-          </div>
-        </div>
-        <div class="list-group-item faq-heading"><i>Q</i> : 入りたいです！
-          <div class="faq-body text-muted"><i>A</i> : 是非！くわしくは<a class="page-scroll" href="#contact">こちら</a>まで。
-          </div>
-        </div>
-      </div>
-      <hr class="light">
-      <div class="call-to-action">
-        <h2>一緒にロボット、作りませんか。</h2>
-        <a href="#contact" class="btn btn-default btn-xl wow tada page-scroll" data-wow-iteration="1">メンバー募集中!</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="access">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h3 class="section-heading">活動日と活動場所について</h3>
-          <hr class="primary">
-          <p> 金曜日は毎週会議を行っています。それ以外の日は個人の都合に合わせて、都合の合う日は活動する、といったスタイルを取っています。</p>
-          <hr class="primary">
-          <p>部室は吹田キャンパスの一角にあり、主にHANDAIクラフトベースという場所で活動しています。<br>(地図をクリックするとGoogleマップが開かれます)</p>
-        </div>
-        <div class="col-xs-12 map">
-          <a href="https://www.google.com/maps/d/edit?mid=1LceoeL08tKqZ3JI19wNTEXB7u3ohLUyU&usp=sharing"><img
-              src="img/robohan_map_kitasenri.png" class="img-responsive" alt="Robohanマップ"></a>
-          <a href="https://www.google.com/maps/d/edit?mid=1LceoeL08tKqZ3JI19wNTEXB7u3ohLUyU&usp=sharing"><img
-              src="img/robohan_map_byouin.png" class="img-responsive" alt="Robohanマップ"></a>
-        </div>
-      </div>
-      <div class="row" id="contact">
-        <div class="col-lg-8 col-lg-offset-2 text-center">
-          <h3 class="">お問い合わせ</h3>
-          <hr class="primary">
-          <p>質問や入部希望、見学希望などのお問い合わせはE-mailで！<br>Twitterでも受け付けてます。</p>
-        </div>
-        <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-3 text-center">
-          <a href="mailto:info@robohan.net">
-            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-offset="10"></i>
-            <p>info@robohan.net</p>
-          </a>
-        </div>
-        <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 text-center">
-          <a target="blank_" href="https://twitter.com/Robohan_">
-            <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s" data-wow-offset="10"></i>
-            <p>Twitter</p>
-          </a>
-        </div>
-        <!-- <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 text-center">
-            <a target="_blank" href="https://www.facebook.com/robohanr">
-              <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".2s" data-wow-offset="10"></i>
-              <p>Facebook</p>
-            </a>
-          </div> -->
-
-        <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 text-center">
-          <!-- <a class="modal-link" data-toggle="modal" data-target="#mirai">
-            <i class="fa fa-gift fa-3x wow bounceIn" data-wow-offset="10"></i>
-            <p>ご寄付に関して</p>
-          </a> -->
-        </div>
-
-        <section id="mirai" class="modal fade" role="dialog">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close modal-close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title">ご寄付に関して</h4>
-              </div>
-              <div class="modal-body text-center">
-                大阪大学Robohanではこの度、大阪大学未来基金の方に「学生ロボコン優勝への道支援事業」の設立を行いました。<br>
-                大阪大学Robohanの活動にご賛同いただけましたらご支援いただけると幸いです。<br>
-                また、大阪大学未来基金の方にご寄附をいただきますと各種税制控除などのメリットもございます。<br>
-                なお、お申し込み・お支払いにつきましては、すべて大阪大学未来基金の所定の手続きにより、大阪大学渉外本部が実施いたします。<br>
-                つきましては、お手数おかけいたしますが以下よりご連絡いただきますよう宜しくお願い申し上げます。<br><br>
-                ご寄附に関するお問合せ先:<br>
-                大阪大学 未来基金事務局(渉外本部内)<br>
-                〒565-0871 大阪府吹田市山田丘2-1<br>
-                TEL: 06-6879-8327<br>
-                FAX: 06-6879-4337<br>
-                E-mail: kikin@office.osaka-u.ac.jp<br>
-                ※基金制度の詳しい情報につきましては、<a href="https://www.miraikikin.osaka-u.ac.jp/450/"
-                  target="_blank">学生ロボコン優勝への道支援事業</a>からもご覧いただけます。<br>
-                <a href="https://www.miraikikin.osaka-u.ac.jp/450/"><img
-                    src="https://www.miraikikin.osaka-u.ac.jp/wp-content/uploads/2020/03/ban_link02.gif" /></a>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default modal-close" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </div>
-    </div>
-  </section>
-  <footer id="footer">
-    <div class="bg-dark container-fluid">
-      <div class="row text-center">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-1">
-          <h3>協力</h3>
-          <p>Robohanは次の方々からご支援をいただいています。</p>
-          <ul class="list-unstyled">
-            <li><a href="http://www.cfi.eng.osaka-u.ac.jp/" target="_blank">大阪大学大学院工学研究科附属 フューチャーイノベーションセンター 様</a></li>
-            <!--<li><a href="https://creatio.eng.osaka-u.ac.jp/" target="_blank">大阪大学 工学部/大学院工学研究科 創造工学センター 様</a></li>--->
-            <li><a href="https://jp.misumi-ec.com/" target="_blank">株式会社ミスミ 様</a></li>
-            <li><a href="https://www.hakko.com/japan/" target="_blank"> 白光株式会社 様</a></li>
-            <li><a href="https://www.mabuchi-motor.co.jp/" target="_blank">マブチモーター株式会社 様</a></li>
-            <li><a href="https://tier4.jp/" target="_blank">株式会社ティアフォー 様</a></li>
-            <li><a href="https://kansai-yip.co.jp/" target="_blank">株式会社関西ユアイノベーションパートナー 様</a></li>
-          </ul>
-        </div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-md-3">
-          <hr class="visible-xs light">
-          <h3>リンク</h3>
-          <ul class="list-unstyled">
-            <li><a href="https://albatross.mystrikingly.com/" target="_blank">大阪大学 飛行機製作研究会 albatross</a></li>
-            <li><a href="http://ofrac.net/" target="_blank">大阪大学 フォーミュラレーシングクラブ OFRAC</a></li>
-            <li><a href="https://outoolbox.wixsite.com/tool" target="_blank">大阪大学 電子技術研究会ToolBox</a></li>
-            <li><a href="https://www.ouxt.jp/" target="_blank">OUXT Polaris</a></li>
-            <li><a href="https://xn--tck4d2b0a0029dol2bn0r.com/" target="_blank">春ロボコン(関西大会)</a></li>
-          </ul>
-        </div>
-        <div class="clearfix visible-sm"></div>
-        <div class="clearfix visible-xs"></div>
-        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 brand-logo">
-          <div class="row">
-            <div class="col-xs-3 col-xs-offset-1"><img src="img/logomark.png" alt="Robohanマーク" width="100%"></div>
-            <div class="col-xs-7"><img src="img/logo.png" alt="Robohanロゴ" width="100%"></div>
-          </div>
-        </div>
-      </div>
-  </footer>
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-      <div class="pswp__ui pswp__ui--hidden">
-        <div class="pswp__top-bar">
-          <div class="pswp__counter"></div>
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-        </button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-        </button>
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    var loadCSS = function (css) {
-      var link = document.createElement('link');
-      link.href = css;
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      var head = document.getElementsByTagName('head')[0];
-      head.appendChild(link);
-    }
-    loadCSS('css/font.css');
-    loadCSS('font-awesome/css/font-awesome.min.css');
-    loadCSS('css/animate.min.css');
-    loadCSS('css/photoswipe.css');
-    loadCSS('css/default-skin/default-skin.css');
-  </script>
-
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Plugin JavaScript -->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.fittext.js"></script>
-  <script src="js/wow.min.js"></script>
-  <!--<script src="js/jssor.slider.mini.js"></script>-->
-  <script src="js/photoswipe.min.js"></script>
-  <script src="js/photoswipe-ui-default.min.js"></script>
-  <!-- Custom Theme JavaScript -->
-  <script src="js/creative.js"></script>
-
+    <!--wrapper-->
 </body>
-
 </html>
