@@ -9,9 +9,12 @@
 .home {
   --allheaderposition: fixed;
   --allheaderheight: 70px;
-  --color: #00baec;
+  --color: #0089C0;
   --font: AGTerminal;
 }
+/* #004176
+#F7EDD1
+#0089C0 */
 
 /*初期設定*/
 a {
@@ -68,7 +71,7 @@ main{
   position: var(--allheaderposition);
   box-sizing: border-box;
   padding: var(--allheaderheightpad) 5%;
-  background-color: #000000;
+  background-color: #00000000;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -113,11 +116,11 @@ main{
 }
 
 /*footer*/
-footer {
+#allfooter {
   width: 100%;
   height: 150px;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #0089C0;
   padding: 20px 20px;
   text-align: center;
   color: #ffffff;
@@ -193,9 +196,9 @@ footer {
 /*homepage*/
 #hometopview {
   height: 100vh;
-  width: 100%;
-  background-image: url("../images/top.svg");
-  background-position: center center;
+  /* width: 100%; */
+  background-image: url("../images/sample.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
