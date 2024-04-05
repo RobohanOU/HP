@@ -94,8 +94,23 @@ main{
   z-index: 1;
 }
 
-#allheader img {
+#allheader h1 {
+  display: block;
   height: var(--allheadercontentsheight);
+  width: calc(var(--allheadercontentsheight) * 4);
+}
+
+.headerlogo {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/headerlogo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  text-indent: 100%;
+  white-space: nowrap;
 }
 
 #allheader .headernav {
@@ -235,12 +250,44 @@ main{
 
 /*homepage*/
 #hometopview {
-  height: 100vh;
+  height: calc(100vh - var(--allheaderheight));
   /* width: 100%; */
-  background-image: url("../images/top.svg");
+  background-color: #fff;
+  margin: var(--allheaderheight) 0 0;
+  /*background-image: url("../images/top.svg");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.hometopvietext {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  width: 100%;
+  padding: 20px 0;
+  transform : translate(-50%,-50%);
+  background-color: #ffffffa1;
+  text-align: center;
+}
+
+.hometopvietext span{
+  display: block;
+  font-family: "M PLUS 2";
+  font-size: 5rem;
+  font-weight: 300;
+  color: #004176;
+}
+
+#hometopview img{
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  /* max-width: 100%; */
+  max-height: 85%;
+  object-fit: fill;
 }
 
 .homesection {
