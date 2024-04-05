@@ -9,6 +9,14 @@
   --font: "M PLUS 1";
 }
 
+.about {
+  --allheaderposition: fixed;
+  --allheaderheight: 80px;
+  --color: #004176;
+  font-weight: 400;
+  --font: "M PLUS 1";
+}
+
 .other {
   --allheaderposition: fixed;
   --allheaderheight: 80px;
@@ -16,6 +24,7 @@
   font-weight: 400;
   --font: "M PLUS 1";
 }
+
 /* #004176
 #F7EDD1
 #0089C0 */
@@ -293,9 +302,10 @@ main{
 
 /*linkbutton*/
 .linkbutton {
-  width: 330px;
-  height: 50px;
-  margin: 20px;
+  width: 40%;
+  min-width: 300px;
+  height: 60px;
+  margin: 20px auto;
   border-radius: 25px;
   background-color: #004176;
   vertical-align: middle;
@@ -323,6 +333,14 @@ main{
   top: 50%;
   left: 50%;
   transform : translate(-50%,-50%);
-  font-size: 20px;
+  font-size: 1.2rem;
   color: #fff;
+}
+
+.linkbutton span::after{
+  margin: 0 0 0 5px;
+  font-size: 0.9rem;
+  vertical-align: middle;
+  content: ">";
+  color: #ffffff;
 }
