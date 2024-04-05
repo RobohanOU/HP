@@ -31,7 +31,7 @@ $(function () {
     });
 
     //スムーススクロール
-    var headerHeight = 70;
+    var headerHeight = 80;
     var speed = 400;//スムーズスクロールスピード
     var urlHash = location.hash;
     var url = location.pathname;

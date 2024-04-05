@@ -1,16 +1,12 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: AGTerminal;
-  src: url(../fonts/AGTerminal-Regular.otf);
-}
-
 /*変数*/
 .home {
   --allheaderposition: fixed;
-  --allheaderheight: 70px;
+  --allheaderheight: 80px;
   --color: #0089C0;
-  --font: AGTerminal;
+  font-weight: 400;
+  --font: "M PLUS 1";
 }
 /* #004176
 #F7EDD1
@@ -28,7 +24,7 @@ a:hover {
 }
 
 h2,h3{
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /*メイン*/
@@ -39,6 +35,8 @@ h2,h3{
   margin: 0 auto;
   --allheaderheightpad: calc(var(--allheaderheight) / 7);
   --allheadercontentsheight: calc(var(--allheaderheight) - var(--allheaderheightpad) * 2);
+  background-color: #fff;
+  color: #222;
   display: flex;
   flex-flow: column;
 }
@@ -70,8 +68,8 @@ main{
   height: var(--allheaderheight);
   position: var(--allheaderposition);
   box-sizing: border-box;
-  padding: var(--allheaderheightpad) 5%;
-  background-color: #00000000;
+  padding: var(--allheaderheightpad) 10%;
+  background-color: #004176;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -102,7 +100,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: AGTerminal;
+  font-family: "M PLUS 1";
 }
 
 .headernav ul li {
@@ -112,28 +110,39 @@ main{
 }
 
 .headernav a {
-  color: #ffffff;
+  color: #fff;
 }
 
 /*footer*/
 #allfooter {
   width: 100%;
-  height: 150px;
   box-sizing: border-box;
-  background-color: #0089C0;
+  background-color: #004176;
   padding: 20px 20px;
   text-align: center;
   color: #ffffff;
   vertical-align: bottom;
+  font-family: "M PLUS 1";
+}
+
+.return{
+  height: 150px;
+  margin: 20px;
+}
+
+#allfooter small{
+  display: block;
 }
 
 /*containerbox*/
 .containerbox {
   width: 300px;
-  height: 250px;
+  height: 270px;
   margin: 20px 10px;
   border-radius: 10px;
-  background: #fafafa;
+  border-width: 2px;
+  border: 0.1rem solid #949497;
+  background: #fff;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -141,7 +150,8 @@ main{
 }
 
 .containerbox:hover {
-  opacity: 0.5;
+  border-color:#004176;
+  outline: 0.1rem solid #004176;
 }
 
 .containerbox a{
@@ -162,15 +172,16 @@ main{
 }
 
 .containertitle h3{
-  margin: 10px 0;
-  font-size: 30px;
+  margin: 20px 12px 10px;
+  font-weight: 450;
+  font-size: 19px;
   font-family: var(--font);
   color: #000000;
 }
 
 /*topicbox*/
 .topicbox {
-  width: 600px;
+  width: 100%;
   height: 100px;
   margin: 20px 10px;
   padding: 10px;
@@ -197,7 +208,7 @@ main{
 #hometopview {
   height: 100vh;
   /* width: 100%; */
-  background-image: url("../images/sample.svg");
+  background-image: url("../images/top.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -205,13 +216,19 @@ main{
 
 .homesection {
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 50px auto 50px;
   text-align: left;
 }
 
+.homesection p{
+  margin: 10px auto 10px;
+  font-size: 16px;
+  font-family: var(--font);
+}
+
 .homesectiontitle {
-  font-size: 30px;
+  font-size: 36px;
   font-family: var(--font);
 }
 
