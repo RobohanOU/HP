@@ -4,7 +4,7 @@
 .home {
   --allheaderposition: fixed;
   --allheaderheight: 80px;
-  --color: #0089C0;
+  --color: #004176;
   font-weight: 400;
   --font: "M PLUS 1";
 }
@@ -126,8 +126,9 @@ main{
 }
 
 .return{
+  display: block;
+  margin: 20px auto;
   height: 150px;
-  margin: 20px;
 }
 
 #allfooter small{
@@ -145,7 +146,7 @@ main{
   text-align: center;
   position: relative;
   overflow: hidden;
-  transition: opacity 0.5s;
+  transition: outline 0.2s;
 }
 
 .containerbox:hover {
@@ -160,6 +161,7 @@ main{
   bottom: 0;
   left: 0;
 }
+
 .containerimg {
   height: 180px;
 }
@@ -170,8 +172,18 @@ main{
   object-fit: fill;
 }
 
+.containertitle{
+  height: 70px;
+  margin: 10px 12px;
+  position: relative;
+}
+
 .containertitle h3{
-  margin: 20px 12px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  width: 100%;
   font-weight: 450;
   font-size: 19px;
   font-family: var(--font);
@@ -218,7 +230,9 @@ main{
   width: 90%;
   max-width: 1000px;
   margin: 50px auto 50px;
+  padding: 10px 0px 10px 20px;
   text-align: left;
+  border-left: 10px solid #004176;
 }
 
 .homesection p{
@@ -228,8 +242,14 @@ main{
   font-family: var(--font);
 }
 
+.homesection ul li {
+  margin: 0.8rem 10px;
+  display: block;
+}
+
 .homesectiontitle {
   font-size: 36px;
+  color: #004176;
   font-family: var(--font);
 }
 
