@@ -8,6 +8,14 @@
   font-weight: 400;
   --font: "M PLUS 1";
 }
+
+.other {
+  --allheaderposition: fixed;
+  --allheaderheight: 80px;
+  --color: #004176;
+  font-weight: 400;
+  --font: "M PLUS 1";
+}
 /* #004176
 #F7EDD1
 #0089C0 */
@@ -178,7 +186,7 @@ main{
   position: relative;
 }
 
-.containertitle h3{
+.containertitle span{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -242,6 +250,12 @@ main{
   font-family: var(--font);
 }
 
+.homesection h3{
+  margin: 20px auto;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
 .homesection ul li {
   margin: 0.8rem 10px;
   display: block;
@@ -275,4 +289,40 @@ main{
 .aboutsectiontitle {
   font-size: 30px;
   font-family: var(--font);
+}
+
+/*linkbutton*/
+.linkbutton {
+  width: 330px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 25px;
+  background-color: #004176;
+  vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s;
+}
+
+.linkbutton:hover {
+  opacity: 0.5;
+}
+
+.linkbutton a{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.linkbutton span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  font-size: 20px;
+  color: #fff;
 }
