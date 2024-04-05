@@ -80,15 +80,24 @@ main{
 /*header*/
 
 #allheader {
+  display: flex;
   top: 0;
   width: 100%;
   height: var(--allheaderheight);
   position: var(--allheaderposition);
   box-sizing: border-box;
-  padding: var(--allheaderheightpad) 10%;
+  padding: var(--allheaderheightpad) 0;
   background-color: #004176;
-  text-align: center;
+  z-index: 1;
+}
+
+.allheadercontents {
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  margin: auto;
   display: flex;
+  text-align: center;
   justify-content: space-between;
   font-size: calc(var(--allheadercontentsheight) / 2);
   z-index: 1;
