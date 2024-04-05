@@ -17,6 +17,14 @@
   --font: "M PLUS 1";
 }
 
+.spons {
+  --allheaderposition: fixed;
+  --allheaderheight: 70px;
+  --color: #004176;
+  font-weight: 400;
+  --font: "M PLUS 1";
+}
+
 .other {
   --allheaderposition: fixed;
   --allheaderheight: 70px;
