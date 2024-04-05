@@ -1,11 +1,11 @@
 RewriteEngine on
 RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://robohan.net/$1 [R=301,L]
+RewriteRule ^(.*)$ https://test.kappas.work/$1 [R=301,L]
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 RewriteEngine on
 RewriteCond %{THE_REQUEST} ^.*/index.html
-RewriteRule ^(.*)index.html$ https://robohan.net/$1 [R=301,L]
+RewriteRule ^(.*)index.html$ https://test.kappas.work/$1 [R=301,L]
 ErrorDocument 404 /404.html
