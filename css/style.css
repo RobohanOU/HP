@@ -516,3 +516,49 @@ main{
   content: ">";
   color: #ffffff;
 }
+
+/*contactcard*/
+.contactcard {
+  width: 250px;
+  height: 150px;
+  margin: 20px 10px;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactcard a{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.cardimg {
+  height: 100px;
+}
+
+.cardimg img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.cardtext{
+  height: 50px;
+  margin: 10px 12px;
+  position: relative;
+}
+
+.cardtext span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: var(--font);
+  color: #000000;
+}
