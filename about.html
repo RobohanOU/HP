@@ -59,7 +59,6 @@
     <!--JavaScript-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/partsload.js"></script>
 
 </head>
 
@@ -67,6 +66,29 @@
     <div id = "wrapper" class = "about">
         <header>
             <div id="allheader">
+                <div class="allheadercontents">
+                    <h1>
+                        <a class="homelink headerlogo" href="https://robohan.net">
+                            大阪大学公認ロボット製作団体&nbsp;Robohan
+                        </a>
+                    </h1>
+                    <div class="hunbmenu">
+                        <input id="hunbmenuch" type="checkbox">
+                        <label for="hunbmenuch" class="burger">
+                            <span></span>
+                        </label>
+                        <nav class="headernav">
+                            <ul>
+                                <!--以下リンクを追加-->
+                                <li><a class="homelink" href="https://robohan.net"><span>HOME</span></a></li>
+                                <li><a class="aboutlink" href="https://robohan.net/about"><span>ABOUT</span></a></li>
+                                <li><a class="homelink" href="https://robohan.net/#join"><span>JOIN</span></a></li>
+                                <li><a class="homelink" href="https://robohan.net/#sponsor"><span>SPONSOR</span></a></li>
+                                <li><a class="homelink" href="https://robohan.net/#contact"><span>CONTACT</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </header>
         <main class="mainmargin">
@@ -123,6 +145,10 @@
 
         </main>
         <footer id="allfooter">
+            <a href="#wrapper">
+                <img src="./images/topreturn.png" class="return">
+            </a>
+            <small>©2024 Robohan All rights reserved</small>
         </footer>
     </div>
     <!--wrapper-->
