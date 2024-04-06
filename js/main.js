@@ -41,6 +41,9 @@ $(function () {
         setTimeout(function () {
             var target = $(urlHash);
             var position = target.offset().top - headerHeight;
+            if($('[id="hunbmenuch"]').prop('checked')){
+                $('[id="hunbmenuch"]').prop('checked', false);
+            }
             $("html, body").stop().animate({ scrollTop: position }, speed, "swing");
         }, 100);
     }
@@ -48,6 +51,9 @@ $(function () {
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top - headerHeight;
+        if($('[id="hunbmenuch"]').prop('checked')){
+            $('[id="hunbmenuch"]').prop('checked', false);
+        }
         $("html, body").animate({ scrollTop: position }, speed, "swing");
         return false;
     });
