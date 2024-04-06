@@ -1,6 +1,6 @@
 $(function() {
-  $("#allheader").load("https://test.kappas.work/htmlparts/allheader.html");
-  $("#allfooter").load("https://test.kappas.work/htmlparts/allfooter.html");
-  $.getScript("https://test.kappas.work/js/main.js", function() {
+  $("#allheader").load("https://robohan.net/htmlparts/allheader.html");
+  $("#allfooter").load("https://robohan.net/htmlparts/allfooter.html");
+  $.getScript("https://robohan.net/js/main.js", function() {
   });
 });
