@@ -317,11 +317,17 @@ main{
 
 .containerimg {
   height: 180px;
+  background-color: #fff;
 }
 
 .containerimg img {
+  position: absolute;
+  top: calc((100% - 70px) * 0.5);
+  left: 50%;
+  transform : translate(-50%,-50%);
   width: 100%;
-  height: 180px;
+  height: auto;
+  vertical-align: middle;
   object-fit: fill;
 }
 
