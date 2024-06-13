@@ -445,6 +445,22 @@ main{
   line-height: 1.5;
 }
 
+.homesection h4{
+  margin: 10px auto;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.homesection h5{
+  margin: 0px auto;
+  font-size: 16px;
+  line-height: 1.0;
+}
+
+.homesection small{
+  font-size: 12px;
+}
+
 .homesection ul li {
   margin: 0.8rem 10px;
   display: block;
@@ -569,4 +585,25 @@ main{
   font-size: 15px;
   font-family: var(--font);
   color: #000000;
+}
+
+.jlc ul li {
+  margin: 1.0rem 2rem 0.4rem;
+  padding-left: 0px;
+  display: flow-root list-item;
+  list-style-type: disc;
+}
+
+.jlc ol li {
+  margin: 1.0rem 2rem 0.4rem;
+  padding-left: 0px;
+}
+
+.jlc ul p {
+  margin: 5px 2rem 8px;
+}
+
+.jlc ol p {
+  margin: 5px 2rem 8px;
+
 }
