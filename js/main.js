@@ -16,19 +16,6 @@ $(function () {
     });
     _window.trigger('scroll');
 
-    //リンクの設定
-    var link = $('#wrapper').attr('class');
-    $('.' + link + 'link').each(function () {
-        var obj = $(this);
-        $(obj).attr('href', function (i, val) {
-            var linkhref = $(obj).attr('href');
-            var str = linkhref.match(/#\w+/);
-            if (str == null) {
-                str = "#wrapper";
-            }
-            return str;
-        });
-    });
 
     //スムーススクロール
     var headerHeight = 85;
