@@ -1,0 +1,24 @@
+.linkButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-lightgray);
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--color-text);
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.text {
+    font-size: var(--font-size-reg);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}

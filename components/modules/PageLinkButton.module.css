@@ -13,6 +13,7 @@
 
 .blueContainer .buttonText {
     color: #ffff;
+    font-family: inherit;
     font-size: var(--font-size-md);
     font-weight: 500;
     white-space: nowrap;
@@ -43,6 +44,7 @@
 
 .whiteContainer .buttonText {
     color: var(--color-navy);
+    font-family: inherit;
     font-size: var(--font-size-md);
     font-weight: 500;
     white-space: nowrap;

@@ -5,7 +5,7 @@ type ButtonColor = 'blue' | 'white';
 
 interface LinkButtonProps {
     text: string;   // ボタンに表示するテキスト
-    href: string;   // 遷移先のURL
+    url: string;   // 遷移先のURL
     color?: ButtonColor;
     className?: string;
 
@@ -20,16 +20,18 @@ export default function LinkButton({text, href, color = 'blue', className}: Link
     return (
         <Link
             href={href}
+
             /*HP外部のリンクのときセキュリティ対策*/
             target={href.startsWith('http') ? '_blank' : undefined}
             rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            
             /*cssで引数のclassNameのstyleを設定すればページごとにデザイン変更可能（設定しなければデフォルトのまま）*/
             className={`${containerClass} ${className || ''}`}
         >
             <span className={styles.buttonText}>{text}</span>
             <div className={styles.buttonArrowIcon}>
                 <svg
-                    /*矢印を作成*/
+                    /*矢印をsvgで作成*/
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
