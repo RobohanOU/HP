@@ -1,0 +1,65 @@
+.blueContainer{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--color-blue);
+    border-radius: 8px; /*四隅の丸み*/
+    padding: 12px 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影 */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blueContainer .buttonText {
+    color: #ffff;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.blueContainer:hover {
+    background-color: var(--color-darkblue);
+    transform: translateY(1px);
+}
+
+.blueContainer:hover .buttonArrowIcon {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+.whiteContainer{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffff;
+    border-radius: 8px; /*四隅の丸み*/
+    padding: 12px 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.whiteContainer .buttonText {
+    color: var(--color-navy);
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.whiteContainer:hover {
+    background-color: var(--color-lightgray);
+    transform: translateY(1px);
+}
+
+.whiteContainer:hover .buttonArrowIcon {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+.buttonArrowIcon {
+    color:#ffff;
+    background-color: var(--color-navy);
+}

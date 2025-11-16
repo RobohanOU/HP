@@ -1,0 +1,45 @@
+:root {
+    /*カラー*/
+    --color-text: #1e1e1e;
+    --color-background: #f1f1f1;
+    --color-blue: #0095ff;
+    --color-navy: #003166;
+    --color-darkblue: #006ebd;
+    --color-lightgray: #e0dfdf;
+    
+    /*フォントサイズ（8の倍数に統一）*/
+    --font-size-reg: 16px;
+    --font-size-md: 24px;
+    --font-size-sb: 32px;
+    --font-size-bld: 56px;
+
+    /*行間（フォントサイズの1.5倍）*/
+    --line-height: 1.5;
+}
+
+body {
+    font-family: var(--font-noto-sans-jp), sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-size: var(--font-size-reg);
+    line-height: var(--line-height);
+}
+
+h1 {
+    font-size: var(--font-size-bld);
+    font-weight: 700;
+    line-height: var(--line-height);
+}
+
+h2 {
+    font-size: var(--font-size-sb);
+    font-weight: 600;
+    line-height: var(--line-height);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    line-height: var(--line-height);
+}
+
