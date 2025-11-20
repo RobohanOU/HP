@@ -1,0 +1,22 @@
+.linkCard {
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.linkCard:hover {
+    background-color: var(--color-lightgray);
+
+}
+
+.gridChild {
+    grid-column-start: var(--grid-column-start);
+    grid-row-start: var(--grid-row-start);
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+    padding: 1.5rem;
+    box-shadow: 0 8px 16px var(--color-black);
+    font-size: var(--font-size-md);
+    border-radius: 50%;
+    background-color: var(--color-white);
+}

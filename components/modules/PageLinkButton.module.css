@@ -1,4 +1,4 @@
-.blueContainer{
+.blueContainer {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -12,8 +12,7 @@
 }
 
 .blueContainer .buttonText {
-    color: #ffff;
-    font-family: inherit;
+    color: var(--color-white);
     font-size: var(--font-size-md);
     font-weight: 500;
     white-space: nowrap;
@@ -34,7 +33,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: #ffff;
+    background-color: var(--color-white);
     border-radius: 8px; /*四隅の丸み*/
     padding: 12px 24px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影 */
@@ -62,6 +61,6 @@
 }
 
 .buttonArrowIcon {
-    color:#ffff;
+    color: var(--color-white);
     background-color: var(--color-navy);
 }

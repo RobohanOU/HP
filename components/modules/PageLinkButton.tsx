@@ -3,7 +3,7 @@ import styles from './LinkButton.module.css';
 
 type ButtonColor = 'blue' | 'white';
 
-interface LinkButtonProps {
+interface PageLinkButtonProps {
     text: string;   // ボタンに表示するテキスト
     url: string;   // 遷移先のURL
     color?: ButtonColor;
@@ -11,7 +11,7 @@ interface LinkButtonProps {
 
 }
 
-export default function LinkButton({text, href, color = 'blue', className}: LinkButtonProps) {
+export default function PageLinkButton({text, url, color = 'blue', className}: PageLinkButtonProps) {
     const containerClass = 
     color === 'white'
         ? styles.whiteContainer // 白背景のボタン
@@ -19,11 +19,11 @@ export default function LinkButton({text, href, color = 'blue', className}: Link
     
     return (
         <Link
-            href={href}
+            href={url}
 
             /*HP外部のリンクのときセキュリティ対策*/
-            target={href.startsWith('http') ? '_blank' : undefined}
-            rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+            target={url.startsWith('http') ? '_blank' : undefined}
+            rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
             
             /*cssで引数のclassNameのstyleを設定すればページごとにデザイン変更可能（設定しなければデフォルトのまま）*/
             className={`${containerClass} ${className || ''}`}
