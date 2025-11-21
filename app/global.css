@@ -6,6 +6,8 @@
     --color-navy: #003166;
     --color-darkblue: #006ebd;
     --color-lightgray: #e0dfdf;
+    --color-white: #ffff;
+    --color-black: #0000;
     
     /*フォントサイズ（8の倍数に統一）*/
     --font-size-reg: 16px;
@@ -22,6 +24,7 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     font-size: var(--font-size-reg);
+    font-weight: 400;
     line-height: var(--line-height);
 }
 

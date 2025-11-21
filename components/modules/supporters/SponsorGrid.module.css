@@ -1,0 +1,22 @@
+.gridContainer {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+}
+
+.gridContainer.is-gold {
+    grid-template-columns: 1fr;
+}
+
+.gridContainer.is-silver {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gridContainer.is-bronze {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridContainer.is-normal {
+    grid-template-columns: repeat(4, 1fr);
+}
