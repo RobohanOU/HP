@@ -1,4 +1,5 @@
 import React, { SVGProps } from "react";
+import Link from "next/link";
 import styles from "./SNSLinkButton.module.css";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa"
@@ -45,7 +46,7 @@ const SNSLinkButton: React.FC<SNSLinkButtonProps> = ({
     bgColor
 }) => {
     return (
-        <a
+        <Link
             href={url}
             target="_blank"
             rel="noopener norefeeror"
@@ -61,7 +62,7 @@ const SNSLinkButton: React.FC<SNSLinkButtonProps> = ({
             <span className={styles.text}>
                 {text}
             </span>
-        </a>
+        </Link>
     );
 };
 
