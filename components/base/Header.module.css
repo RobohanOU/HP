@@ -1,10 +1,8 @@
 .header {
     display: flex;
-    height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     border-bottom: 0.2rem solid ;
     border-bottom-color: var(--color-white);
     border-top: 0.5rem solid;
@@ -26,6 +24,7 @@
     font-weight: 1000;
     font-size: var(--font-size-mb);
     font-family: arial;
+    transition: color 0.5s;
 }
 
 .navLink:hover {
@@ -33,15 +32,9 @@
 }
 
 .snsList {
+    margin: 0 0 0 8;
     display: flex;
     gap: 1rem;
     list-style: none;
     align-items: center;
-}
-
-.border {
-    border-top: 0.5rem solid var(--color-blue);
-    border-bottom: 0.1rem solid var(--color-white);
-    width: 100%;
-    box-sizing: border-box;
 }

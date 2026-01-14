@@ -7,19 +7,23 @@
     background-color: var(--color-lightgray);
     text-decoration: none;
     cursor: pointer;
-    font-family: inherit;
     color: var(--color-text);
     height: 1rem;
+    transition: background-color 0.5s;
+}
+
+.linkButton:hover {
+    background-color: var(--color-gray);
 }
 
 .icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     margin-right: 0.5rem;
 }
 
 .text {
-    font-size: var(--font-size-reg);
+    font-size: smaller;
     font-weight: 500;
     letter-spacing: 0.5px;
 }

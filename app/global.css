@@ -6,6 +6,7 @@
     --color-navy: #003166;
     --color-darkblue: #006ebd;
     --color-lightgray: #e0dfdf;
+    --color-gray: #bfbfbf;
     --color-white: #ffff;
     --color-black: #0000;
     
@@ -13,10 +14,15 @@
     --font-size-reg: 16px;
     --font-size-md: 24px;
     --font-size-sb: 32px;
-    --font-size-bld: 56px;
+    --font-size-bld: 40px;
 
     /*行間（フォントサイズの1.5倍）*/
     --line-height: 1.5;
+}
+
+html {
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -26,6 +32,15 @@ body {
     font-size: var(--font-size-reg);
     font-weight: 400;
     line-height: var(--line-height);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: 0 1rem 0 1rem;
 }
 
 h1 {
