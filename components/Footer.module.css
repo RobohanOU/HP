@@ -1,18 +1,21 @@
 .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-columns: auto auto;
     margin-top: auto;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0;
+    padding: 0 1rem 0 1rem;
     border-top: 0.5rem solid;
     border-top-color: var(--color-blue);
+    box-sizing: border-box;
 }
 
 .footerLeft {
     display: flex;
     align-items: center;
-    margin: 0 0 0 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .profileText {
@@ -21,15 +24,20 @@
 }
 
 .navMenu {
-    margin: 0 0 0 auto; 
+    margin: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 0;
     border-left: 0.3rem solid;
     border-left-color: var(--color-lightgray);
 }
 
 .navList {
     display: block;
+    right: 0;
     list-style: none;
-    margin: 0 24 0 8;
+    margin: 0;
     align-items: center;
     gap: 0.5rem;
 }
@@ -65,7 +73,8 @@
 .copyright {
     grid-column-start: 1;
     grid-column-end: 3;
-    margin: 0 0 0 auto;
+    margin: 0 8 0 auto;
+    padding: 0;
     text-align: right;
     font-size: 0.6rem;
 }

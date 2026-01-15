@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import SNSLinkButton, { SNSPreset } from '../modules/SNSLinkButton';
+import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
+import ResponsiveImage from './ResponsiveImage';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,19 +10,21 @@ export default function Footer() {
             <div className={styles.footerLeft}>
                 <div className={styles.profileText}>
                     <p>大阪大学公認ロボット製作団体</p>
-                    <div>
-                    <Image
-                        src="/images/logos/logo_R.png"
-                        alt="Robohan Logo R"
-                        width={56}
-                        height={56}
-                    />
-                    <Image
-                        src="/images/logos/Robohan_black(no logo, full).png"
-                        alt="Robohan Logo UoO"
-                        width={175}
-                        height={56}
-                    />
+                    <div style={{display: 'flex'}}>
+                        <ResponsiveImage
+                            src="/images/logos/logo_R.png"
+                            alt="Robohan Logo R"
+                            originalWidth={100}
+                            originalHeight={100}
+                            displaySize='4rem'
+                        />
+                        <ResponsiveImage
+                            src="/images/logos/Robohan_black(no logo, full).png"
+                            alt="Robohan Logo UoO"
+                            originalWidth={1250}
+                            originalHeight={400}
+                            displaySize='13rem'
+                        />
                     </div>
                     <p>大阪大学吹田キャンパス内  HANDAIクラフトベースC<br/>〒565-0871  大阪府吹田市山田丘2</p>
                 </div>

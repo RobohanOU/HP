@@ -1,26 +1,27 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import SNSLinkButton, { SNSPreset } from '../modules/SNSLinkButton';
+import ResponsiveImage from './ResponsiveImage';
+import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
 import styles from './Header.module.css';
 
 export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <Image
+                <ResponsiveImage
                     src="/images/logos/logo_R.png"
                     alt="Robohan Logo R"
-                    width={48}
-                    height={48}
-                >
-                </Image>
-                <Image
+                    originalWidth={100}
+                    originalHeight={100}
+                    displaySize='3rem'
+                />
+                <ResponsiveImage
                     src="/images/logos/Robohan_black(no logo, full).png"
                     alt="Robohan Logo UoO"
-                    width={150}
-                    height={48}
-                >
-                </Image>
+                    originalWidth={1250}
+                    originalHeight={400}
+                    displaySize='10rem'
+                />
             </div>
             <nav className={styles.navMenu}>
                 <ul className={styles.navList}>

@@ -8,7 +8,6 @@ interface PageLinkButtonProps {
     url: string;   // 遷移先のURL
     color?: ButtonColor;
     className?: string;
-
 }
 
 export default function PageLinkButton({text, url, color = 'blue', className}: PageLinkButtonProps) {
