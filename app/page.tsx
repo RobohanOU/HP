@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <div>
-            <h1>見出し1</h1>
+            <h1>NEWS</h1>
             <p>あいうえお</p>
             <h2>見出し2</h2>
             <p>かきくけこ</p>

@@ -23,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${notoSansJP.variable}`}>
-        <Header/>
-        <main>{children}</main>
-        <Footer/>
+        <div className="siteWrapper">
+          <Header/>
+          <main className="mainContent">{children}</main>
+          <Footer/>
+        </div>
       </body>
     </html>
   );
