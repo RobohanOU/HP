@@ -8,6 +8,7 @@ type SponsorGrade = 'gold' | 'silver' | 'bronze' | 'normal'
 
 interface SponsorData {
     name: string
+    grade: string
     logo?: string
     logoAlt?: string
     logoWidth?: number
@@ -31,10 +32,11 @@ const COMPONENT_MAP = {
 export default function SponsorGrid ({sponsors, grade}: SponsorGridProps) {
     const SponsorComponent = COMPONENT_MAP[grade];
     const gridClassName = `${styles.gridContainer} ${styles[`is-${grade}`]}`;
+    const filteredSponsors = sponsors.filter(s => s.grade == grade);
 
     return (
         <div className={gridClassName}>
-            {sponsors.map((sponsor, index) => (
+            {filteredSponsors.map((sponsor, index) => (
                 <SponsorComponent
                     key={sponsor.name || index}
                     name={sponsor.name}

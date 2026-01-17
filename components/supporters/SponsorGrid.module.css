@@ -1,8 +1,8 @@
 .gridContainer {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
-    column-gap: 1.5em;
-    row-gap: 1.5em;
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
 
 .gridContainer.is-gold {
@@ -15,8 +15,12 @@
 
 .gridContainer.is-bronze {
     grid-template-columns: repeat(3, 1fr);
+    text-align: center;
 }
 
 .gridContainer.is-normal {
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    font-weight: 600;
 }

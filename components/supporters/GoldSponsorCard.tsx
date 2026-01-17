@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ResponsiveImage from "../ResponsiveImage";
 import Link from "next/link";
 import styles from "./SponsorCard.module.css"
 
@@ -12,18 +12,22 @@ interface GoldSuponsorCardProps {
     description: string
 }
 
+const displaySize = "40%";
+
 export default function GoldSuponsorCard ({name, logo, logoAlt, logoWidth, logoHeight, url, description}: GoldSuponsorCardProps) {
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
+    const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
 
-    if(url === undefined){
+    if(!hasUrl){
         return (
             <div className={noLinkClass}>
-                <Image
+                <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    originalWidth={logoWidth}
+                    originalHeight={logoHeight}
+                    displaySize={displaySize}
                 />
                 <h3>{name}</h3>
                 <p>{description}</p>
@@ -39,14 +43,15 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, logoWidth, logoH
                 target={url.startsWith('http') ? '_blank' : undefined}
                 rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
-                <Image
+                <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    originalWidth={logoWidth}
+                    originalHeight={logoHeight}
+                    displaySize={displaySize}
                 />
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <p className={styles.description}>{description}</p>
             </Link>
         )
     }

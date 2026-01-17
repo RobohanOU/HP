@@ -9,8 +9,9 @@ interface NormalSupporterCardProps {
 export default function NormalSupporterCard ({name, url}: NormalSupporterCardProps) {
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
+    const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
 
-    if(url === undefined){
+    if(!hasUrl){
         return (
             <div className={noLinkClass}>{name}</div>
         )
@@ -24,7 +25,7 @@ export default function NormalSupporterCard ({name, url}: NormalSupporterCardPro
                 target={url.startsWith('http') ? '_blank' : undefined}
                 rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
-                {name}
+                <p>{name}</p>
             </Link>
         )
     }

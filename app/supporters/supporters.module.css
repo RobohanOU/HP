@@ -1,0 +1,43 @@
+.goldSponsor::before {
+    content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/images/logos/logo_R_gold.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.silverSponsor::before {
+    content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/images/logos/logo_R_silver.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.bronzeSponsor::before {
+    content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/images/logos/logo_R_bronze.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.normalSponsor::before {
+    content: '';
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/images/logos/logo_R.png);
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.sponsorContainer {
+    margin-bottom: 3rem;
+}
