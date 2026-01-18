@@ -39,6 +39,10 @@ body {
     max-width: var(--max-width);
 }
 
+.header {
+    min-height: 5rem;
+}
+
 main {
     flex: 1;
     width: 100%;

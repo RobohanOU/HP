@@ -1,12 +1,16 @@
-import Image from 'next/image';
+"use client";
 import Link from 'next/link';
 import ResponsiveImage from './ResponsiveImage';
 import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
+import { useScrollDirection } from './hooks/useScrollDirection';
 import styles from './Header.module.css';
 
 export default function Header() {
+    const isVisible = useScrollDirection();
+
     return (
-        <header className={styles.header}>
+        <>
+        <header className={`${styles.header} ${isVisible ? '' : styles.hidden}`}>
             <div className={styles.logo}>
                 <ResponsiveImage
                     src="/images/logos/logo_R.png"
@@ -53,6 +57,8 @@ export default function Header() {
                 </ul>
             </div>
         </header>
+        <div className={styles.headerSpacer}/>
+        </>
     )
 }
 
