@@ -67,11 +67,11 @@ export default function Footer() {
             </div>
             <nav className={styles.navMenu}>
                 <ul className={styles.navList}>
-                    <li><Link href="./" className={styles.navLink}>HOME</Link></li>
-                    <li><Link href="./about" className={styles.navLink}>ABOUT</Link></li>
-                    <li><Link href="./join" className={styles.navLink}>JOIN</Link></li>
-                    <li><Link href="./supporters" className={styles.navLink}>SUPPORTERS</Link></li>
-                    <li><Link href="./news" className={styles.navLink}>NEWS</Link></li>
+                    <li><Link href="/" className={styles.navLink}>HOME</Link></li>
+                    <li><Link href="/about" className={styles.navLink}>ABOUT</Link></li>
+                    <li><Link href="/join" className={styles.navLink}>JOIN</Link></li>
+                    <li><Link href="/supporters" className={styles.navLink}>SUPPORTERS</Link></li>
+                    <li><Link href="/news" className={styles.navLink}>NEWS</Link></li>
                 </ul>
             </nav>
             <div className={styles.copyright}><p>©Robohan, All Rights Reserved.</p></div>
