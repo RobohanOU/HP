@@ -15,7 +15,7 @@
     --font-size-md: 24px;
     --font-size-bld: 32px;
 
-    /*行間（フォントサイズの1.5倍）*/
+    /*行間（フォントサイズの1倍）*/
     --line-height: 1.5;
 
     /*最大画面幅*/
@@ -104,7 +104,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-reg);
     font-weight: 600;
     line-height: var(--line-height);
 }

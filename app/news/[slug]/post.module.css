@@ -1,0 +1,22 @@
+.title {
+    font-size: var(--font-size-bld);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.date {
+    font-size: 1rem;
+    display: flex;
+    align-items: right;
+}
+
+.content h1 {
+    all: revert;
+    font-size: var(--font-size-bld);
+    font-weight: 700;
+    line-height: var(--line-height);
+}
+.content h1::before, h1::after {
+    content: none !important;
+}
