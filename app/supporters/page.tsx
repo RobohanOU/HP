@@ -1,5 +1,6 @@
 import SponsorGrid from "@/components/supporters/SponsorGrid"
 import styles from "./supporters.module.css"
+import PageLinkButton from "@/components/PageLinkButton";
 
 const Sponsors = [
     {
@@ -95,34 +96,48 @@ const Sponsors = [
 export default function Supporters() {
     return (
         <div>
-            <h1>Supporters</h1>
-            <div className={styles.sponsorContainer}>
-                <h2 className={styles.goldSponsor}>Gold Sponsors</h2>
-                <SponsorGrid
-                    sponsors={Sponsors}
-                    grade="gold"
-                />
+            <div>
+                <h1>Supporters</h1>
+                <div className={styles.sponsorContainer}>
+                    <h2 className={styles.goldSponsor}>Gold Sponsors</h2>
+                    <SponsorGrid
+                        sponsors={Sponsors}
+                        grade="gold"
+                    />
+                </div>
+                <div className={styles.sponsorContainer}>
+                    <h2 className={styles.silverSponsor}>Silver Sponsors</h2>
+                    <SponsorGrid
+                        sponsors={Sponsors}
+                        grade="silver"
+                    />
+                </div>
+                <div className={styles.sponsorContainer}>
+                    <h2 className={styles.bronzeSponsor}>Bronze Sponsors</h2>
+                    <SponsorGrid
+                        sponsors={Sponsors}
+                        grade="bronze"
+                    />
+                </div>
+                <div className={styles.sponsorContainer}>
+                    <h2 className={styles.normalSponsor}>協力企業・個人サポーター様</h2>
+                    <SponsorGrid
+                        sponsors={Sponsors}
+                        grade="normal"
+                    />
+                </div>
             </div>
-            <div className={styles.sponsorContainer}>
-                <h2 className={styles.silverSponsor}>Silver Sponsors</h2>
-                <SponsorGrid
-                    sponsors={Sponsors}
-                    grade="silver"
-                />
-            </div>
-            <div className={styles.sponsorContainer}>
-                <h2 className={styles.bronzeSponsor}>Bronze Sponsors</h2>
-                <SponsorGrid
-                    sponsors={Sponsors}
-                    grade="bronze"
-                />
-            </div>
-            <div className={styles.sponsorContainer}>
-                <h2 className={styles.normalSponsor}>協力企業・個人サポーター様</h2>
-                <SponsorGrid
-                    sponsors={Sponsors}
-                    grade="normal"
-                />
+            <div className={styles.request}>
+                <h1>ご支援のお願い</h1>
+                <p>Robohanは大学組織・民間企業の方々をはじめとするスポンサー・サポーターの皆様からご支援をいただき、活動しております。<br />ご興味のある企業の方や、個人的に支援をしたい!という方がいらっしゃれば、以下の「CONTACT」からご連絡をぜひともお願いいたします。</p>
+                <div className={styles.linkButton}>
+                    <PageLinkButton
+                        text="CONTACT"
+                        url=""
+                        color='white'
+                        className="contact"
+                    />
+                </div>
             </div>
         </div>
     )

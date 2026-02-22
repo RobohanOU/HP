@@ -3,7 +3,7 @@
     align-items: center;
     gap: 8px;
     background-color: var(--color-blue);
-    border-radius: 8px; /*四隅の丸み*/
+    border-radius: 1rem; /*四隅の丸み*/
     padding: 12px 24px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影 */
     text-decoration: none;
@@ -32,12 +32,14 @@
 .whiteContainer{
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 1rem;
     background-color: var(--color-white);
-    border-radius: 8px; /*四隅の丸み*/
-    padding: 12px 24px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影 */
+    border-radius: 2rem; /*四隅の丸み*/
+    padding: 0.5rem 1rem;
+    box-shadow: 0  0.2rem 0.1rem rgba(0, 0, 0, 0.2); /* 影 */
     cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -45,22 +47,24 @@
     color: var(--color-navy);
     font-family: inherit;
     font-size: var(--font-size-md);
-    font-weight: 500;
+    font-weight: 700;
     white-space: nowrap;
-    text-decoration: none;
 }
 
 .whiteContainer:hover {
     background-color: var(--color-lightgray);
-    transform: translateY(1px);
-}
-
-.whiteContainer:hover .buttonArrowIcon {
-    transform: translateX(3px);
-    transition: transform 0.2s ease;
 }
 
 .buttonArrowIcon {
-    color: var(--color-white);
-    background-color: var(--color-navy);
+    color: var(--color-navy);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
 }

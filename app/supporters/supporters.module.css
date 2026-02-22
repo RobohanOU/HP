@@ -41,3 +41,28 @@
 .sponsorContainer {
     margin-bottom: 3rem;
 }
+
+.request {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 3rem;
+}
+
+.request h1 {
+    all: revert;
+}
+
+.request h1::before, 
+.request h1::after {
+    all: revert;
+}
+
+.linkButton {
+    display: flex;
+    justify-content: center; /* 左右の中央揃え */
+    align-items: center;     /* 上下の中央揃え（必要に応じて） */
+    width: 100%;
+    padding: 1rem;
+}

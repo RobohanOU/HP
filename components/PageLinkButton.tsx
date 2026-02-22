@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import styles from './LinkButton.module.css';
+import { FaCircleArrowRight } from 'react-icons/fa6';
+import styles from '@/components/PageLinkButton.module.css';
 
 type ButtonColor = 'blue' | 'white';
 
@@ -29,19 +30,7 @@ export default function PageLinkButton({text, url, color = 'blue', className}: P
         >
             <span className={styles.buttonText}>{text}</span>
             <div className={styles.buttonArrowIcon}>
-                <svg
-                    /*矢印をsvgで作成*/
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M5 12h13M12 5l7 7-7 7"/>
-                </svg>
+                <FaCircleArrowRight className={styles.icon}/>
             </div>
         </Link>
     );
