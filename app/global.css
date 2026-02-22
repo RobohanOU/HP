@@ -59,7 +59,8 @@ h1 {
     display: inline-block;
     position: relative;
     padding-left: 3rem;
-    padding-bottom: 0.1rem;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
     font-size: var(--font-size-bld);
     font-weight: 700;
     line-height: var(--line-height);
@@ -101,11 +102,20 @@ h2 {
     font-size: var(--font-size-md);
     font-weight: 700;
     line-height: var(--line-height);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
 }
 
 h3 {
     font-size: var(--font-size-reg);
     font-weight: 600;
     line-height: var(--line-height);
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 

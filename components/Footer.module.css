@@ -24,6 +24,10 @@
     font-size: 0.7rem;
 }
 
+.profileText p {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
 .navMenu {
     margin: 0;
     position: sticky;

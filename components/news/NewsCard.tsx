@@ -18,18 +18,20 @@ export default function NewsCard ({url, title, date, description, image, imageAl
     return (
         <Link
             href={url}
-            className={`${styles.baseCard}`}
+            className={styles.baseCard}
         >
-            <ResponsiveImage
-                src={image}
-                alt={imageAlt}
-                originalWidth={imageWidth}
-                originalHeight={imageHeight}
-                displaySize={displaySize}
-            />
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <p className={`${styles.date}`}>{date}</p>
+            <div className={styles.image}>
+                <ResponsiveImage
+                    src={image}
+                    alt={imageAlt}
+                    originalWidth={imageWidth}
+                    originalHeight={imageHeight}
+                    displaySize={displaySize}
+                />
+            </div>
+            <h2 className={styles.title}>{title}</h2>
+            <p className={styles.description}>{description}</p>
+            <p className={styles.date}>{date}</p>
         </Link>
     )
 }

@@ -32,7 +32,7 @@ export default function NewsGrid ({posts}: NewsGridProps) {
                     imageAlt={post.imageAlt}
                     imageWidth={post.imageWidth}
                     imageHeight={post.imageHeight}
-                    displaySize={post.diplaySize}
+                    displaySize={post.displaySize}
                 />
             ))}
         </div>

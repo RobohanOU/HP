@@ -2,13 +2,19 @@
     font-size: var(--font-size-bld);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    margin: 0;
 } 
 
 .date {
     font-size: 1rem;
-    display: flex;
-    align-items: right;
+}
+
+.imageWrapper {
+    margin: 1rem;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 .content h1 {
@@ -16,7 +22,32 @@
     font-size: var(--font-size-bld);
     font-weight: 700;
     line-height: var(--line-height);
+    margin: 0;
+    padding: 0;
 }
-.content h1::before, h1::after {
-    content: none !important;
+
+.content h1::before, 
+.content h1::after {
+    all: revert;
+}
+
+.content {
+    line-height: 2rem;
+    white-space: pre-wrap;
+}
+
+.content p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.content h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.content h3 {
+    margin: 0;
+    padding: 0;
 }

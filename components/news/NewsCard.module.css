@@ -1,25 +1,46 @@
 .baseCard {
-    grid-column-start: var(--grid-column-start);
-    grid-row-start: var(--grid-row-start);
-    grid-column-end: span 1;
-    grid-row-end: span 1;
-    padding: 1.5rem;
-    box-shadow: 0 8px 16px var(--color-black);
-    font-size: var(--font-size-md);
-    border-radius: 10%;
-    background-color: var(--color-white);
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: flex;
+    transition: background-color 0.5s;
+    grid-column-start: var(--grid-column-start);
+    grid-row-start: var(--grid-row-start);
+    grid-row-end: span 1;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    border-radius: 1rem;
+    background-color: var(--color-white);
+    font-size: var(--font-size-reg);
+    color: var(--color-text);
+    min-width: minmax(100%, max-content);
+    height: min-content;
+    box-shadow: 0.1rem 0.2rem var(--color-lightgray);
 }
 
 .baseCard:hover {
     background-color: var(--color-lightgray);
 }
 
-.date {
+.image {
+    border-radius: 1rem;
     position: relative;
-    right: 0;
-    bottom: 0;
+    overflow: hidden;
+}
+
+.title {
+    display: flex;
+    justify-content: left;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.description {
+    line-height: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.date {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: right;
 }

@@ -6,6 +6,7 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 import styles from './post.module.css'
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import React from 'react';
 
 interface PostData {
     slug: string;
@@ -72,13 +73,15 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                     <h1>{postData.title}</h1>
                     <div className={styles.date}>{postData.date}</div>   
                 </div>
-                <ResponsiveImage
-                    src={postData.image}
-                    alt={postData.imageAlt}
-                    originalWidth={postData.imageWidth}
-                    originalHeight={postData.imageHeight}
-                    displaySize='50rem'
-                />
+                <div className={styles.imageWrapper}>
+                    <ResponsiveImage
+                        src={postData.image}
+                        alt={postData.imageAlt}
+                        originalWidth={postData.imageWidth}
+                        originalHeight={postData.imageHeight}
+                        displaySize='100%'
+                    />
+                </div>
                 <ReactMarkdown
                     components={{
                         a: ({node, href, children, ...props}) => {
@@ -104,6 +107,37 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                                     {children}
                                 </a>
                             );
+                        },
+                        p: ({ children }) => {
+                            // 子要素の中に img (変換後は ResponsiveImage) が含まれているか判定
+                            const hasImage = React.Children.toArray(children).some(
+                                (child) => React.isValidElement(child) && (child.type === 'img' || (typeof child.type === 'function' && child.type.name === 'ResponsiveImage'))
+                            );
+
+                            // 画像が含まれる場合は div として出力、そうでなければ通常の p として出力
+                            return hasImage ? (
+                                <div className={styles.imageParagraph}>{children}</div>
+                            ) : (
+                                <p className={styles.paragraph}>{children}</p>
+                            );
+                        },
+                        img: ({src, alt}) => {
+                            if(!src || typeof src !== 'string') return null;
+                            const decodedSrc = src.replace(/&amp;/g, '&');
+                            const [cleanSrc, queryString] = decodedSrc.split('?');
+                            const params = new URLSearchParams(queryString);
+                            const originalWidth = params.get('width') || 190;
+                            const originalHeight = params.get('height') || 1080;
+
+                            return (
+                                <ResponsiveImage
+                                    src={cleanSrc || '/images/NoImage.png'}
+                                    alt={alt || ''}
+                                    displaySize='80%'
+                                    originalWidth={Number(originalWidth)}
+                                    originalHeight={Number(originalHeight)}
+                                />
+                            )
                         }
                     }}
                 >{postData.content}</ReactMarkdown>
