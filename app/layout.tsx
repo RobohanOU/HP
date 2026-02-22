@@ -12,7 +12,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: "Robohan -大阪大学公認ロボット製作団体-",
-  description: "RobohanはNHK学生ロボコン優勝を目指す大阪大学公認のロボット製作団体です。",
+  description: "Robohanは大阪大学公認のロボット製作団体です。NHK学生ロボコンと呼ばれる全国の大学が参戦する大会で優勝することを目標に日々活動を行っています!",
 };
 
 export default function RootLayout({
