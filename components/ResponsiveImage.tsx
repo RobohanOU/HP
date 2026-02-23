@@ -6,7 +6,7 @@ interface ResponsiveImagePropsinterface {
     alt: string;  // 画像が読み込まれないときの代替テキスト
     originalWidth: number;  // 画像の横幅(px)
     originalHeight: number; // 画像の縦幅(px)
-    displaySize: string;  // 設定したいサイズ(rem)
+    displaySize: string;  // 設定したいサイズ
 }
 
 export default function ResponsiveImage({src, alt, originalWidth, originalHeight, displaySize}: ResponsiveImagePropsinterface) {

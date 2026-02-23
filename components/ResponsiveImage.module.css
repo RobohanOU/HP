@@ -9,4 +9,6 @@
     width: 100% !important;
     height: auto !important;
     display: block;
+    object-fit: cover;
+    object-position: center;
 }

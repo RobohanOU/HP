@@ -1,0 +1,85 @@
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.slideItem {
+    flex-shrink: 0;  /* これが重要！縮ませない */
+    width: 100%;     /* 親（container）と同じ幅を維持 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+}
+
+.button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--color-background);
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    z-index: 10;
+}
+
+.button:hover {
+    background-color: var(--color-black);
+}
+
+.button:nth-of-type(1) {
+    left: 2rem;
+}
+
+.button:nth-of-type(2) {
+    right: 2rem;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+    padding: 1rem 0;
+}
+
+.dot {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.dotNormal {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-gray);
+}
+
+.dotActive {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--color-black);
+    transform: scale(1.2);
+}

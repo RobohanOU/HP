@@ -8,7 +8,7 @@
     --color-lightgray: #e0dfdf;
     --color-gray: #bfbfbf;
     --color-white: #ffff;
-    --color-black: #0000;
+    --color-black: #000;
     
     /*フォントサイズ（8の倍数に統一）*/
     --font-size-reg: 16px;
@@ -115,7 +115,7 @@ h3 {
 }
 
 p {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
 
