@@ -11,7 +11,10 @@
 }
 
 .imageWrapper {
-    margin: 1rem;
+    justify-self: center;
+    margin: 1rem 0;
+    width: 90%;
+    height: auto;
     position: relative;
     border-radius: 2rem;
     overflow: hidden;
@@ -50,4 +53,14 @@
 .content h3 {
     margin: 0;
     padding: 0;
+}
+
+.insertImage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin-top: -1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    justify-self: center;
 }

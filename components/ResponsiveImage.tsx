@@ -11,7 +11,7 @@ interface ResponsiveImagePropsinterface {
 
 export default function ResponsiveImage({src, alt, originalWidth, originalHeight, displaySize}: ResponsiveImagePropsinterface) {
     return (
-        <span 
+        <div 
             className={styles.container}
             style={{width: displaySize}}
         >
@@ -23,6 +23,6 @@ export default function ResponsiveImage({src, alt, originalWidth, originalHeight
                 className={styles.image}
                 sizes={`(max-width: ${originalWidth}px) 100vw, ${displaySize}`}
             />
-        </span>
+        </div>
     )
 }

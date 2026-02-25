@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import rehypeUnwrapImages from 'rehype-unwrap-images';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import styles from './post.module.css'
 import { notFound } from 'next/navigation';
@@ -83,6 +84,7 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                     />
                 </div>
                 <ReactMarkdown
+                    rehypePlugins={[rehypeUnwrapImages]}
                     components={{
                         a: ({node, href, children, ...props}) => {
                             if(!href) return null;
@@ -111,7 +113,7 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                         p: ({ children }) => {
                             // 子要素の中に img (変換後は ResponsiveImage) が含まれているか判定
                             const hasImage = React.Children.toArray(children).some(
-                                (child) => React.isValidElement(child) && (child.type === 'img' || (typeof child.type === 'function' && child.type.name === 'ResponsiveImage'))
+                                (child) => React.isValidElement(child) && (child.type === 'span' || (typeof child.type === 'function' && child.type.name === 'ResponsiveImage'))
                             );
 
                             // 画像が含まれる場合は div として出力、そうでなければ通常の p として出力
@@ -130,13 +132,15 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                             const originalHeight = params.get('height') || 1080;
 
                             return (
-                                <ResponsiveImage
-                                    src={cleanSrc || '/images/NoImage.png'}
-                                    alt={alt || ''}
-                                    displaySize='80%'
-                                    originalWidth={Number(originalWidth)}
-                                    originalHeight={Number(originalHeight)}
-                                />
+                                <div className={styles.insertImage}>
+                                    <ResponsiveImage
+                                        src={cleanSrc || '/images/NoImage.png'}
+                                        alt={alt || ''}
+                                        displaySize='100%'
+                                        originalWidth={Number(originalWidth)}
+                                        originalHeight={Number(originalHeight)}
+                                    />
+                                </div>
                             )
                         }
                     }}

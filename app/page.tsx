@@ -76,22 +76,28 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <h1>Join us!</h1>
-            <h2>Robohanはどの時期からでも入部可能です!</h2>
-            <p>Robohanでは一緒にロボットを作る仲間を大募集しています!クラフトベースで共にロボットを作りませんか？連絡はこちらまで↓</p>
-            <PageLinkButton
-                text="CONTACT"
-                url=""
-            />
-            <p>新入生歓迎期（4~6月）は仮入部の受付も行っています!<br/>詳しくは4月サークルオリエンテーションや、5月いちょう祭で!</p>
-            <h1>Supporters</h1>
-            <h2>Robohanは支援によって支えられています。</h2>
-            <p>Robohanは大学組織・民間企業の方々をはじめとするスポンサー・サポーターの皆様からご支援をいただき、活動しております。<br />ご興味のある企業の方や、個人的に支援をしたい!という方がいらっしゃれば、ご連絡をぜひお願いいたします。</p>
-            <p>支援額に応じた返礼もご用意しております。詳細は以下から↓</p>
-            <PageLinkButton
-                text="SUPPORTERS"
-                url="/supporters"
-            />
+            <div className={styles.join}>
+                <h1>Join us!</h1>
+                <h2>Robohanはどの時期からでも入部可能です!</h2>
+                <p>Robohanでは一緒にロボットを作る仲間を大募集しています! クラフトベースで共にロボットを作りませんか？連絡はこちらまで↓</p>
+                <PageLinkButton
+                    text="CONTACT"
+                    url="https://docs.google.com/forms/d/e/1FAIpQLSe0VcA8o55Yu9P0gTbuFr8K2c3w82YNrep-9Ru5jyLIg_OodA/viewform?usp=publish-editor"
+                    className={styles.contactButton}
+                />
+                <p>新入生歓迎期（4~6月）は仮入部の受付も行っています!<br/>詳しくは4月サークルオリエンテーションや、5月いちょう祭で!</p>
+            </div>
+            <div className={styles.supporters}>
+                <h1>Supporters</h1>
+                <h2>Robohanは支援によって支えられています。</h2>
+                <p>Robohanは大学組織・民間企業の方々をはじめとするスポンサー・サポーターの皆様からご支援をいただき、活動しております。<br />ご興味のある企業の方や、個人的に支援をしたい!という方がいらっしゃれば、ご連絡をぜひお願いいたします。</p>
+                <p>支援額に応じた返礼もご用意しております。詳細は以下から↓</p>
+                <PageLinkButton
+                    text="SUPPORTERS"
+                    url="/supporters"
+                    className={styles.supportersButton}
+                />
+            </div>
         </div>
     )
 }
