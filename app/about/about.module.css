@@ -1,0 +1,12 @@
+.nhkImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.imageWrapper {
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 1rem;
+}

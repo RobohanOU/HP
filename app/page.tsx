@@ -59,7 +59,7 @@ export default function Home() {
                 <div className={styles.aboutText}>
                     <h1>About</h1>
                     <h2>ものづくりの面白さを大事に。</h2>
-                    <p>Robohanはロボコンを軸にモノづくりが大好きな人たちが日々技術を切磋琢磨しています。<br/>Robohanの目標はNHK学生ロボコン優勝ですが、それだけでなくさまざまな大会に出場しています。</p>
+                    <p>Robohanはロボコンを軸にものづくりが大好きな人たちが日々技術を切磋琢磨しています。<br/>Robohanの目標はNHK学生ロボコン優勝ですが、それだけでなくさまざまな大会に出場しています。</p>
                     <div className={styles.aboutButton}>
                         <PageLinkButton
                             text="ABOUT"
