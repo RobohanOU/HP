@@ -1,0 +1,30 @@
+.welcome {
+    margin-bottom: 4rem;
+}
+
+.seminar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.imageWrapper {
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.description {
+    display: flex;
+    
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    width: 100%;
+    margin: 4rem 0;
+}

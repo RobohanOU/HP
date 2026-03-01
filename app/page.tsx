@@ -3,7 +3,7 @@ import PageLinkButton from "@/components/PageLinkButton"
 import ImageSlider from "@/components/ImageSlider";
 import styles from './home.module.css'
 
-const COMPETITIONS_IMAGES = [
+const COMPETITIONS_IMAGE_SLIDES = [
     {
         id: 1,
         src: '/images/NoImage.png',
@@ -58,7 +58,7 @@ export default function Home() {
             <div className={styles.about}>
                 <div className={styles.aboutText}>
                     <h1>About</h1>
-                    <h2>ものづくりの面白さを大事に。</h2>
+                    <h2>ものづくりの面白さを大切に。</h2>
                     <p>Robohanはロボコンを軸にものづくりが大好きな人たちが日々技術を切磋琢磨しています。<br/>Robohanの目標はNHK学生ロボコン優勝ですが、それだけでなくさまざまな大会に出場しています。</p>
                     <div className={styles.aboutButton}>
                         <PageLinkButton
@@ -70,7 +70,7 @@ export default function Home() {
                 <div className={styles.slider}>
                     <h2>出場した大会</h2>
                     <ImageSlider
-                        slides={COMPETITIONS_IMAGES}
+                        slides={COMPETITIONS_IMAGE_SLIDES}
                         displaySize="100%"
                         interval={7500}
                     />
@@ -81,8 +81,8 @@ export default function Home() {
                 <h2>Robohanはどの時期からでも入部可能です!</h2>
                 <p>Robohanでは一緒にロボットを作る仲間を大募集しています! クラフトベースで共にロボットを作りませんか？連絡はこちらまで↓</p>
                 <PageLinkButton
-                    text="CONTACT"
-                    url="https://docs.google.com/forms/d/e/1FAIpQLSe0VcA8o55Yu9P0gTbuFr8K2c3w82YNrep-9Ru5jyLIg_OodA/viewform?usp=publish-editor"
+                    text="JOIN"
+                    url="/join"
                     className={styles.contactButton}
                 />
                 <p>新入生歓迎期（4~6月）は仮入部の受付も行っています!<br/>詳しくは4月サークルオリエンテーションや、5月いちょう祭で!</p>
@@ -97,6 +97,10 @@ export default function Home() {
                     url="/supporters"
                     className={styles.supportersButton}
                 />
+            </div>
+            <div className={styles.news}>
+                <h1>News</h1>
+                <h2>Robohanの今。</h2>
             </div>
         </div>
     )
