@@ -1,3 +1,7 @@
+.content p {
+    line-height: 48px;
+}
+
 .welcome {
     margin-bottom: 4rem;
 }

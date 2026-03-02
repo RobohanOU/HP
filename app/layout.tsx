@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin", "japanese"],
-  weight: ["400", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,9 @@ export default function RootLayout({
             <Header/>
           </div>
           <main className="mainContent">{children}</main>
-          <Footer/>
+          <div className="footer">
+            <Footer/>
+          </div>
         </div>
       </body>
     </html>

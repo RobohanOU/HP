@@ -131,8 +131,7 @@ export default async function Home() {
             <div className={styles.supporters}>
                 <h1>Supporters</h1>
                 <h2>Robohanは支援によって支えられています。</h2>
-                <p>Robohanは大学組織・民間企業の方々をはじめとするスポンサー・サポーターの皆様からご支援をいただき、活動しております。<br />ご興味のある企業の方や、個人的に支援をしたい!という方がいらっしゃれば、ご連絡をぜひお願いいたします。</p>
-                <p>支援額に応じた返礼もご用意しております。詳細は以下から↓</p>
+                <p>Robohanは大学組織・民間企業の方々をはじめとするスポンサー・サポーターの皆様からご支援をいただき、活動しております。<br />ご興味のある企業の方や、個人的に支援をしたい!という方がいらっしゃれば、ご連絡をぜひお願いいたします。<br/>支援額に応じた返礼もご用意しております。詳細は以下から↓</p>
                 <PageLinkButton
                     text="SUPPORTERS"
                     url="/supporters"
@@ -149,7 +148,7 @@ export default async function Home() {
                 </div>
                 <div className={styles.newsButton}>
                     <PageLinkButton
-                        text="News"
+                        text="NEWS"
                         url="/news"
                     />
                 </div>
