@@ -1,6 +1,10 @@
 import Image from "next/image";
 import PageLinkButton from "@/components/PageLinkButton"
 import ImageSlider from "@/components/ImageSlider";
+import NewsGrid from "@/components/news/NewsGrid";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 import styles from './home.module.css'
 
 const COMPETITIONS_IMAGE_SLIDES = [
@@ -29,7 +33,44 @@ const COMPETITIONS_IMAGE_SLIDES = [
 
 
 
-export default function Home() {
+export default async function Home() {
+    const postsDirectory = path.join(process.cwd(), 'posts');
+
+    if(!fs.existsSync(postsDirectory)) return [];
+    
+    const allFiles = fs.readdirSync(postsDirectory);
+
+    const posts = allFiles
+        .filter((filename) => {
+            return filename !== 'template.md' && filename !== 'README.md';
+        })
+        .map((filename)=> {
+            const filePath = path.join(postsDirectory, filename);
+            const fileContents = fs.readFileSync(filePath, 'utf-8');
+
+            // gray-matterでメタデータと本文を分離
+            const { data } = matter(fileContents);
+            const slug = filename.replace(/\.md$/, '');
+            const url = `/news/${slug}`
+            
+            return {
+                url: url,
+                title: data.title || 'No title', 
+                date: data.date || '',
+                description: data.description || '',
+                image: data.image || '/images/news/notitle.jpg',
+                imageAlt: data.imageAlt || data.title || '',
+                imageWidth: Number(data.imageWidth),
+                imageHeight: Number(data.imageHeight),
+                displaySize: '100%',
+            };
+        });
+
+    // 日付順にソート
+    const lastesrPosts = posts
+        .sort((a, b) => (a.date < b.date ? 1: -1))
+        .slice(0, 3);
+
     return (
         <div>
             <section className={styles.hero}>
@@ -85,7 +126,7 @@ export default function Home() {
                     url="/join"
                     className={styles.contactButton}
                 />
-                <p>新入生歓迎期（4~6月）は仮入部の受付も行っています!<br/>詳しくは4月サークルオリエンテーションや、5月いちょう祭で!</p>
+                <p>新入生歓迎期（4～6月）は仮入部の受付も行っています!<br/>詳しくは4月サークルオリエンテーションや、5月いちょう祭で!</p>
             </div>
             <div className={styles.supporters}>
                 <h1>Supporters</h1>
@@ -101,6 +142,17 @@ export default function Home() {
             <div className={styles.news}>
                 <h1>News</h1>
                 <h2>Robohanの今。</h2>
+                <div className={styles.newsPosts}>
+                    <NewsGrid
+                        posts={lastesrPosts}
+                    />
+                </div>
+                <div className={styles.newsButton}>
+                    <PageLinkButton
+                        text="News"
+                        url="/news"
+                    />
+                </div>
             </div>
         </div>
     )

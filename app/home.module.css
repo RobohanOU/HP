@@ -159,3 +159,12 @@
     justify-self: center;
     margin: 1rem 0;
 }
+
+.newsPosts {
+    margin: 2rem 0;
+}
+
+.newsButton {
+    justify-self: right;
+    margin: 2rem;
+}
