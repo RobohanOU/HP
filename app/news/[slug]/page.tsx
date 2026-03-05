@@ -17,8 +17,6 @@ interface PostData {
     content: string;
     image: string;
     imageAlt: string;
-    imageWidth: number;
-    imageHeight: number;
 }
 
 async function getPostData(slug: string) : Promise<PostData>{
@@ -37,8 +35,6 @@ async function getPostData(slug: string) : Promise<PostData>{
         description: data.description,
         image: data.image,
         imageAlt: data.imageAlt,
-        imageWidth: data.imageWidth,
-        imageHeight: data.imageHeight
     };
 }
 
@@ -78,9 +74,8 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                     <ResponsiveImage
                         src={postData.image}
                         alt={postData.imageAlt}
-                        originalWidth={postData.imageWidth}
-                        originalHeight={postData.imageHeight}
-                        displaySize='100%'
+                        width="100%"
+                        height="40rem"
                     />
                 </div>
                 <ReactMarkdown
@@ -136,9 +131,8 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                                     <ResponsiveImage
                                         src={cleanSrc || '/images/NoImage.png'}
                                         alt={alt || ''}
-                                        displaySize='100%'
-                                        originalWidth={Number(originalWidth)}
-                                        originalHeight={Number(originalHeight)}
+                                        width="100%"
+                                        height="35rem"
                                     />
                                 </div>
                             )

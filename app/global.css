@@ -7,8 +7,12 @@
     --color-darkblue: #006ebd;
     --color-lightgray: #e0dfdf;
     --color-gray: #bfbfbf;
+    --color-pink: #ff69b4;
+    --color-orange: #ff8c00;
+    --color-green: #008000;
     --color-white: #ffff;
     --color-black: #000;
+
     
     /*フォントサイズ（8の倍数に統一）*/
     --font-size-reg: 16px;
@@ -103,7 +107,7 @@ h1::after {
 }
 
 h2 {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-bld);
     font-weight: 700;
     line-height: var(--line-height);
     margin-bottom: 0.5rem;
@@ -111,7 +115,7 @@ h2 {
 }
 
 h3 {
-    font-size: var(--font-size-reg);
+    font-size: var(--font-size-md);
     font-weight: 600;
     line-height: var(--line-height);
     margin-bottom: 0.5rem;

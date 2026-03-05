@@ -1,13 +1,13 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
-import ResponsiveImage from "./ResponsiveImage";
+import { useState, useEffect, useCallback, ReactNode } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
-import { motion, AnimatePresence, scale } from "framer-motion";
-import styles from "./ImageSlider.module.css";
+import { motion, AnimatePresence } from "framer-motion";
+import styles from "./CycleSlider.module.css";
 
 const variants = {
     enter: (direction: number) => ({
+        zIndex: 0,
         x: direction > 0 ? "100%" : "-100%",
         opacity: 0,
         scale: 0.95,
@@ -26,21 +26,18 @@ const variants = {
     }),
 };
 
-interface Slide {
-    id: number;   // 画像のインデックス
-    src: string;  // 画像のパス
-    alt: string;  // 画像が読み込まれないときの代替テキスト
-    originalWidth: number;  // 画像の横幅(px)
-    originalHeight: number; // 画像の縦幅(px)
+interface SlideItem {
+    id: number;
+    slide: ReactNode;
 }
 
-interface ImageSliderProps {
-    slides: Slide[];
-    displaySize: string;  // 設定したいサイズ
+interface CycleSliderProps {
+    slides: SlideItem[];
     interval?: number;  // 自動再生の間隔(s)
+    height: string;
 }
 
-export default function ImageSlider({slides, displaySize, interval=5000}: ImageSliderProps) {
+export default function ImageSlider({slides, interval=5000, height}: CycleSliderProps) {
     const [[page, direction], setPage] = useState([0, 0]);
 
     // slidesの数で割った余りを使うことで無限ループを実現
@@ -60,8 +57,8 @@ export default function ImageSlider({slides, displaySize, interval=5000}: ImageS
 
     return (
         <div className={styles.container}>
-            <div className={styles.slide}>
-                <AnimatePresence initial={false} custom={direction} mode="popLayout">
+            <div className={styles.slide} style={{height: height}}>
+                <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                         key={page}
                         custom={direction}
@@ -70,19 +67,13 @@ export default function ImageSlider({slides, displaySize, interval=5000}: ImageS
                         animate="center"
                         exit="exit"
                         transition={{
-                            x: { type: "tween", duration: 0.8, ease: [0.4, 0, 0.2, 1]},
                             opacity: { duration: 0.5 },
                             scale: { duration: 0.5 }
                         }}
                         className={styles.slideItem}
+                        style={{height: height}}
                     >
-                        <ResponsiveImage
-                            src={slides[currentIndex].src}
-                            alt={slides[currentIndex].alt}
-                            originalWidth={slides[currentIndex].originalWidth}
-                            originalHeight={slides[currentIndex].originalHeight}
-                            displaySize={displaySize}
-                        />
+                        {slides[currentIndex].slide}
                     </motion.div>
                 </AnimatePresence>
             </div>

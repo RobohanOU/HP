@@ -1,14 +1,15 @@
 .container {
     position: relative;
-    margin: 0 auto;
-    max-width: 100%;
-    display: block;
+    overflow: hidden;
+}
+
+.rounded {
+    border-radius: 1rem;
 }
 
 .image {
     width: 100% !important;
-    height: auto !important;
-    display: block;
+    height: 100% !important;
     object-fit: cover;
     object-position: center;
 }

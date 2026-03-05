@@ -1,4 +1,3 @@
-import fs from "fs"
 import NewsCard from "./NewsCard"
 import styles from "./NewsGrid.module.css"
 

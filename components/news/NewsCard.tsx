@@ -9,9 +9,6 @@ interface NewsCardProps {
     description: string
     image: string
     imageAlt: string
-    imageWidth: number
-    imageHeight: number
-    displaySize: string
 }
 
 export default function NewsCard ({url, title, date, description, image, imageAlt, imageWidth, imageHeight, displaySize}: NewsCardProps) {
@@ -24,9 +21,8 @@ export default function NewsCard ({url, title, date, description, image, imageAl
                 <ResponsiveImage
                     src={image}
                     alt={imageAlt}
-                    originalWidth={imageWidth}
-                    originalHeight={imageHeight}
-                    displaySize={displaySize}
+                    width="100%"
+                    height="15rem"
                 />
             </div>
             <h2 className={styles.title}>{title}</h2>

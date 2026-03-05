@@ -1,33 +1,45 @@
 import Image from "next/image";
 import PageLinkButton from "@/components/PageLinkButton"
-import ImageSlider from "@/components/ImageSlider";
+import CycleSlider from "@/components/CycleSlider";
 import NewsGrid from "@/components/news/NewsGrid";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import styles from './home.module.css'
+import ResponsiveImage from "@/components/ResponsiveImage";
+
+const COMPETITIONS_IMAGE_HEIGHT = "20rem";
 
 const COMPETITIONS_IMAGE_SLIDES = [
     {
         id: 1,
-        src: '/images/NoImage.png',
-        alt: 'No Image',
-        originalWidth: 1920,
-        originalHeight: 1080
+        slide: 
+        <ResponsiveImage
+            src='/images/NoImage.png'
+            alt='No Image'
+            width="100%"
+            height={COMPETITIONS_IMAGE_HEIGHT}
+        />
     },
     {
         id: 2,
-        src: '/images/hero_gray.jpg',
-        alt: 'Robohan',
-        originalWidth: 3408,
-        originalHeight: 2272
+        slide:
+        <ResponsiveImage
+            src='/images/hero_gray.jpg'
+            alt='Robohan'
+            width="100%"
+            height={COMPETITIONS_IMAGE_HEIGHT}
+        />
     },
     {
         id: 3,
-        src: '/images/news/20260301/practice.jpg',
-        alt: 'practice',
-        originalWidth: 1920,
-        originalHeight: 1080
+        slide:
+        <ResponsiveImage
+            src='/images/news/20260301/practice.jpg'
+            alt='practice'
+            width="100%"
+            height={COMPETITIONS_IMAGE_HEIGHT}
+        />
     }
 ]
 
@@ -109,11 +121,11 @@ export default async function Home() {
                     </div>
                 </div>
                 <div className={styles.slider}>
-                    <h2>出場した大会</h2>
-                    <ImageSlider
+                    <h3>出場した大会</h3>
+                    <CycleSlider
                         slides={COMPETITIONS_IMAGE_SLIDES}
-                        displaySize="100%"
                         interval={7500}
+                        height="20rem"
                     />
                 </div>
             </div>

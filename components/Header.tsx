@@ -15,16 +15,16 @@ export default function Header() {
                 <ResponsiveImage
                     src="/images/logos/logo_R.png"
                     alt="Robohan Logo R"
-                    originalWidth={100}
-                    originalHeight={100}
-                    displaySize='3rem'
+                    width='3rem'
+                    height='3rem'
+                    borderRadius={false}
                 />
                 <ResponsiveImage
                     src="/images/logos/Robohan_black(no logo, full).png"
                     alt="Robohan Logo UoO"
-                    originalWidth={1250}
-                    originalHeight={400}
-                    displaySize='10rem'
+                    width='9rem'
+                    height='3rem'
+                    borderRadius={false}
                 />
             </div>
             <nav className={styles.navMenu}>

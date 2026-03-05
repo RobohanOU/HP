@@ -10,20 +10,24 @@ export default function Footer() {
             <div className={styles.footerLeft}>
                 <div className={styles.profileText}>
                     <p>大阪大学公認ロボット製作団体</p>
-                    <div style={{display: 'flex'}}>
+                    <div style={{
+                        display: 'flex',
+                        margin: '1rem 0'
+                    }}>
                         <ResponsiveImage
                             src="/images/logos/logo_R.png"
                             alt="Robohan Logo R"
-                            originalWidth={100}
-                            originalHeight={100}
-                            displaySize='4rem'
+                            width='4rem'
+                            height='4rem'
+                            borderRadius={false}
                         />
                         <ResponsiveImage
                             src="/images/logos/Robohan_black(no logo, full).png"
                             alt="Robohan Logo UoO"
-                            originalWidth={1250}
-                            originalHeight={400}
-                            displaySize='13rem'
+                            width='13rem'
+                            height='4rem'
+                            borderRadius={false}    
+                        
                         />
                     </div>
                     <p>大阪大学吹田キャンパス内  HANDAIクラフトベースC<br/>〒565-0871  大阪府吹田市山田丘2</p>

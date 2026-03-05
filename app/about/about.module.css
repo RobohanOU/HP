@@ -1,12 +1,155 @@
+.teamWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0 4.5rem;
+    gap: 2rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+}
+
+.teamText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8rem;
+    line-height: 2.0;
+    gap: 2rem;
+}
+
+.teamText h2 {
+    display: inline-block;
+    height: fit-content;
+    align-items: center;
+    white-space: nowrap;
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: var(--font-size-bld);
+    border-radius: 1rem;
+}
+
+.teamText p {
+    padding-left: 1rem;
+}
+
+.kikouhan {
+    background-color: var(--color-orange);
+}
+
+.kairohan {
+    background-color: var(--color-green);
+}
+
+.seigyohan {
+    background-color: var(--color-darkblue);
+}
+
+.teamImageWrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.teamImage {
+    justify-self: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: rem;
+}
+
 .nhkImages {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
-.imageWrapper {
-    justify-self: center;
-    overflow: hidden;
+.roboconCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border-radius: 1rem;
+    overflow: hidden;
+    gap: 2rem;
+    background-color: var(--color-white);
+    margin: 2rem 0;
+    box-shadow: 0.1rem 0.2rem var(--color-lightgray);
+}
+
+.haruroboText {
+    padding: 2rem 1rem;
+    line-height: 2.0;
+}
+
+.haruroboText h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+
+.haruroboText h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-pink);
+    border-radius: 0.25rem;
+}
+
+.natsuroboText {
+    padding: 2rem;
+    line-height: 2.0;
+}
+
+.natsuroboText h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+
+.natsuroboText h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-blue);
+    border-radius: 0.25rem;
+}
+
+.gakuroboText {
+    padding: 2rem 1rem;
+    line-height: 2.0;
+}
+
+.gakuroboText h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+
+.gakuroboText h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-darkblue);
+    border-radius: 0.25rem;
+}
+
+.teamContent {
+    padding: 3rem 4rem 3rem 4rem;
+    margin: 0 -4rem;
+    background-color: var(--color-white);
+}
+
+.teamSlide {
+    padding: 3rem 0 4rem 0;
+    margin: 0 -4rem;
+    background-color: var(--color-blue);
 }

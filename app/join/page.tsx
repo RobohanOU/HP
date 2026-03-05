@@ -18,9 +18,8 @@ export default function Join () {
                         <ResponsiveImage
                             src="/images/join/esa.png"
                             alt="esa"
-                            originalWidth={1919}
-                            originalHeight={954}
-                            displaySize="100%"
+                            width="100%"
+                            height="20rem"
                         />
                     </div>
                     <div className={styles.description}>
@@ -33,9 +32,8 @@ export default function Join () {
                         <ResponsiveImage
                             src="/images/join/seminar.jpg"
                             alt="勉強会"
-                            originalWidth={4000}
-                            originalHeight={2252}
-                            displaySize="100%"
+                            width="100%"
+                            height="20rem"
                         />
                     </div>
                 </div>

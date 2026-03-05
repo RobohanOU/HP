@@ -6,18 +6,16 @@ interface GoldSuponsorCardProps {
     name: string
     logo: string
     logoAlt: string
-    logoWidth: number
-    logoHeight: number
     url?: string
     description: string
 }
 
-const displaySize = "40%";
-
-export default function GoldSuponsorCard ({name, logo, logoAlt, logoWidth, logoHeight, url, description}: GoldSuponsorCardProps) {
+export default function GoldSuponsorCard ({name, logo, logoAlt, url, description}: GoldSuponsorCardProps) {
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
     const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
+    const logoWidth = "100%";
+    const logoHeight = "12rem";
 
     if(!hasUrl){
         return (
@@ -25,9 +23,10 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, logoWidth, logoH
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
                 <p>{description}</p>
@@ -46,9 +45,10 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, logoWidth, logoH
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
                 <p className={styles.description}>{description}</p>

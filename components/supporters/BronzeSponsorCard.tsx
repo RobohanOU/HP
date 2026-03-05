@@ -6,17 +6,17 @@ interface BronzeSuponsorCardProps {
     name: string
     logo: string
     logoAlt: string
-    logoWidth: number
-    logoHeight: number
     url?: string
 }
 
 const displaySize = "100%"
 
-export default function BronzeSuponsorCard ({name, logo, logoAlt, logoWidth, logoHeight, url}: BronzeSuponsorCardProps) {
+export default function BronzeSuponsorCard ({name, logo, logoAlt, url}: BronzeSuponsorCardProps) {
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
     const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
+    const logoWidth = "100%";
+    const logoHeight = "10rem";
 
     if(!hasUrl){
         return (
@@ -24,9 +24,10 @@ export default function BronzeSuponsorCard ({name, logo, logoAlt, logoWidth, log
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
             </div>
@@ -44,9 +45,10 @@ export default function BronzeSuponsorCard ({name, logo, logoAlt, logoWidth, log
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
             </Link>

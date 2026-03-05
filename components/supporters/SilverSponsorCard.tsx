@@ -12,12 +12,13 @@ interface SilverSuponsorCardProps {
     description: string
 }
 
-const displaySize = "80%";
-
-export default function SilverSuponsorCard ({name, logo, logoAlt, logoWidth, logoHeight, url, description}: SilverSuponsorCardProps) {    
+export default function SilverSuponsorCard ({name, logo, logoAlt, url, description}: SilverSuponsorCardProps) {    
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
     const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
+    const logoWidth = "100%";
+    const logoHeight = "10rem";
+
 
     if(!hasUrl){
         return (
@@ -25,9 +26,10 @@ export default function SilverSuponsorCard ({name, logo, logoAlt, logoWidth, log
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
                 <p>{description}</p>
@@ -46,9 +48,10 @@ export default function SilverSuponsorCard ({name, logo, logoAlt, logoWidth, log
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    originalWidth={logoWidth}
-                    originalHeight={logoHeight}
-                    displaySize={displaySize}
+                    width={logoWidth}
+                    height={logoHeight}
+                    objectFit="contain"
+                    borderRadius={false}
                 />
                 <h3>{name}</h3>
                 <p>{description}</p>

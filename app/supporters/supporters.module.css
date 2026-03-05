@@ -61,8 +61,8 @@
 
 .linkButton {
     display: flex;
-    justify-content: center; /* 左右の中央揃え */
-    align-items: center;     /* 上下の中央揃え（必要に応じて） */
+    justify-content: center;
+    align-items: center;     
     width: 100%;
     padding: 1rem;
 }

@@ -4,24 +4,27 @@ import styles from "./ResponsiveImage.module.css"
 interface ResponsiveImagePropsinterface {
     src: string;  // 画像のパス
     alt: string;  // 画像が読み込まれないときの代替テキスト
-    originalWidth: number;  // 画像の横幅(px)
-    originalHeight: number; // 画像の縦幅(px)
-    displaySize: string;  // 設定したいサイズ
+    width: string;  // 設定したいサイズ
+    height: string;
+    borderRadius?: boolean;
+    objectFit?: "cover" | "contain";
 }
 
-export default function ResponsiveImage({src, alt, originalWidth, originalHeight, displaySize}: ResponsiveImagePropsinterface) {
+export default function ResponsiveImage({src, alt, width, height, borderRadius=true, objectFit="cover"}: ResponsiveImagePropsinterface) {
     return (
         <div 
-            className={styles.container}
-            style={{width: displaySize}}
+            className={`${styles.container} ${borderRadius ? styles.rounded : ''}`}
+            style={{
+                width: width,
+                height: height
+            }}
         >
             <Image
                 src={src}
                 alt={alt}
-                width={originalWidth}
-                height={originalHeight}
+                fill
                 className={styles.image}
-                sizes={`(max-width: ${originalWidth}px) 100vw, ${displaySize}`}
+                style={{objectFit: objectFit}}
             />
         </div>
     )
