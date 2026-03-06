@@ -11,7 +11,7 @@ const TEAM_SLIDES = [
         <div className={styles.teamWrapper}>
             <div className={styles.teamText}>
                 <h2 className={styles.kikouhan}>機構班</h2>
-                <p>ロボットのハードウェアの設計及び加工を行う班。<br/>機構は主にCADというソフトを使って、PC上で設計します。<br/>また、完成後は各々の担当する機構の保守も行います。</p>
+                <p>ロボットのハードウェアの設計及び加工を行う班です。<br/>機構は主にCADというソフトを使って、PC上で設計します。<br/>また、完成後は各々の担当する機構の保守も行います。</p>
             </div>
             <div className={styles.teamImageWrapper}>
                 <ResponsiveImage

@@ -11,7 +11,7 @@ interface NewsCardProps {
     imageAlt: string
 }
 
-export default function NewsCard ({url, title, date, description, image, imageAlt, imageWidth, imageHeight, displaySize}: NewsCardProps) {
+export default function NewsCard ({url, title, date, description, image, imageAlt}: NewsCardProps) {
     return (
         <Link
             href={url}
@@ -23,6 +23,7 @@ export default function NewsCard ({url, title, date, description, image, imageAl
                     alt={imageAlt}
                     width="100%"
                     height="15rem"
+                    objectFit="contain"
                 />
             </div>
             <h2 className={styles.title}>{title}</h2>
