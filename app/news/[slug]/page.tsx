@@ -8,6 +8,8 @@ import styles from './post.module.css'
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
+import { Metadata } from 'next';
+import { title } from 'process';
 
 interface PostData {
     slug: string;
@@ -17,6 +19,8 @@ interface PostData {
     content: string;
     image: string;
     imageAlt: string;
+    imageWidth: number;
+    imageHeight: number;
 }
 
 async function getPostData(slug: string) : Promise<PostData>{
@@ -35,6 +39,8 @@ async function getPostData(slug: string) : Promise<PostData>{
         description: data.description,
         image: data.image,
         imageAlt: data.imageAlt,
+        imageWidth: data.imageWidth,
+        imageHeight: data.imageHeight
     };
 }
 
@@ -52,6 +58,40 @@ export async function generateStaticParams() {
             slug: slugWithoutMd,
         };
     });
+}
+
+export async function generateMetadata({ params }: { params: Promise<{slug: string}> }){
+    const {slug} = await params;
+    const postData = await getPostData(slug);
+    const baseUrl = "https://www.robohan.net";
+    const shareImage = postData.image.startsWith('http')
+        ? postData.image
+        : `${baseUrl}${postData.image}`
+    
+    return {
+        title: postData.title,
+        description: postData.description,
+        openGraph: {
+            title: postData.title,
+            description: postData.description,
+            url: `${baseUrl}/news/${slug}`,
+            images: [
+                {
+                    url: shareImage,
+                    width: postData.imageWidth,
+                    height: postData.imageHeight
+                }
+            ]
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: postData.title,
+            description: postData.description,
+            site: "@Robohan_",
+            creator: "@Robohan_",
+            images: [shareImage]
+        }
+    } 
 }
 
 export default async function Post({params}: {params: Promise<{slug: string}>}) {
@@ -122,9 +162,6 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                             if(!src || typeof src !== 'string') return null;
                             const decodedSrc = src.replace(/&amp;/g, '&');
                             const [cleanSrc, queryString] = decodedSrc.split('?');
-                            const params = new URLSearchParams(queryString);
-                            const originalWidth = params.get('width') || 190;
-                            const originalHeight = params.get('height') || 1080;
 
                             return (
                                 <div className={styles.insertImage}>

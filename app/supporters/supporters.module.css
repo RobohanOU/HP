@@ -1,3 +1,7 @@
+.goldSponsor {
+    margin-bottom: 1rem;
+}
+
 .goldSponsor::before {
     content: '';
     display: inline-block;
@@ -6,6 +10,10 @@
     background-image: url(/images/logos/logo_R_gold.png);
     background-size: contain;
     vertical-align: middle;
+}
+
+.silverSponsor {
+    margin-bottom: 1rem;
 }
 
 .silverSponsor::before {
@@ -18,6 +26,10 @@
     vertical-align: middle;
 }
 
+.bronzeSponsor {
+    margin-bottom: 1rem;
+}
+
 .bronzeSponsor::before {
     content: '';
     display: inline-block;
@@ -26,6 +38,10 @@
     background-image: url(/images/logos/logo_R_bronze.png);
     background-size: contain;
     vertical-align: middle;
+}
+
+.normalSponsor {
+    margin-bottom: 1rem;
 }
 
 .normalSponsor::before {
@@ -45,9 +61,8 @@
 .request {
     background-color: var(--color-blue);
     color: var(--color-white);
-    padding: 2rem;
-    border-radius: 2rem;
-    margin-bottom: 3rem;
+    margin: 0 -4rem 3rem -4rem;
+    padding: 3rem 4rem;
 }
 
 .request h1 {
