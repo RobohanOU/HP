@@ -5,17 +5,24 @@
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     align-items: center;
-    vertical-align: middle;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-bottom: 0.2rem solid;
     border-bottom-color: var(--color-white);
     border-top: 0.5rem solid;
     border-top-color: var(--color-blue);
     box-sizing: border-box;
-    min-width: var(--min-width);
+    min-width: 0;
     transition: transform 0.5s ease-in-out;
     z-index: 100;
     background-color: var(--color-background);
+}
+
+.hamburger {
+    display: none;
+} 
+
+.navContainer {
+    display: contents;
 }
 
 .hidden {
@@ -34,9 +41,9 @@
     margin: 0 0.5rem 0 0;
 }
 
-.navList {
+.navMenu {
     display: flex;
-    gap: 5rem;
+    gap: clamp(2rem, 8vw, 5rem);
     list-style: none;
     margin: 0 1.5rem 0 1.5rem;
     padding: 0;
@@ -47,9 +54,13 @@
     color: var(--color-text);
     text-decoration: none;
     font-weight: 1000;
-    font-size: var(--font-size-mb);
     font-family: arial;
     transition: color 0.5s;
+    flex-shrink: 0;
+}
+
+.navLink p {
+    margin: 0;
 }
 
 .navLink:hover {
@@ -59,7 +70,89 @@
 .snsList {
     margin: 0 0 0 0.5rem;
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
     list-style: none;
     align-items: center;
+}
+
+@media (max-width: 767px) {
+    .header {
+        grid-template-columns: auto 1fr auto;
+        min-width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        grid-column: 3;
+        background: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 10000;
+        border: none;
+        outline: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: 0.5s;
+        border-radius: 0.5rem;
+    }
+
+    .hamburger:hover {
+        background-color: var(--color-lightgray);
+    }
+
+    .active {
+        color: var(--color-white);
+        transition: 0.5s;
+    }
+
+    .active:hover {
+        background-color: var(--color-darkblue);
+    }
+
+    .navContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 50vh;
+        background-color: var(--color-background);
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+        gap: 2rem;
+        padding-left: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    .navOpen {
+        right: 0;
+        background-color: var(--color-blue);
+        box-shadow: 0  0.1rem 0.1rem var(--color-navy); /* 影 */
+
+    }
+
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .navLink {
+        padding-left: 1rem;
+        color: var(--color-white);
+    }
+
+    .navLink:hover {
+        color: var(--color-lightgray);
+    }
+
+    .snsList {
+        display: none;
+    }
 }

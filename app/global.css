@@ -24,6 +24,9 @@
 
     /*最大画面幅*/
     --max-width: 100vw;
+
+    /*スマホ用に切り替える画面幅*/
+    --sp-width: 767px;
 }
 
 body {
@@ -126,4 +129,3 @@ p {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
-

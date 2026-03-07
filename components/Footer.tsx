@@ -44,7 +44,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <SNSLinkButton
-                                text="robohan_"
+                                text="Robohan_"
                                 url="https://x.com/Robohan_"                            
                                 icon={SNSPreset.x.icon}
                                 iconColor={SNSPreset.x.iconColor}

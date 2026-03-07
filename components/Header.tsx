@@ -4,8 +4,15 @@ import ResponsiveImage from './ResponsiveImage';
 import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
 import { useScrollDirection } from './hooks/useScrollDirection';
 import styles from './Header.module.css';
+import { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 export default function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+    const closeMenu = () => setIsOpen(false);
     const isVisible = useScrollDirection();
 
     return (
@@ -27,35 +34,37 @@ export default function Header() {
                     borderRadius={false}
                 />
             </div>
-            <nav className={styles.navMenu}>
-                <ul className={styles.navList}>
-                    <li><Link href="/" className={styles.navLink}>HOME</Link></li>
-                    <li><Link href="/about" className={styles.navLink}>ABOUT</Link></li>
-                    <li><Link href="/join" className={styles.navLink}>JOIN</Link></li>
-                    <li><Link href="/supporters" className={styles.navLink}>SUPPORTERS</Link></li>
-                    <li><Link href="/news" className={styles.navLink}>NEWS</Link></li>
-                </ul>
-            </nav>
-            <div>
-                <ul className={styles.snsList}>
-                    <li>
-                        <SNSLinkButton
-                            text="ourobohan"
-                            url="https://www.youtube.com/@ourobohan"
-                            icon={SNSPreset.youtube.icon}
-                            iconColor={SNSPreset.youtube.iconColor}
-                        />
-                    </li>
-                    <li>
-                        <SNSLinkButton
-                            text="robohan_"
-                            url="https://x.com/Robohan_"                            
-                            icon={SNSPreset.x.icon}
-                            iconColor={SNSPreset.x.iconColor}
-                        />
-                    </li>
-                </ul>
+            <button
+                className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
+                onClick={toggleMenu}
+            >
+                <GiHamburgerMenu/>
+            </button>
+
+            <div className={`${styles.navContainer} ${isOpen ? styles.navOpen : ""}`}>
+                <nav className={styles.navMenu}>
+                    <Link href="/" className={styles.navLink}><p>HOME</p></Link>
+                    <Link href="/about" className={styles.navLink}><p>ABOUT</p></Link>
+                    <Link href="/join" className={styles.navLink}><p>JOIN</p></Link>
+                    <Link href="/supporters" className={styles.navLink}><p>SUPPORTERS</p></Link>
+                    <Link href="/news" className={styles.navLink}><p>NEWS</p></Link>
+                </nav>
+                <div className={styles.snsList}>
+                    <SNSLinkButton
+                        text="ourobohan"
+                        url="https://www.youtube.com/@ourobohan"
+                        icon={SNSPreset.youtube.icon}
+                        iconColor={SNSPreset.youtube.iconColor}
+                    />
+                    <SNSLinkButton
+                        text="Robohan_"
+                        url="https://x.com/Robohan_"                            
+                        icon={SNSPreset.x.icon}
+                        iconColor={SNSPreset.x.iconColor}
+                    />
+                </div>
             </div>
+            
         </header>
         <div className={styles.headerSpacer}/>
         </>
