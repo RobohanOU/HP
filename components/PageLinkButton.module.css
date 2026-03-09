@@ -21,6 +21,10 @@
     letter-spacing: 0.1rem;
 }
 
+.blueContainer .buttonText p {
+    margin: 0;
+}
+
 .blueContainer:hover {
     background-color: var(--color-darkblue);
 }
@@ -66,4 +70,11 @@
 .icon {
     width: 2rem;
     height: 2rem;
+}
+
+@media (max-width: 767px) {
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }

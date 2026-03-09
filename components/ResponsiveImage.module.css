@@ -1,6 +1,8 @@
 .container {
     position: relative;
     overflow: hidden;
+    width: var(--width-pc);
+    height: var(--height-pc);
 }
 
 .rounded {
@@ -12,4 +14,11 @@
     height: 100% !important;
     object-fit: cover;
     object-position: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: var(--width-mobile);
+        height: var(--height-mobile);
+    }
 }

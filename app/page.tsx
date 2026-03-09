@@ -8,7 +8,8 @@ import matter from 'gray-matter';
 import styles from './home.module.css'
 import ResponsiveImage from "@/components/ResponsiveImage";
 
-const COMPETITIONS_IMAGE_HEIGHT = "20rem";
+const DESKTOP_IMAGE_HEIGHT = "20rem";
+const MOBILE_IMAGE_HEIGHT = "15rem";
 
 const COMPETITIONS_IMAGE_SLIDES = [
     {
@@ -17,8 +18,10 @@ const COMPETITIONS_IMAGE_SLIDES = [
         <ResponsiveImage
             src='/images/NoImage.png'
             alt='No Image'
-            width="100%"
-            height={COMPETITIONS_IMAGE_HEIGHT}
+            desktopWidth="100%"
+            desktopHeight={DESKTOP_IMAGE_HEIGHT}
+            mobileWidth="100%"
+            mobileHeight={MOBILE_IMAGE_HEIGHT}
         />
     },
     {
@@ -27,8 +30,10 @@ const COMPETITIONS_IMAGE_SLIDES = [
         <ResponsiveImage
             src='/images/hero_gray.jpg'
             alt='Robohan'
-            width="100%"
-            height={COMPETITIONS_IMAGE_HEIGHT}
+            desktopWidth="100%"
+            desktopHeight={DESKTOP_IMAGE_HEIGHT}
+            mobileWidth="100%"
+            mobileHeight={MOBILE_IMAGE_HEIGHT}
         />
     },
     {
@@ -37,8 +42,10 @@ const COMPETITIONS_IMAGE_SLIDES = [
         <ResponsiveImage
             src='/images/news/20260301/practice.jpg'
             alt='practice'
-            width="100%"
-            height={COMPETITIONS_IMAGE_HEIGHT}
+            desktopWidth="100%"
+            desktopHeight={DESKTOP_IMAGE_HEIGHT}
+            mobileWidth="100%"
+            mobileHeight={MOBILE_IMAGE_HEIGHT}
         />
     }
 ]
@@ -84,7 +91,7 @@ export default async function Home() {
         .slice(0, 3);
 
     return (
-        <div>
+        <div className={styles.home}>
             <section className={styles.hero}>
                 <div className={styles.imageWrapper}>
                     <Image
@@ -125,7 +132,8 @@ export default async function Home() {
                     <CycleSlider
                         slides={COMPETITIONS_IMAGE_SLIDES}
                         interval={7500}
-                        height="20rem"
+                        desktopHeight="20rem"
+                        mobileHeight="20rem"
                     />
                 </div>
             </div>

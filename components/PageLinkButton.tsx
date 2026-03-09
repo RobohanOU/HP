@@ -28,7 +28,7 @@ export default function PageLinkButton({text, url, color = 'blue', className}: P
             /*cssで引数のclassNameのstyleを設定すればページごとにデザイン変更可能（設定しなければデフォルトのまま）*/
             className={`${containerClass} ${className || ''}`}
         >
-            <span className={styles.buttonText}>{text}</span>
+            <span className={styles.buttonText}><p>{text}</p></span>
             <div className={styles.buttonArrowIcon}>
                 <FaCircleArrowRight className={styles.icon}/>
             </div>

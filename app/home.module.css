@@ -1,13 +1,15 @@
+.home {
+    width: 100%;
+}
+
 .hero {
     position: relative;
-    width: 100vw;
+    width: calc(100% + 8rem);
     height: 100vh;
     overflow: hidden;
-    left: 50%;
-    right: 50%;
     margin-top: -6rem;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: -4rem;
+    margin-right: -4rem;
     margin-bottom: 2rem;
 }
 
@@ -26,7 +28,7 @@
     position: absolute;
     z-index: 10;
     bottom: 8%;
-    left: 5%;
+    left: 3rem;
     height: auto;
     color: var(--color-white);
 }
@@ -167,4 +169,55 @@
 .newsButton {
     justify-self: right;
     margin: 2rem;
+}
+
+.mobileOnlyBr {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .mobileOnlyBr {
+        display: block;
+    }
+
+    .hero {
+        width: calc(100% + 4rem);
+        height: 50dvh;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        overflow: hidden;
+    }
+
+    .catchCopy {
+        left: 1rem;
+    }
+
+    .catchCopyText1 {
+        font-size: 1.4rem;
+    }
+
+    .catchCopyText2 {
+        font-size: 1.6rem;
+        margin-left: 1.2rem;
+    }
+
+    .blueLine {
+        height: 4rem;
+    }
+
+    .navyLine {
+        height: 4rem;
+    }
+
+    .backgroundLine {
+        height: 4rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .newsButton {
+        justify-self: center;
+    }
 }

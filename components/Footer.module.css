@@ -1,22 +1,19 @@
 .footer {
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: auto auto;
-    margin-top: auto;
+    margin-top: 3rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 1rem 0 1rem;
     border-top: 0.5rem solid;
     border-top-color: var(--color-blue);
     box-sizing: border-box;
-    min-width: var(--min-width);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 .footerLeft {
     display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    gap: 8rem;
 }
 
 .profileText {
@@ -29,23 +26,15 @@
 }
 
 .navMenu {
-    margin: 0;
+    flex-direction: column;
     position: sticky;
     display: flex;
-    align-items: center;
-    padding: 0;
-    margin: 0 0 0 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 1rem 0 2rem;
     border-left: 0.3rem solid;
     border-left-color: var(--color-lightgray);
-}
-
-.navList {
-    display: block;
-    right: 0;
-    list-style: none;
-    margin: 0;
-    align-items: center;
-    gap: 0.5rem;
+    margin-top: 1.5rem;
 }
 
 .navLink {
@@ -57,6 +46,10 @@
     transition: color 0.5s;
 }
 
+.navLink p {
+    margin: 0;
+}
+
 .navLink:hover {
     color: var(--color-blue);
 }
@@ -64,10 +57,12 @@
 .snsList {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
-    margin: 0 0 0 36;
+    gap: 1rem 1rem;
+    margin: 1.5rem 0;
     list-style: none;
     align-items: center;
+    justify-content: center;
+    font-size: 1rem;
 }
 
 .border {
@@ -77,10 +72,54 @@
 }
 
 .copyright {
-    grid-column-start: 1;
-    grid-column-end: 3;
     margin: 0 8 0 auto;
     padding: 0;
     text-align: right;
     font-size: 0.6rem;
+}
+
+.mobileOnlyBr {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navLink {
+        display: none;
+        position: static;
+    }
+
+    .footer {
+        margin-top: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .footerLeft {
+        gap: 1rem;
+    }
+
+    .profileText p{
+        font-size: 0.6rem;
+    }
+
+    .snsList {
+        grid-template-columns: 1fr;
+        font-size: 0.8rem;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    .copyright {
+        padding: 0;
+    }
+
+    .copyright p{
+        font-size: 0.5rem;
+    }
+
+    .mobileOnlyBr {
+        display: block;
+    }
 }

@@ -1,11 +1,23 @@
-.gridContainer {
+.postsContainer {
     display: grid;
-    grid-auto-rows: minmax(100px, auto);
-    column-gap: 2rem;
-    row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    text-align: center;
+    gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
     font-weight: 600;
     color: var(--color-text);
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.post {
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .postsContainer {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }

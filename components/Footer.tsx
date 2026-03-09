@@ -6,79 +6,73 @@ import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
-        <footer className={styles.footer}>
-            <div className={styles.footerLeft}>
-                <div className={styles.profileText}>
-                    <p>大阪大学公認ロボット製作団体</p>
-                    <div style={{
-                        display: 'flex',
-                        margin: '1rem 0'
-                    }}>
-                        <ResponsiveImage
-                            src="/images/logos/logo_R.png"
-                            alt="Robohan Logo R"
-                            width='4rem'
-                            height='4rem'
-                            borderRadius={false}
+        <footer>
+            <div className={styles.footer}>
+                <div className={styles.footerLeft}>
+                    <div className={styles.profileText}>
+                        <p>大阪大学公認ロボット製作団体</p>
+                        <div style={{
+                            display: 'flex',
+                            margin: '1rem 0'
+                        }}>
+                            <ResponsiveImage
+                                src="/images/logos/logo_R.png"
+                                alt="Robohan Logo R"
+                                desktopWidth='4rem'
+                                desktopHeight='4rem'
+                                mobileWidth='3rem'
+                                mobileHeight='3rem'
+                                borderRadius={false}
+                            />
+                            <ResponsiveImage
+                                src="/images/logos/Robohan_black(no logo, full).png"
+                                alt="Robohan Logo UoO"
+                                desktopWidth='13rem'
+                                desktopHeight='4rem'
+                                mobileWidth='10rem'
+                                mobileHeight='3rem'
+                                borderRadius={false}    
+                            
+                            />
+                        </div>
+                        <p>大阪大学吹田キャンパス内<br className={styles.mobileOnlyBr}/>HANDAIクラフトベースC<br/>〒565-0871  大阪府吹田市山田丘2</p>
+                    </div>
+                    <div className={styles.snsList}>
+                        <SNSLinkButton
+                            text="ourobohan"
+                            url="https://www.youtube.com/@ourobohan"
+                            icon={SNSPreset.youtube.icon}
+                            iconColor={SNSPreset.youtube.iconColor}
                         />
-                        <ResponsiveImage
-                            src="/images/logos/Robohan_black(no logo, full).png"
-                            alt="Robohan Logo UoO"
-                            width='13rem'
-                            height='4rem'
-                            borderRadius={false}    
-                        
+                        <SNSLinkButton
+                            text="Robohan_"
+                            url="https://x.com/Robohan_"                            
+                            icon={SNSPreset.x.icon}
+                            iconColor={SNSPreset.x.iconColor}
+                        />
+                        <SNSLinkButton
+                            text="robohan_ou"
+                            url="https://www.instagram.com/robohan_ou"
+                            icon={SNSPreset.instagram.icon}
+                            iconColor={SNSPreset.instagram.iconColor}
+                        />
+                        <SNSLinkButton
+                            text="info@robohan.net"
+                            url="mailto:info@robohan.net"
+                            icon={SNSPreset.email.icon}
+                            iconColor={SNSPreset.email.iconColor}
                         />
                     </div>
-                    <p>大阪大学吹田キャンパス内  HANDAIクラフトベースC<br/>〒565-0871  大阪府吹田市山田丘2</p>
                 </div>
-                <div className={styles.snsblock}>
-                    <ul className={styles.snsList}>
-                        <li>
-                            <SNSLinkButton
-                                text="ourobohan"
-                                url="https://www.youtube.com/@ourobohan"
-                                icon={SNSPreset.youtube.icon}
-                                iconColor={SNSPreset.youtube.iconColor}
-                            />
-                        </li>
-                        <li>
-                            <SNSLinkButton
-                                text="Robohan_"
-                                url="https://x.com/Robohan_"                            
-                                icon={SNSPreset.x.icon}
-                                iconColor={SNSPreset.x.iconColor}
-                            />
-                        </li>
-                        <li>
-                            <SNSLinkButton
-                                text="robohan_ou"
-                                url="https://www.instagram.com/robohan_ou"
-                                icon={SNSPreset.instagram.icon}
-                                iconColor={SNSPreset.instagram.iconColor}
-                            />
-                        </li>
-                        <li>
-                            <SNSLinkButton
-                                text="info@robohan.net"
-                                url="mailto:info@robohan.net"
-                                icon={SNSPreset.email.icon}
-                                iconColor={SNSPreset.email.iconColor}
-                            />
-                        </li>
-                    </ul>
-                </div>
+                    <nav className={styles.navMenu}>
+                        <Link href="/" className={styles.navLink}><p>HOME</p></Link>
+                        <Link href="/about" className={styles.navLink}><p>ABOUT</p></Link>
+                        <Link href="/join" className={styles.navLink}><p>JOIN</p></Link>
+                        <Link href="/supporters" className={styles.navLink}><p>SUPPORTERS</p></Link>
+                        <Link href="/news" className={styles.navLink}><p>NEWS</p></Link>
+                    </nav>
             </div>
-            <nav className={styles.navMenu}>
-                <ul className={styles.navList}>
-                    <li><Link href="/" className={styles.navLink}>HOME</Link></li>
-                    <li><Link href="/about" className={styles.navLink}>ABOUT</Link></li>
-                    <li><Link href="/join" className={styles.navLink}>JOIN</Link></li>
-                    <li><Link href="/supporters" className={styles.navLink}>SUPPORTERS</Link></li>
-                    <li><Link href="/news" className={styles.navLink}>NEWS</Link></li>
-                </ul>
-            </nav>
-            <div className={styles.copyright}><p>©Robohan, All Rights Reserved.</p></div>
+            <div className={styles.copyright}><p>©Robohan, All rights reserved</p></div>
         </footer>
     )
 }

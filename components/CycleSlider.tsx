@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback, ReactNode } from "react";
+import { useState, useEffect, useCallback, ReactNode, CSSProperties } from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,10 +34,11 @@ interface SlideItem {
 interface CycleSliderProps {
     slides: SlideItem[];
     interval?: number;  // 自動再生の間隔(s)
-    height: string;
+    desktopHeight: string;
+    mobileHeight: string;
 }
 
-export default function ImageSlider({slides, interval=5000, height}: CycleSliderProps) {
+export default function ImageSlider({slides, interval=5000, desktopHeight, mobileHeight}: CycleSliderProps) {
     const [[page, direction], setPage] = useState([0, 0]);
 
     // slidesの数で割った余りを使うことで無限ループを実現
@@ -55,9 +56,14 @@ export default function ImageSlider({slides, interval=5000, height}: CycleSlider
 
         console.log("index: ", currentIndex);
 
+    const sliderStyle = {
+        '--desktop-height': desktopHeight,
+        '--moblie-height': mobileHeight
+    } as CSSProperties;
+
     return (
         <div className={styles.container}>
-            <div className={styles.slide} style={{height: height}}>
+            <div className={styles.slide} style={sliderStyle}>
                 <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                         key={page}
@@ -71,7 +77,7 @@ export default function ImageSlider({slides, interval=5000, height}: CycleSlider
                             scale: { duration: 0.5 }
                         }}
                         className={styles.slideItem}
-                        style={{height: height}}
+                        style={sliderStyle}
                     >
                         {slides[currentIndex].slide}
                     </motion.div>

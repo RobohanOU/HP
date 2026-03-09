@@ -13,22 +13,25 @@ interface NewsCardProps {
 
 export default function NewsCard ({url, title, date, description, image, imageAlt}: NewsCardProps) {
     return (
-        <Link
-            href={url}
-            className={styles.baseCard}
-        >
-            <div className={styles.image}>
-                <ResponsiveImage
-                    src={image}
-                    alt={imageAlt}
-                    width="100%"
-                    height="15rem"
-                    objectFit="contain"
-                />
-            </div>
-            <h2 className={styles.title}>{title}</h2>
-            <p className={styles.description}>{description}</p>
-            <p className={styles.date}>{date}</p>
-        </Link>
+            <Link
+                href={url}
+                className={styles.baseCard}
+            >   
+                <div className={styles.imageWrapper}>
+                    <ResponsiveImage
+                        src={image}
+                        alt={imageAlt}
+                        desktopWidth="100%"
+                        desktopHeight="100%"
+                        mobileWidth="100%"
+                        mobileHeight="100%"
+                    />
+                </div>
+                <div className={styles.container}>
+                    <h2 className={styles.title}>{title}</h2>
+                    <p className={styles.description}>{description}</p>
+                    <p className={styles.date}>{date}</p>
+                </div>
+            </Link>
     )
 }

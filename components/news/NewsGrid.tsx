@@ -8,9 +8,6 @@ interface NewsCardData {
     description: string
     image: string
     imageAlt: string
-    imageWidth: number
-    imageHeight: number
-    displaySize: string
 }
 
 interface NewsGridProps {
@@ -19,20 +16,19 @@ interface NewsGridProps {
 
 export default function NewsGrid ({posts}: NewsGridProps) {
     return (
-        <div className={`${styles.gridContainer}`}>
+        <div className={styles.postsContainer}>
             {posts.map((post, index) => (
-                <NewsCard
-                    key={index}
-                    url={post.url}
-                    title={post.title}
-                    date={post.date}
-                    description={post.description}
-                    image={post.image}
-                    imageAlt={post.imageAlt}
-                    imageWidth={post.imageWidth}
-                    imageHeight={post.imageHeight}
-                    displaySize={post.displaySize}
-                />
+                <div className={styles.post} key={index}>
+                    <NewsCard
+                        key={index}
+                        url={post.url}
+                        title={post.title}
+                        date={post.date}
+                        description={post.description}
+                        image={post.image}
+                        imageAlt={post.imageAlt}
+                    />
+                </div>
             ))}
         </div>
     )
