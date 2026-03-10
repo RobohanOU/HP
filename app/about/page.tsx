@@ -1,5 +1,5 @@
 import ResponsiveImage from "@/components/ResponsiveImage";
-import CycleSlider from "@/components/CycleSlider";
+import CycleSlider from "@/components/home/CycleSlider";
 import styles from './about.module.css'
 
 const DESKTOP_TEAM_IMAGE_HEIGHT = "15rem"

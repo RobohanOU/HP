@@ -1,7 +1,7 @@
 "use client";
 import Link from 'next/link';
 import ResponsiveImage from './ResponsiveImage';
-import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
+import SNSLinkButton, { SNSPreset } from './home/SNSLinkButton';
 import { useScrollDirection } from './hooks/useScrollDirection';
 import styles from './Header.module.css';
 import { useState, useEffect } from 'react';

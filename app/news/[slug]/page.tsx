@@ -8,8 +8,6 @@ import styles from './post.module.css'
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
-import { Metadata } from 'next';
-import { title } from 'process';
 
 interface PostData {
     slug: string;
@@ -69,7 +67,7 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
         : `${baseUrl}${postData.image}`
     
     return {
-        title: postData.title,
+        title: `${postData.title} - Robohan`,
         description: postData.description,
         openGraph: {
             title: postData.title,

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FaCircleArrowRight } from 'react-icons/fa6';
-import styles from '@/components/PageLinkButton.module.css';
+import styles from './PageLinkButton.module.css';
 
 type ButtonColor = 'blue' | 'white';
 

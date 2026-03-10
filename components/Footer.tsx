@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import SNSLinkButton, { SNSPreset } from './SNSLinkButton';
+import SNSLinkButton, { SNSPreset } from './home/SNSLinkButton';
 import ResponsiveImage from './ResponsiveImage';
 import styles from './Footer.module.css';
 

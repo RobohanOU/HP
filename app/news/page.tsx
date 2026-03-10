@@ -20,7 +20,6 @@ export default async function News({
     }
 
     const allFiles = fs.readdirSync(postsDirectory);
-    console.log('All files found:', allFiles); // ファイル一覧をログ出力
 
     const posts = allFiles
     .filter((filename) => {
@@ -47,8 +46,6 @@ export default async function News({
             displaySize: '100%',
         };
     });
-
-    console.log('Final allPosts count:', posts.length)
 
     const sortedPosts = posts.sort((a, b) => (a.date < b.date ? 1 : -1));
     

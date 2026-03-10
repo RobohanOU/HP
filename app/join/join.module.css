@@ -29,9 +29,13 @@
     margin: 4rem 0;
 }
 
+.desktipOnlyBr {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .content p {
-        line-height: var(--line-height);
+        line-height: 2;
     }
 
     .welcome {
@@ -67,5 +71,9 @@
 
     .contact {
         margin: 1rem 0;
+    }
+
+    .desktopOnlyBr {
+        display: none;
     }
 }

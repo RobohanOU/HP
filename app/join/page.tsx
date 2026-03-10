@@ -1,5 +1,5 @@
 import ResponsiveImage from "@/components/ResponsiveImage";
-import PageLinkButton from "@/components/PageLinkButton";
+import PageLinkButton from "@/components/home/PageLinkButton";
 import styles from "./join.module.css";
 
 export default function Join () {
@@ -8,7 +8,7 @@ export default function Join () {
             <h1>Join</h1>
             <h2>ロボコンしませんか？</h2>
             <div className={styles.welcome}>
-                <p className={styles.welcomeText}>Robohanは1年中いつでも新入部員を募集しています!<br/>私たちは「NHK学生ロボコンでの優勝」を目標に日々活動しています。<br/>そこでは、技術力や経験よりもロボコンに対するやる気・熱意が求められます。逆に、やる気・熱意さえあれば、おのずと技術力や経験がついてきます。<br/>ぜひ、私たちと一緒に優勝を目指して活動しましょう。<br/>新入生はもちろん、2年生以上の方、高専編入生の方の入部も大歓迎です!<br/>少しでもRobohanに興味がある方は、ページ下部の「お問い合わせ」からぜひお問い合わせください!</p>
+                <p className={styles.welcomeText}>Robohanは1年中いつでも新入部員を募集しています!<br/>私たちは「NHK学生ロボコンでの優勝」を目標に日々活動しています。<br/>そこでは、技術力や経験よりもロボコンに対するやる気・熱意が求められます。<br className={styles.desktopOnlyBr}/>逆に、やる気・熱意さえあれば、おのずと技術力や経験がついてきます。<br/>ぜひ、私たちと一緒に優勝を目指して活動しましょう。<br/>新入生はもちろん、2年生以上の方、高専編入生の方の入部も大歓迎です!<br/>少しでもRobohanに興味がある方は、ページ下部の「お問い合わせ」からぜひお問い合わせください!</p>
                 <ResponsiveImage
                     src="/images/join/craftbase.png"
                     alt="クラフトベース"

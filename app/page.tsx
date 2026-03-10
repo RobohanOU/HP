@@ -1,6 +1,6 @@
 import Image from "next/image";
-import PageLinkButton from "@/components/PageLinkButton"
-import CycleSlider from "@/components/CycleSlider";
+import PageLinkButton from "@/components/home/PageLinkButton"
+import CycleSlider from "@/components/home/CycleSlider";
 import NewsGrid from "@/components/news/NewsGrid";
 import fs from 'fs';
 import path from 'path';
@@ -95,7 +95,7 @@ export default async function Home() {
             <section className={styles.hero}>
                 <div className={styles.imageWrapper}>
                     <Image
-                        src='/images/hero_gray.jpg'
+                        src='/images/home/hero_gray.jpg'
                         alt="Robohan"
                         fill
                         priority

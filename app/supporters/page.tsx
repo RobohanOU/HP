@@ -1,6 +1,6 @@
 import SponsorGrid from "@/components/supporters/SponsorGrid"
 import styles from "./supporters.module.css"
-import PageLinkButton from "@/components/PageLinkButton";
+import PageLinkButton from "@/components/home/PageLinkButton";
 
 const Sponsors = [
     {
