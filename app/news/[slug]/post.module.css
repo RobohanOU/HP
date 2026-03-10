@@ -58,9 +58,38 @@
 .insertImage {
     position: relative;
     width: 90%;
-    height: auto;
-    margin-top: -1rem;
-    border-radius: 2rem;
-    overflow: hidden;
-    justify-self: center;
+}
+
+@media (max-width: 767px) {
+    .title {
+        flex-direction: column;
+    }
+
+    .date {
+        margin: 0 0 0 auto;
+        padding: 0;
+        text-align: right;
+        font-size: 0.5rem;
+    }
+
+    .date p {
+        margin: 0;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .content h1 {
+        font-size: var(--font-size-md);
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+
+    .insertImage {
+        width: 100%;
+    }
 }

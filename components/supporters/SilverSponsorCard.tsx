@@ -16,8 +16,6 @@ export default function SilverSuponsorCard ({name, logo, logoAlt, url, descripti
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
     const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
-    const logoWidth = "100%";
-    const logoHeight = "10rem";
 
 
     if(!hasUrl){
@@ -26,8 +24,10 @@ export default function SilverSuponsorCard ({name, logo, logoAlt, url, descripti
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    desktopWidth="100%"
+                    desktopHeight="10rem"
+                    mobileWidth="100%"
+                    mobileHeight="10rem"
                     objectFit="contain"
                     borderRadius={false}
                 />
@@ -48,8 +48,10 @@ export default function SilverSuponsorCard ({name, logo, logoAlt, url, descripti
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    desktopWidth="100%"
+                    desktopHeight="10rem"
+                    mobileWidth="100%"
+                    mobileHeight="10rem"
                     objectFit="contain"
                     borderRadius={false}
                 />

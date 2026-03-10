@@ -1,8 +1,9 @@
 .gridContainer {
     display: grid;
     grid-auto-rows: minmax(100px, auto);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    gap: 2rem;
+    justify-content: flex-start;
+    grid-auto-rows: auto;
 }
 
 .gridContainer.is-gold {
@@ -23,4 +24,23 @@
     grid-template-rows: auto;
     text-align: center;
     font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .gridContainer {
+        gap: 1.5rem;
+    }
+
+    .gridContainer.gridContainer.is-silver {
+        grid-template-columns: 1fr;
+    }
+
+    .gridContainer.is-bronze {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridContainer.is-normal {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 }

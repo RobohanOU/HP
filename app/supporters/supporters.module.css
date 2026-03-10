@@ -59,6 +59,7 @@
 }
 
 .request {
+    display: grid;
     background-color: var(--color-blue);
     color: var(--color-white);
     margin: 0 -4rem 3rem -4rem;
@@ -80,4 +81,39 @@
     align-items: center;     
     width: 100%;
     padding: 1rem;
+}
+
+.linkButton {
+    font-size: 2rem;
+}
+
+@media (max-width: 767px) {
+    .goldSponsor::before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .silverSponsor::before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .bronzeSponsor::before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .normalSponsor::before {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .request {
+        margin: 0 -2rem 3rem -2rem;
+        padding: 3rem 2rem;
+    }
+
+    .linkButton {
+        padding: 0;
+    }
 }

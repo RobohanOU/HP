@@ -58,7 +58,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 1rem;
-    margin: 1.5rem 0;
+    margin: 1.5rem 1rem;
     list-style: none;
     align-items: center;
     justify-content: center;
@@ -82,10 +82,9 @@
     display: none;
 }
 
-@media (max-width: 767px) {
-    .navLink {
+@media (max-width: 821px) {
+    .navMenu {
         display: none;
-        position: static;
     }
 
     .footer {
@@ -97,6 +96,9 @@
     }
 
     .footerLeft {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
         gap: 1rem;
     }
 

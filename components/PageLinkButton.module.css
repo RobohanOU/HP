@@ -36,8 +36,8 @@
     gap: 1rem;
     background-color: var(--color-white);
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
-    box-shadow: 0  0.2rem 0.1rem var(--color-navy); /* 影 */
+    padding: 0 1rem;
+    box-shadow: 0  0.2rem 0.1rem var(--color-darkblue); /* 影 */
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.5s;
@@ -46,7 +46,7 @@
 .whiteContainer .buttonText {
     color: var(--color-navy);
     font-family: inherit;
-    font-size: var(--font-size-reg);
+    font-size: 1.2rem;
     font-weight: 700;
     white-space: nowrap;
     letter-spacing: 0.1rem;

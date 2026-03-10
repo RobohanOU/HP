@@ -59,20 +59,21 @@ export default function Header() {
                         borderRadius={false}
                     />
                 </div>
-                <button
-                    className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
-                    onClick={toggleMenu}
-                >
-                    <GiHamburgerMenu/>
-                </button>
-
+                <div className={styles.hamburgerWrapper}>
+                    <button
+                        className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
+                        onClick={toggleMenu}
+                    >
+                        <GiHamburgerMenu/>
+                    </button>
+                </div>
                 <div className={`${styles.navContainer} ${isOpen ? styles.navOpen : ""} ${isHeaderVisible ? '' : styles.hiddenNav}`}>
                     <nav className={styles.navMenu}>
-                        <Link href="/" className={styles.navLink} onClick={closeMenu}><p>HOME</p></Link>
-                        <Link href="/about" className={styles.navLink} onClick={closeMenu}><p>ABOUT</p></Link>
-                        <Link href="/join" className={styles.navLink} onClick={closeMenu}><p>JOIN</p></Link>
-                        <Link href="/supporters" className={styles.navLink} onClick={closeMenu}><p>SUPPORTERS</p></Link>
-                        <Link href="/news" className={styles.navLink} onClick={closeMenu}><p>NEWS</p></Link>
+                        <div><Link href="/" className={styles.navLink} onClick={closeMenu}><p>HOME</p></Link></div>
+                        <div><Link href="/about" className={styles.navLink} onClick={closeMenu}><p>ABOUT</p></Link></div>
+                        <div><Link href="/join" className={styles.navLink} onClick={closeMenu}><p>JOIN</p></Link></div>
+                        <div><Link href="/supporters" className={styles.navLink} onClick={closeMenu}><p>SUPPORTERS</p></Link></div>
+                        <div><Link href="/news" className={styles.navLink} onClick={closeMenu}><p>NEWS</p></Link></div>
                     </nav>
                     <div className={styles.snsList}>
                         <SNSLinkButton

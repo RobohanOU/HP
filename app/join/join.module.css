@@ -3,7 +3,14 @@
 }
 
 .welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-bottom: 4rem;
+}
+
+.welcome p {
+    margin-bottom: 0;
 }
 
 .seminar {
@@ -14,21 +21,51 @@
     margin-top: 2rem;
 }
 
-.imageWrapper {
-    display: flex;
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.description {
-    display: flex;
-    
-}
-
 .contact {
     display: flex;
     justify-content: center;
     align-items: center;     
     width: 100%;
     margin: 4rem 0;
+}
+
+@media (max-width: 767px) {
+    .content p {
+        line-height: var(--line-height);
+    }
+
+    .welcome {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .welcomeText {
+        order: 2;
+    }
+
+    .seminar {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .esaImageWrapper {
+        order: 1;
+    }
+
+    .esaDescription {
+        order: 2;
+    }
+
+    .seminarImageWrapper {
+        order: 3;
+    }
+    
+    .seminarDescription {
+        order: 4;
+    }
+
+    .contact {
+        margin: 1rem 0;
+    }
 }

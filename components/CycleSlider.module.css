@@ -7,18 +7,19 @@
     display: flex;
     transition: transform 0.7s ease-in-out;
     justify-self: center;
-    width: 100%;
+    width: var(--desktop-width);
     height: var(--desktop-height);
     overflow: hidden;
 }
 
 .slideItem {
-    width: 100%;
+    width: var(--desktop-width);
     flex-shrink: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: var(--desktop-height);
+    overflow: hidden;
 }
 
 .button {
@@ -84,10 +85,17 @@
 
 @media (max-width: 767px) {
     .slide {
+        width: var(--mobile-width);
         height: var(--mobile-height);
     }
 
     .slideItem {
+        width: var(--mobile-width);
         height: var(--mobile-height);
+    }
+
+    .button {
+        transform: translateY(-70%);
+        margin: 0 -1.5rem;
     }
 }

@@ -76,7 +76,7 @@ const Sponsors = [
     {
         name: "ロボ半太郎5",
         grade: "normal"
-    }
+    },
 ];
 
 export default function Supporters() {
@@ -121,7 +121,7 @@ export default function Supporters() {
                         text="CONTACT"
                         url="https://docs.google.com/forms/d/e/1FAIpQLSe0VcA8o55Yu9P0gTbuFr8K2c3w82YNrep-9Ru5jyLIg_OodA/viewform?usp=publish-editor"
                         color='white'
-                        className="contact"
+                        className="contactButton"
                     />
                 </div>
             </div>

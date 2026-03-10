@@ -14,8 +14,6 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, url, description
     const noLinkClass = `${styles.baseCard}`
     const linkClass = `${styles.linkCard} ${styles.baseCard}`
     const hasUrl = Boolean(typeof url === 'string' && url.length > 0);
-    const logoWidth = "100%";
-    const logoHeight = "12rem";
 
     if(!hasUrl){
         return (
@@ -23,8 +21,10 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, url, description
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    desktopWidth="100%"
+                    desktopHeight="12rem"
+                    mobileWidth="100%"
+                    mobileHeight="12rem"
                     objectFit="contain"
                     borderRadius={false}
                 />
@@ -45,8 +45,10 @@ export default function GoldSuponsorCard ({name, logo, logoAlt, url, description
                 <ResponsiveImage
                     src={logo}
                     alt={logoAlt}
-                    width={logoWidth}
-                    height={logoHeight}
+                    desktopWidth="100%"
+                    desktopHeight="12rem"
+                    mobileWidth="100%"
+                    mobileHeight="12rem"
                     objectFit="contain"
                     borderRadius={false}
                 />

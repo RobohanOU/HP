@@ -7,9 +7,13 @@
     text-decoration: none;
     color: var(--color-text);
     box-shadow: 0.1rem 0.2rem var(--color-lightgray);
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
     height: 100%;
     box-sizing: border-box;
+}
+
+.baseCard:hover {
+    background-color: var(--color-lightgray);
 }
 
 .imageWrapper {

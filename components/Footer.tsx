@@ -64,13 +64,13 @@ export default function Footer() {
                         />
                     </div>
                 </div>
-                    <nav className={styles.navMenu}>
-                        <Link href="/" className={styles.navLink}><p>HOME</p></Link>
-                        <Link href="/about" className={styles.navLink}><p>ABOUT</p></Link>
-                        <Link href="/join" className={styles.navLink}><p>JOIN</p></Link>
-                        <Link href="/supporters" className={styles.navLink}><p>SUPPORTERS</p></Link>
-                        <Link href="/news" className={styles.navLink}><p>NEWS</p></Link>
-                    </nav>
+                <nav className={styles.navMenu}>
+                    <Link href="/" className={styles.navLink}><p>HOME</p></Link>
+                    <Link href="/about" className={styles.navLink}><p>ABOUT</p></Link>
+                    <Link href="/join" className={styles.navLink}><p>JOIN</p></Link>
+                    <Link href="/supporters" className={styles.navLink}><p>SUPPORTERS</p></Link>
+                    <Link href="/news" className={styles.navLink}><p>NEWS</p></Link>
+                </nav>
             </div>
             <div className={styles.copyright}><p>©Robohan, All rights reserved</p></div>
         </footer>

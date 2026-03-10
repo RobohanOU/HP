@@ -1,24 +1,26 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import NewsGrid from '@/components/news/NewsGrid';
-import Pagination from '@/components/Pagination';
+import NewsContainer from '@/components/news/NewsContainer';
 import styles from './news.module.css'
-
-const ITEMS_PER_PAGE = 12; // 1ページ当たりの記事数
 
 export default async function News({
     searchParams,
 }: {
     searchParams: Promise<{page?: string}>;
 }) {
+
     const {page} = await searchParams;
     const currentPage = Number(page) || 1;
     const postsDirectory = path.join(process.cwd(), 'posts');
 
-    if(!fs.existsSync(postsDirectory)) return [];
+    if (!fs.existsSync(postsDirectory)) {
+        console.error('Directory NOT found');
+        return <div>ディレクトリが見つかりません: {postsDirectory}</div>;
+    }
 
     const allFiles = fs.readdirSync(postsDirectory);
+    console.log('All files found:', allFiles); // ファイル一覧をログ出力
 
     const posts = allFiles
     .filter((filename) => {
@@ -46,22 +48,16 @@ export default async function News({
         };
     });
 
-    // 日付順にソート
-    const sortedPosts = posts.sort((a, b) => (a.date < b.date ? 1: -1));
+    console.log('Final allPosts count:', posts.length)
 
-    const totalPosts = sortedPosts.length;
-    const totalPages = Math.ceil(totalPosts / ITEMS_PER_PAGE);
-    const displayPosts = sortedPosts.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
-
+    const sortedPosts = posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+    
     return (
         <div>
             <h1>News</h1>
-            <div className={styles.posts}>
-                <NewsGrid posts={displayPosts}/>
-            </div>
-            <Pagination
+            <NewsContainer
+                posts={sortedPosts}
                 currentPage={currentPage}
-                totalPages={totalPages}
             />
         </div>
     )

@@ -21,12 +21,6 @@
 
     /*行間（フォントサイズの1倍）*/
     --line-height: 1.5;
-
-    /*最大画面幅*/
-    --max-width: 100%;
-
-    /*スマホ用に切り替える画面幅*/
-    --sp-width: 767px;
 }
 
 body {
@@ -39,7 +33,7 @@ body {
     margin: 0;
     width: 100%;
     height: auto !important;
-    min-height: 100% !important;
+    min-height: 100vh !important;
     overflow-y: visible !important;
     overflow-x: hidden;
 }
@@ -47,8 +41,8 @@ body {
 .siteWrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
-    height: auto !important;
+    min-height: max(100%, 100vh);
+    height: max-content !important;
     overflow-y: visible;
 }
 

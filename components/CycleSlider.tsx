@@ -34,11 +34,20 @@ interface SlideItem {
 interface CycleSliderProps {
     slides: SlideItem[];
     interval?: number;  // 自動再生の間隔(s)
+    desktopWidth: string;
     desktopHeight: string;
+    mobileWidth: string;
     mobileHeight: string;
 }
 
-export default function ImageSlider({slides, interval=5000, desktopHeight, mobileHeight}: CycleSliderProps) {
+export default function ImageSlider({
+    slides, 
+    interval=5000, 
+    desktopWidth,
+    desktopHeight,
+    mobileWidth, 
+    mobileHeight
+}: CycleSliderProps) {
     const [[page, direction], setPage] = useState([0, 0]);
 
     // slidesの数で割った余りを使うことで無限ループを実現
@@ -57,7 +66,9 @@ export default function ImageSlider({slides, interval=5000, desktopHeight, mobil
         console.log("index: ", currentIndex);
 
     const sliderStyle = {
+        '--desktop-width': desktopWidth,
         '--desktop-height': desktopHeight,
+        '--mobile-width': mobileWidth,
         '--moblie-height': mobileHeight
     } as CSSProperties;
 

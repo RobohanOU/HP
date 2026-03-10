@@ -12,6 +12,7 @@ interface ResponsiveImagePropsinterface {
     mobileHeight: string;
     borderRadius?: boolean;
     objectFit?: "cover" | "contain";
+    objectPosition?: string;
 }
 
 export default function ResponsiveImage({
@@ -20,7 +21,8 @@ export default function ResponsiveImage({
     desktopWidth, desktopHeight, 
     mobileWidth, mobileHeight, 
     borderRadius=true, 
-    objectFit="cover"
+    objectFit="cover",
+    objectPosition="center"
 }: ResponsiveImagePropsinterface) {
     const imageStyle = {
         '--width-pc': desktopWidth,
@@ -40,7 +42,10 @@ export default function ResponsiveImage({
                 alt={alt}
                 fill
                 className={styles.image}
-                style={{objectFit: objectFit}}
+                style={{
+                    objectFit: objectFit,
+                    objectPosition: objectPosition
+                }}
             />
         </div>
     )

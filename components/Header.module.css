@@ -1,5 +1,5 @@
 .header {
-    display: grid;
+    display: flex;
     position: fixed;
     width: 100%;
     grid-template-columns: auto auto auto;
@@ -17,12 +17,14 @@
     background-color: var(--color-background);
 }
 
-.hamburger {
+.hamburgerWrapper {
     display: none;
 } 
 
 .navContainer {
-    display: contents;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
 .hidden {
@@ -43,11 +45,14 @@
 
 .navMenu {
     display: flex;
-    gap: clamp(2rem, 8vw, 5rem);
+    justify-content: space-evenly;
+    width: 100%;
+    gap: auto;
     list-style: none;
-    margin: 0 1.5rem 0 1.5rem;
+    margin: 0 1.5rem;
     padding: 0;
     align-items: center;
+    min-width: 0;
 }
 
 .navLink {
@@ -57,10 +62,11 @@
     font-family: arial;
     transition: color 0.5s;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .navLink p {
-    margin: 0;
+    margin: auto;
 }
 
 .navLink:hover {
@@ -73,9 +79,10 @@
     gap: clamp(0.5rem, 1.5vw, 1rem);
     list-style: none;
     align-items: center;
+    justify-content: space-between;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 821px) {
     .header {
         display: grid;
         grid-template-columns: auto auto;
@@ -96,6 +103,11 @@
     @keyframes fadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
+    }
+
+    .hamburgerWrapper {
+        display: unset;
+        z-index: 10000;
     }
 
     .hamburger {
@@ -130,27 +142,27 @@
     .navContainer {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
         position: fixed;
         top: 0;
         right: 0;
         transform: translateX(100%);
-        width: 100vw;
-        height: 30%;
+        width: 100%;
+        height: max-content;
         background-color: var(--color-background);
         transition: 0.5s ease-in-out;
         z-index: 1001;
         gap: 2rem;
-        padding: 4rem 2rem 4rem 1rem;
+        padding: 4rem 2rem 2rem 2rem;
         border-bottom-left-radius: 1rem;
     }
 
     .navOpen {
         transform: translateX(50%);
         background-color: var(--color-blue);
-        box-shadow: 0  0.1rem 0.1rem var(--color-navy); /* 影 */
-
+        box-shadow: 0  0.1rem 0.1rem var(--color-navy);
+        overflow: hidden;
     }
 
     .navMenu {
@@ -159,6 +171,7 @@
         align-items: flex-start;
         gap: 1rem;
         margin: 0;
+        width: 20rem;
     }
 
     .navLink {
@@ -168,11 +181,17 @@
         transition: 0.5s;
     }
 
+    .navLink p {
+        font-size: 1.2rem;
+    }
+
     .navLink:hover {
         background-color: var(--color-darkblue);
     }
 
     .snsList {
-        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
     }
 }

@@ -2,7 +2,8 @@ import ResponsiveImage from "@/components/ResponsiveImage";
 import CycleSlider from "@/components/CycleSlider";
 import styles from './about.module.css'
 
-const TEAM_IMAGE_HEIGHT = "15rem"
+const DESKTOP_TEAM_IMAGE_HEIGHT = "15rem"
+const MOBILE_TEAM_IMAGE_HEIGHT = "5rem"
 
 const TEAM_SLIDES = [
     {
@@ -17,24 +18,31 @@ const TEAM_SLIDES = [
                 <ResponsiveImage
                     src="/images/about/kikou1.png"
                     alt="機構班1"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
                 <ResponsiveImage
                     src="/images/about/kikou2.JPG"
                     alt="機構班2"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
-                <ResponsiveImage
-                    src="/images/about/kikou3.jpg"
-                    alt="機構班2"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
-                />
+                <div className={styles.mobileHidden}>
+                    <ResponsiveImage
+                        src="/images/about/kikou3.jpg"
+                        alt="機構班2"
+                        desktopWidth="100%"
+                        desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                        mobileWidth="100%"
+                        mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
+                    />
+                </div>
             </div>
         </div>
-
     },
     {
         id: 2,
@@ -48,21 +56,29 @@ const TEAM_SLIDES = [
                 <ResponsiveImage
                     src="/images/about/kairo1.png"
                     alt="回路班1"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
                 <ResponsiveImage
                     src="/images/about/kairo2.png"
                     alt="回路班2"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
-                <ResponsiveImage
-                    src="/images/about/kairo3.jpg"
-                    alt="回路班3"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
-                />
+                <div className={styles.mobileHidden}>
+                    <ResponsiveImage
+                        src="/images/about/kairo3.jpg"
+                        alt="回路班3"
+                        desktopWidth="100%"
+                        desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                        mobileWidth="100%"
+                        mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
+                    />
+                </div>
             </div>
         </div>
     },
@@ -78,21 +94,29 @@ const TEAM_SLIDES = [
                 <ResponsiveImage
                     src="/images/about/seigyo1.png"
                     alt="制御班1"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
                 <ResponsiveImage
                     src="/images/about/seigyo2.png"
                     alt="制御班2"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
+                    desktopWidth="100%"
+                    desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                    mobileWidth="100%"
+                    mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
                 />
-                <ResponsiveImage
-                    src="/images/about/seigyo3.png"
-                    alt="制御班3"
-                    width="100%"
-                    height={TEAM_IMAGE_HEIGHT}
-                />
+                <div className={styles.mobileHidden}>
+                    <ResponsiveImage
+                        src="/images/about/seigyo3.png"
+                        alt="制御班3"
+                        desktopWidth="100%"
+                        desktopHeight={DESKTOP_TEAM_IMAGE_HEIGHT}
+                        mobileWidth="100%"
+                        mobileHeight={MOBILE_TEAM_IMAGE_HEIGHT}
+                    />
+                </div>
             </div>
         </div>
     }
@@ -109,14 +133,18 @@ export default function About(){
                 <ResponsiveImage
                     src="/images/about/IMG_4179.JPG"
                     alt="NHK学生ロボコン"
-                    width="100%"
-                    height="25rem"    
+                    desktopWidth="100%"
+                    desktopHeight="25rem"
+                    mobileWidth="100%"
+                    mobileHeight="10rem"    
                 />
                 <ResponsiveImage
                     src="/images/about/DSC_6140.JPG"
                     alt="NHK学生ロボコン"
-                    width="100%"
-                    height="25rem"
+                    desktopWidth="100%"
+                    desktopHeight="25rem"
+                    mobileWidth="100%"
+                    mobileHeight="10rem"
                 />
             </div>
 
@@ -128,8 +156,10 @@ export default function About(){
                     <ResponsiveImage
                         src="/images/about/DSC_6142.JPG"
                         alt="春ロボ"
-                        width="100%"
-                        height="25rem"
+                        desktopWidth="100%"
+                        desktopHeight="100%"
+                        mobileWidth="100%"
+                        mobileHeight="12rem"
                         borderRadius={false}
                     />
                     <div className={styles.haruroboText}>
@@ -145,9 +175,12 @@ export default function About(){
                     <ResponsiveImage
                         src="/images/about/natsurobo.JPG"
                         alt="夏ロボ"
-                        width="100%"
-                        height="25rem"
+                        desktopWidth="100%"
+                        desktopHeight="100%"
+                        mobileWidth="100%"
+                        mobileHeight="12rem"
                         objectFit="cover"
+                        objectPosition="bottom"
                         borderRadius={false}
                     />
                 </div>
@@ -155,9 +188,12 @@ export default function About(){
                     <ResponsiveImage
                         src="/images/about/DSC_6142.JPG"
                         alt="学ロボ"
-                        width="100%"
-                        height="25rem"
+                        desktopWidth="100%"
+                        desktopHeight="100%"
+                        mobileWidth="100%"
+                        mobileHeight="12rem"
                         borderRadius={false}
+                        objectPosition="bottom"
                     />
                     <div className={styles.gakuroboText}>
                         <h2>NHK学生ロボコン</h2>
@@ -173,7 +209,10 @@ export default function About(){
                     <CycleSlider
                         slides={TEAM_SLIDES}
                         interval={10000}
-                        height='30rem'
+                        desktopWidth="100%"
+                        desktopHeight='30rem'
+                        mobileWidth="100%"
+                        mobileHeight="30rem"
                     />
                 </div>                   
             </div>

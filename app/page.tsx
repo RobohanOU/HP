@@ -132,7 +132,9 @@ export default async function Home() {
                     <CycleSlider
                         slides={COMPETITIONS_IMAGE_SLIDES}
                         interval={7500}
+                        desktopWidth="100%"
                         desktopHeight="20rem"
+                        mobileWidth="100%"
                         mobileHeight="20rem"
                     />
                 </div>

@@ -108,14 +108,16 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
             <div className={styles.content}>
                 <div className={styles.title}>
                     <h1>{postData.title}</h1>
-                    <div className={styles.date}>{postData.date}</div>   
+                    <div className={styles.date}><p>{postData.date}</p></div>   
                 </div>
                 <div className={styles.imageWrapper}>
                     <ResponsiveImage
                         src={postData.image}
                         alt={postData.imageAlt}
-                        width="100%"
-                        height="40rem"
+                        desktopWidth="100%"
+                        desktopHeight="40rem"
+                        mobileWidth='100%'
+                        mobileHeight='15rem'
                     />
                 </div>
                 <ReactMarkdown
@@ -168,8 +170,10 @@ export default async function Post({params}: {params: Promise<{slug: string}>}) 
                                     <ResponsiveImage
                                         src={cleanSrc || '/images/NoImage.png'}
                                         alt={alt || ''}
-                                        width="100%"
-                                        height="35rem"
+                                        desktopWidth="100%"
+                                        desktopHeight="35rem"
+                                        mobileWidth='100%'
+                                        mobileHeight='15rem'
                                     />
                                 </div>
                             )

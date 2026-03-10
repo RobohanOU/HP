@@ -21,3 +21,14 @@
     height: min-content;
     box-shadow: 0.1rem 0.2rem var(--color-lightgray);
 }
+
+@media (max-width: 767px) {
+    .baseCard h3 {
+        font-size: 1.2rem;
+    }
+
+    .baseCard p {
+        margin: 0;
+        font-size: 0.6rem;
+    }
+}
