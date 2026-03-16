@@ -110,13 +110,19 @@
                     <p>これらの基板の機能について，簡単に紹介します．</p>
 
 					<h4>通信変換基板: TransLink</h4>
-					<p>TransLinkは以前から制作している，Expander_Sparcoシリーズのうち，Ethernetと接続する機能のみを取り出した基板です．本基板では，Robohanとしては初めてとなる0402サイズのチップ抵抗やチップコンデンサを搭載した基板になります．手はんだでは難しいサイズの部品であっても，JLCPCB様のPCBAサービスを利用することで，失敗無く高密度な基板を簡単に制作することができます．</p>
 					<p>できあがった基板が以下の画像です．</p>
                     <img src="./images/jlc2026-NHK_3/TransLink.jpg" alt="通信変換基板TransLinkの画像" class="jlcpcbimg">
-                    <h5>主なIC</h5>
-                    <ul>
-                        <li>STM32H503CBT6: マイコン</li>
-                    </ul>
+                    <h5>機能概要</h5>
+					<ul>
+						<li>CAN通信により，汎用基板と通信</li>
+						    <ul>
+								<li>ROHM製　BD41044FJ</li>
+							</ul>
+						<li>プログラムにより，I2C，SPI，UARTなどのセンサー類と通信</li>
+						    <ul>
+								<li>使用マイコン: STM32H503CBT6</li>
+						    </li>
+					</ul>
                     
                     <h4>JLCPCB様でのPCBAの発注方法</h4>
                     <strong>発注方法は<a href="https://www.robohan.net/JLCPCB2024">NHK2024でのご支援の記事</a>と同じ内容です．</strong>
